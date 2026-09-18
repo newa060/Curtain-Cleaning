@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, User, Sparkles } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -11,7 +11,6 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
     { name: "Gallery", href: "/gallery" },
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
@@ -19,7 +18,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#FAF6F0]/95 backdrop-blur-md border-b border-[#0F4C4C]/10 transition-colors">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#f1fcf8]/95 backdrop-blur-md border-b border-[#0F4C4C]/10 transition-colors">
       <div className="h-20 w-full max-w-[1240px] mx-auto px-4 md:px-6 flex items-center justify-between gap-4">
         {/* Logo & Brand Title */}
         <Link href="/" className="flex items-center gap-2 group">
@@ -31,8 +30,8 @@ export const Navbar: React.FC = () => {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
+        {/* Desktop Navigation Links */}
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -52,28 +51,31 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Desktop Right Actions */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <Link
             href="/book-now"
-            className="inline-flex items-center justify-center font-body text-xs md:text-sm text-white bg-secondary hover:bg-secondary-hover px-5 py-2.5 rounded-full shadow-sm transition-all duration-200"
+            className="hidden sm:inline-flex items-center justify-center font-body text-xs md:text-sm text-white bg-secondary hover:bg-secondary-hover px-6 py-2.5 rounded-full shadow-sm transition-all duration-200"
           >
             Enquire Now
           </Link>
-        </div>
+          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shrink-0">
+            <User className="w-4 h-4" />
+          </div>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle navigation menu"
-          className="lg:hidden p-2 rounded-lg text-primary hover:bg-primary/5 transition-colors"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+            className="md:hidden p-2 rounded-lg text-primary hover:bg-primary/5 transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#FAF6F0] border-b border-[#0F4C4C]/10 px-6 py-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden bg-[#f1fcf8] border-b border-[#0F4C4C]/10 px-6 py-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -99,15 +101,8 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full inline-flex items-center justify-center font-body text-sm font-semibold text-white bg-secondary hover:bg-secondary-hover px-6 py-3 rounded-full shadow-md transition-all"
             >
-              Book & Enquire Online
+              Enquire Now
             </Link>
-            <a
-              href="tel:0405849841"
-              className="w-full inline-flex items-center justify-center gap-2 font-body text-sm font-semibold text-primary border-2 border-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full transition-all"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Call (0405 849 841)</span>
-            </a>
           </div>
         </div>
       )}

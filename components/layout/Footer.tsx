@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
@@ -18,67 +18,60 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="font-body text-sm text-white/80 leading-relaxed max-w-sm">
-              Brisbane’s trusted specialist in gentle, in-situ curtain steam cleaning and ultrasonic sanitisation. Safe for delicate sheers, silk, and linen right on your tracks.
+              Brisbane's dedicated on-site curtain and drapery cleaning specialists. We restore delicate fabrics and fresh indoor air directly in your home — no taking curtains down, no hassle.
             </p>
             <div className="flex items-center gap-2 text-xs text-secondary-container bg-white/5 px-3 py-2 rounded-lg w-fit">
               <ShieldCheck className="w-4 h-4 text-secondary" />
-              <span>Fully Insured & Brisbane Family Owned</span>
+              <span>Master Fabric Care Certified</span>
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
+          {/* Col 2: Services */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="font-headline text-lg font-semibold text-white">Services</h4>
+            <ul className="space-y-2 text-sm text-white/80">
+              <li><Link href="/services#steam-cleaning" className="hover:text-white transition-colors">Curtain Cleaning</Link></li>
+              <li><Link href="/services#sheer-care" className="hover:text-white transition-colors">Sheer Cleaning</Link></li>
+              <li><Link href="/services#ultrasonic" className="hover:text-white transition-colors">Blind Cleaning</Link></li>
+              <li><Link href="/services#stain-deodorisation" className="hover:text-white transition-colors">Odour Removal</Link></li>
+              <li><Link href="/services#stain-deodorisation" className="hover:text-white transition-colors">Stain Treatment</Link></li>
+            </ul>
+          </div>
+
+          {/* Col 3: Company */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-headline text-lg font-semibold text-secondary-container">Navigation</h4>
+            <h4 className="font-headline text-lg font-semibold text-white">Company</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
               <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Blog & Tips</Link></li>
-              <li><Link href="/locations" className="hover:text-white transition-colors">Service Areas</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Services */}
+          {/* Col 4: Contact & Support */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-headline text-lg font-semibold text-secondary-container">Our Services</h4>
-            <ul className="space-y-2 text-sm text-white/80">
-              <li><Link href="/services#steam-cleaning" className="hover:text-white transition-colors">On-Site Steam Cleaning</Link></li>
-              <li><Link href="/services#ultrasonic" className="hover:text-white transition-colors">Ultrasonic Deep Sanitisation</Link></li>
-              <li><Link href="/services#mould-removal" className="hover:text-white transition-colors">Subtropical Mould Removal</Link></li>
-              <li><Link href="/services#sheer-care" className="hover:text-white transition-colors">Delicate Sheer & Voile Care</Link></li>
-              <li><Link href="/services#commercial" className="hover:text-white transition-colors">Commercial & Hotel Drapery</Link></li>
-              <li><Link href="/feedback" className="hover:text-white transition-colors">Reviews & Testimonials</Link></li>
-            </ul>
-          </div>
-
-          {/* Col 4: Contact Info */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-headline text-lg font-semibold text-secondary-container">Contact Brisbane HQ</h4>
+            <h4 className="font-headline text-lg font-semibold text-white">Contact & Support</h4>
             <div className="space-y-2 text-sm text-white/80">
               <a href="tel:0405849841" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Phone className="w-4 h-4 text-secondary shrink-0" />
+                <Phone className="w-4 h-4 text-secondary-container shrink-0" />
                 <span>0405 849 841</span>
               </a>
               <div className="flex items-start gap-2">
-                <Mail className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
-                <span>info@curtaincleaningbrisbane.com.au</span>
+                <Mail className="w-4 h-4 text-secondary-container shrink-0 mt-0.5" />
+                <span className="break-all">hello@curtaincleaningbrisbane.com.au</span>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
-                <span>Servicing Greater Brisbane, QLD (New Farm, Ascot, Bulimba, Paddington & surrounds)</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-white/60 pt-1">
-                <Clock className="w-3.5 h-3.5" />
-                <span>Mon – Sat: 7:00 AM – 6:00 PM</span>
+                <MapPin className="w-4 h-4 text-secondary-container shrink-0 mt-0.5" />
+                <span>Brisbane QLD, Australia</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom copyright */}
+        {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
-          <p>© {new Date().getFullYear()} Curtain Cleaning Brisbane. All rights reserved.</p>
+          <p>© 2026 Curtain Cleaning Brisbane. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

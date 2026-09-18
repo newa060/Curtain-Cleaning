@@ -26,7 +26,7 @@ const config: Config = {
           container: "#3a4831",
         },
         surface: {
-          DEFAULT: "#FAF6F0",
+          DEFAULT: "#f1fcf8",
           alt: "#F1FCF8",
           container: "#F3EDE2",
           dim: "#d1dcd9",

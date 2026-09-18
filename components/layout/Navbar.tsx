@@ -1,0 +1,116 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Phone, User, Sparkles } from "lucide-react";
+
+export const Navbar: React.FC = () => {
+  const pathname = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "About", href: "/about" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#FAF6F0]/95 backdrop-blur-md border-b border-[#0F4C4C]/10 transition-colors">
+      <div className="h-20 w-full max-w-[1240px] mx-auto px-4 md:px-6 flex items-center justify-between gap-4">
+        {/* Logo & Brand Title */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+            <span className="material-symbols-outlined text-[22px]">curtains</span>
+          </div>
+          <span className="font-headline text-xl md:text-2xl text-primary font-bold tracking-tight">
+            Curtain Cleaning Brisbane
+          </span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-6">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`font-body text-sm tracking-wide transition-colors ${
+                  isActive
+                    ? "text-primary font-semibold border-b-2 border-primary pb-0.5"
+                    : "text-on-surface-variant hover:text-primary"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Desktop Right Actions */}
+        <div className="hidden sm:flex items-center gap-3">
+          <Link
+            href="/book-now"
+            className="inline-flex items-center justify-center font-body text-xs md:text-sm text-white bg-secondary hover:bg-secondary-hover px-5 py-2.5 rounded-full shadow-sm transition-all duration-200"
+          >
+            Enquire Now
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          className="lg:hidden p-2 rounded-lg text-primary hover:bg-primary/5 transition-colors"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Drawer */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-[#FAF6F0] border-b border-[#0F4C4C]/10 px-6 py-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
+          <div className="flex flex-col space-y-3">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`font-body text-base py-2 transition-colors border-b border-[#0F4C4C]/5 ${
+                    isActive
+                      ? "text-primary font-bold pl-2 border-l-4 border-l-primary"
+                      : "text-on-surface-variant hover:text-primary"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </div>
+          <div className="pt-4 flex flex-col gap-3">
+            <Link
+              href="/book-now"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center font-body text-sm font-semibold text-white bg-secondary hover:bg-secondary-hover px-6 py-3 rounded-full shadow-md transition-all"
+            >
+              Book & Enquire Online
+            </Link>
+            <a
+              href="tel:0405849841"
+              className="w-full inline-flex items-center justify-center gap-2 font-body text-sm font-semibold text-primary border-2 border-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full transition-all"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call (0405 849 841)</span>
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};

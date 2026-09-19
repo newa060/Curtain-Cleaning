@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -58,10 +58,6 @@ export const Navbar: React.FC = () => {
           >
             Enquire Now
           </Link>
-          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shrink-0">
-            <User className="w-4 h-4" />
-          </div>
-
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

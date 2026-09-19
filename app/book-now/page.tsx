@@ -311,7 +311,7 @@ export default function BookNowPage() {
                           id="full-name"
                           type="text"
                           required
-                          placeholder="e.g. Eleanor Vance"
+                          placeholder="Full Name"
                           value={formData.fullName}
                           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
@@ -325,7 +325,7 @@ export default function BookNowPage() {
                           id="email-address"
                           type="email"
                           required
-                          placeholder="e.g. eleanor@example.com"
+                          placeholder="Email Address"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
@@ -339,7 +339,7 @@ export default function BookNowPage() {
                           id="mobile-phone"
                           type="tel"
                           required
-                          placeholder="e.g. 0412 345 678"
+                          placeholder="Phone Number"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
@@ -353,7 +353,7 @@ export default function BookNowPage() {
                           id="property-address"
                           type="text"
                           required
-                          placeholder="e.g. 42 River Terrace, New Farm"
+                          placeholder="Property Address & Suburb"
                           value={formData.address}
                           onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"

@@ -456,11 +456,6 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="text-center sm:text-right">
-                  <span className="text-[10px] uppercase font-bold text-on-surface-variant block">Estimated Price</span>
-                  <span className="font-headline font-bold text-primary text-lg">{getEstimatedCost(trackLength, activeFabric)}</span>
-                </div>
-
                 <Link
                   href="/book-now"
                   className="px-5 py-2.5 rounded-full bg-secondary text-white text-xs font-semibold hover:bg-secondary-hover transition-colors shrink-0"

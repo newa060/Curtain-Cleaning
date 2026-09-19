@@ -195,7 +195,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Eleanor Vance"
+                      placeholder="Full Name"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-outline border-opacity-30 focus:border-primary text-xs"
@@ -206,7 +206,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       required
-                      placeholder="e.g. eleanor@example.com"
+                      placeholder="Email Address"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-outline border-opacity-30 focus:border-primary text-xs"
@@ -220,7 +220,7 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       required
-                      placeholder="e.g. 0412 345 678"
+                      placeholder="Phone Number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-outline border-opacity-30 focus:border-primary text-xs"
@@ -230,7 +230,7 @@ export default function ContactPage() {
                     <label className="text-xs font-bold text-primary block mb-1">Brisbane Suburb / Address</label>
                     <input
                       type="text"
-                      placeholder="e.g. New Farm, Paddington, Ascot"
+                      placeholder="Suburb / Address"
                       value={formData.suburb}
                       onChange={(e) => setFormData({ ...formData, suburb: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-outline border-opacity-30 focus:border-primary text-xs"

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICES_DATA } from "@/data/services";
@@ -15,12 +15,12 @@ export default function ServicesPage() {
       {/* Header */}
       <section className="bg-primary text-white py-16">
         <div className="max-w-[1240px] mx-auto px-4 md:px-6">
-          <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">Specialised Treatments</span>
+          <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">WHAT WE DO</span>
           <h1 className="font-headline text-4xl lg:text-5xl font-bold mt-2 text-balance">
-            Bespoke Window Textile Cleaning Services
+            Our Curtain Cleaning Services
           </h1>
           <p className="font-body text-base text-white/80 max-w-2xl mt-4 leading-relaxed">
-            Tailored solutions for every fabric type, from fragile silk sheers to heavy lined blackout curtains and commercial theater drapes.
+            We handle all types of curtains and blinds — from lightweight sheers to heavy blackouts. Every job is done at your home, no removal needed.
           </p>
         </div>
       </section>
@@ -112,15 +112,15 @@ export default function ServicesPage() {
               <ShieldCheck className="w-6 h-6 text-secondary-container" />
             </div>
             <div>
-              <h3 className="font-headline text-xl font-bold text-primary">Need Custom Fabric Consultation?</h3>
-              <p className="text-xs text-on-surface-variant">Our team offers free on-site inspections for large residential and commercial estates.</p>
+              <h3 className="font-headline text-xl font-bold text-primary">Not Sure Which Service You Need?</h3>
+              <p className="text-xs text-on-surface-variant">Give us a call or send a message — we'll ask a few quick questions and point you in the right direction.</p>
             </div>
           </div>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm transition-all shrink-0"
           >
-            <span>Request Inspection</span>
+            <span>Get in Touch</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -128,3 +128,4 @@ export default function ServicesPage() {
     </div>
   );
 }
+

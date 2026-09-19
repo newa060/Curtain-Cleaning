@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -23,31 +23,31 @@ const SERVICES_OPTIONS = [
   {
     id: "Curtain Cleaning",
     title: "Curtain Cleaning",
-    desc: "Lined, thermal, and heavy draping.",
+    desc: "Lined, thermal, blackout and heavy curtains.",
     icon: Layers,
   },
   {
     id: "Sheer Cleaning",
     title: "Sheer Cleaning",
-    desc: "Delicate linen, voile, and lace.",
+    desc: "Voile, lace, linen sheers — anything lightweight and delicate.",
     icon: Sparkles,
   },
   {
     id: "Blind Cleaning",
     title: "Blind Cleaning",
-    desc: "Romans, vertical, and roller blinds.",
+    desc: "Roman, vertical, roller, and fabric blinds.",
     icon: Blinds,
   },
   {
     id: "Odour Removal",
     title: "Odour Removal",
-    desc: "Organic allergen and musty scent cleanse.",
+    desc: "Cooking smells, pet odours, mustiness.",
     icon: Wind,
   },
   {
     id: "Stain Treatment",
     title: "Stain Treatment",
-    desc: "Water marks, mildew, and spot care.",
+    desc: "Water marks, mould spots, and specific stains.",
     icon: Droplets,
     colSpan: "sm:col-span-2 lg:col-span-1",
   },
@@ -97,29 +97,29 @@ export default function BookNowPage() {
         <div className="relative max-w-[1240px] mx-auto text-center flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-sm text-[#d7e8c8] text-xs font-semibold uppercase tracking-wider mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#fc9267]"></span>
-            Direct Booking Request
+            BOOK A CLEAN
           </div>
           <h1 className="font-headline text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-2xl tracking-tight">
-            Book Your Cleaning
+            Book a Curtain Clean
           </h1>
           <p className="font-sans text-sm sm:text-base text-[#85bbbb] max-w-xl mt-3 font-normal leading-relaxed">
-            No upfront payment required. We will confirm your preferred date and fabric requirements within a few hours.
+            No payment upfront. We'll confirm your booking and run through the details with you before the day.
           </p>
 
           <div className="mt-8 pt-6 flex flex-wrap items-center justify-center gap-y-3 gap-x-6 text-[#85bbbb] text-xs sm:text-sm">
             <div className="flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-[#fc9267]" />
-              <span className="text-white font-medium">100% In-Situ Cleaning</span>
+              <span className="text-white font-medium">Cleaned at your home</span>
             </div>
             <span className="text-[#85bbbb]/40 hidden sm:inline">•</span>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#fc9267]" />
-              <span className="text-white font-medium">Zero Fabric Shrinkage</span>
+              <span className="text-white font-medium">No shrinkage</span>
             </div>
             <span className="text-[#85bbbb]/40 hidden sm:inline">•</span>
             <div className="flex items-center gap-1.5">
               <MapPin className="w-4 h-4 text-[#fc9267]" />
-              <span className="text-white font-medium">Brisbane & Surrounds</span>
+              <span className="text-white font-medium">All of Brisbane</span>
             </div>
           </div>
         </div>
@@ -137,9 +137,9 @@ export default function BookNowPage() {
                 <div className="w-12 h-12 rounded-full bg-[#fc9267]/20 text-[#9a4521] mx-auto flex items-center justify-center">
                   <CheckCircle2 className="w-8 h-8 text-[#0F4C4C]" />
                 </div>
-                <h3 className="font-headline text-2xl font-bold text-[#003434]">Booking Request Submitted</h3>
+                <h3 className="font-headline text-2xl font-bold text-[#003434]">Request Sent!</h3>
                 <p className="text-sm text-[#404848] max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong>{formData.fullName || "valued client"}</strong>! A fabric care specialist will review your request for <strong>{selectedServices.join(", ")}</strong> and get in touch within 2 business hours.
+                  Thank you, <strong>{formData.fullName || "valued client"}</strong>! We'll be in touch within a couple of hours to confirm your booking for <strong>{selectedServices.join(", ")}</strong> 
                 </p>
                 <div className="pt-4">
                   <button
@@ -147,13 +147,13 @@ export default function BookNowPage() {
                     onClick={() => setIsSubmitted(false)}
                     className="px-6 py-2.5 rounded-full bg-[#0F4C4C] text-white text-xs font-semibold hover:bg-[#003434] transition-all"
                   >
-                    Submit Another Request
+                    Send Another Request
                   </button>
                 </div>
               </div>
             ) : (
               <>
-                {/* STEP 1: Select Services */}
+                {/* STEP 1: What do you need cleaned? */}
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f4c4c] text-white flex items-center justify-center font-semibold text-sm">
@@ -161,10 +161,10 @@ export default function BookNowPage() {
                     </span>
                     <div>
                       <h2 className="font-headline text-xl sm:text-2xl font-semibold text-[#003434] tracking-tight">
-                        Select Services
+                        What do you need cleaned?
                       </h2>
                       <p className="text-xs sm:text-sm text-[#404848] mt-1">
-                        Select all fabric treatments required for your in-home visit.
+                        Pick everything that applies — you can select more than one.
                       </p>
                     </div>
                   </div>
@@ -213,7 +213,7 @@ export default function BookNowPage() {
 
                 <div className="w-full h-px bg-[#e5f0ed]"></div>
 
-                {/* STEP 2: Preferred Date */}
+                {/* STEP 2: When suits you? */}
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f4c4c] text-white flex items-center justify-center font-semibold text-sm">
@@ -221,10 +221,10 @@ export default function BookNowPage() {
                     </span>
                     <div>
                       <h2 className="font-headline text-xl sm:text-2xl font-semibold text-[#003434] tracking-tight">
-                        Preferred Date
+                        When suits you?
                       </h2>
                       <p className="text-xs sm:text-sm text-[#404848] mt-1">
-                        Choose your ideal day — we will confirm technician availability promptly.
+                        Pick a day that works for you and we'll confirm whether we can make it work.
                       </p>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ export default function BookNowPage() {
                         className="block text-xs font-semibold uppercase tracking-wider text-[#003434] mb-2" 
                         htmlFor="preferred-date"
                       >
-                        Target Date (Monday – Saturday)
+                        Preferred date
                       </label>
                       <input
                         id="preferred-date"
@@ -296,7 +296,7 @@ export default function BookNowPage() {
                         Your Details
                       </h2>
                       <p className="text-xs sm:text-sm text-[#404848] mt-1">
-                        Provide contact information so our local team can reach out.
+                        So we can confirm the booking and get in touch if we need anything.
                       </p>
                     </div>
                   </div>
@@ -363,12 +363,12 @@ export default function BookNowPage() {
 
                     <div>
                       <label className="block text-xs font-semibold text-[#003434] mb-1.5" htmlFor="special-instructions">
-                        Special Instructions (Optional)
+                        Anything else we should know? \(Optional\)
                       </label>
                       <textarea
                         id="special-instructions"
                         rows={4}
-                        placeholder="Fabric type (linen, velvet, silk), approximate ceiling height, parking access notes, or specific fabric concerns..."
+                        placeholder="Fabric type, ceiling height, parking, mould or stain concerns — anything that helps us prepare."
                         value={formData.instructions}
                         onChange={(e) => setFormData({ ...formData, instructions: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all resize-none border border-transparent focus:border-[#0F4C4C]"
@@ -389,11 +389,11 @@ export default function BookNowPage() {
 
                   <div className="text-center space-y-1.5">
                     <p className="text-xs text-[#404848]">
-                      No payment required now — our team will call to confirm final details.
+                      No payment now. We'll call to confirm the details before the visit.
                     </p>
                     <div className="inline-flex items-center gap-1.5 text-[#707978] text-xs">
                       <Lock className="w-3.5 h-3.5" />
-                      <span>Zero obligation • We respect your privacy and never share your details</span>
+                      <span>No obligation · We don't share your details</span>
                     </div>
                   </div>
                 </div>
@@ -412,9 +412,9 @@ export default function BookNowPage() {
                 <Clock className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-sans text-sm font-semibold text-[#003434]">Fast Confirmation</h3>
+                <h3 className="font-sans text-sm font-semibold text-[#003434]">Quick Response</h3>
                 <p className="text-xs text-[#404848] mt-1 leading-relaxed">
-                  We typically review and respond within 2 business hours.
+                  We get back to most enquiries within a couple of hours during business hours.
                 </p>
               </div>
             </div>
@@ -424,9 +424,9 @@ export default function BookNowPage() {
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-sans text-sm font-semibold text-[#003434]">In-Situ Care</h3>
+                <h3 className="font-sans text-sm font-semibold text-[#003434]">We Come to You</h3>
                 <p className="text-xs text-[#404848] mt-1 leading-relaxed">
-                  No removing curtains or heavy lifting; we clean directly on the rail.
+                  Curtains stay hanging the whole time. No removing, no lugging them anywhere.
                 </p>
               </div>
             </div>
@@ -436,9 +436,9 @@ export default function BookNowPage() {
                 <Compass className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-sans text-sm font-semibold text-[#003434]">Brisbane Local</h3>
+                <h3 className="font-sans text-sm font-semibold text-[#003434]">Based in Brisbane</h3>
                 <p className="text-xs text-[#404848] mt-1 leading-relaxed">
-                  Servicing Brisbane North, South, Western Suburbs & Bayside.
+                  We cover Brisbane North, South, Western Suburbs, and the Bayside.
                 </p>
               </div>
             </div>
@@ -459,13 +459,13 @@ export default function BookNowPage() {
           </div>
           <div className="flex flex-col space-y-2">
             <span className="text-xs font-semibold uppercase tracking-wider text-[#9a4521]">
-              Hassle-Free Care
+              WHY LEAVE THEM HANGING
             </span>
             <h4 className="font-headline text-lg sm:text-xl font-semibold text-[#003434]">
-              Why Brisbane Homeowners Keep Curtains Hanging
+              Taking Curtains Down Often Causes More Damage
             </h4>
             <p className="text-xs sm:text-sm text-[#404848] leading-relaxed">
-              Taking down heavyweight drapery risks seam tearing and structural track damage. Our precision micro-extraction technology cleans hanging drapery safely in place with zero downtime.
+              Heavy curtains are awkward to remove and easy to damage in the process — tracks get bent, seams tear, pleats lose their shape. Cleaning them while they hang avoids all of that.
             </p>
           </div>
         </div>
@@ -473,3 +473,4 @@ export default function BookNowPage() {
     </div>
   );
 }
+

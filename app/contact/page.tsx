@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle2, Lock, Timer, ShieldCheck } from "lucide-react";
@@ -42,13 +42,13 @@ export default function ContactPage() {
         <div className="relative max-w-[900px] mx-auto text-center flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-secondary"></span>
-            We're Here to Help
+            CONTACT US
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
-            Get In <span className="italic font-headline text-secondary-container">Touch</span>
+            Get in <span className="italic font-headline text-secondary-container">Touch</span>
           </h1>
           <p className="mt-4 max-w-[640px] font-body text-base sm:text-lg text-on-primary-container leading-relaxed">
-            Have questions about our on-site curtain cleaning service or want a complimentary quote? Send us a message and our Brisbane fabric specialists will respond promptly.
+            Have a question or want a price? Drop us a message and we'll get back to you the same day.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 w-full">
@@ -71,7 +71,7 @@ export default function ContactPage() {
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-secondary hover:bg-secondary-hover text-white font-semibold text-xs shadow-md transition-all"
             >
               <span className="material-symbols-outlined text-[18px]">calendar_month</span>
-              <span>Enquire Online</span>
+              <span>Send a Message</span>
             </a>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </a>
                 <div className="mt-2 flex items-center gap-1.5 text-tertiary text-xs font-semibold">
                   <span className="material-symbols-outlined text-sm text-secondary">schedule</span>
-                  <span>Average response: under 2 hours</span>
+                  <span>We usually reply within 2 hours</span>
                 </div>
               </div>
             </div>
@@ -109,11 +109,11 @@ export default function ContactPage() {
                 <span className="text-[10px] uppercase tracking-wider text-outline font-bold block mb-0.5">Service Area</span>
                 <div className="font-headline text-base text-primary font-bold">Brisbane & Surrounds</div>
                 <p className="mt-1 text-on-surface-variant text-xs leading-relaxed">
-                  Servicing all of Greater Brisbane — Inner City, Northside, Southside, Western Suburbs, Redlands, and Moreton Bay.
+                  We cover all of Greater Brisbane — Inner City, Northside, Southside, Western Suburbs, Redlands, and Moreton Bay.
                 </p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
                   <span className="material-symbols-outlined text-sm">home_pin</span>
-                  <span>100% In-Situ On-Site Service</span>
+                  <span>We come to you — no drop-offs</span>
                 </div>
               </div>
             </div>
@@ -123,12 +123,12 @@ export default function ContactPage() {
                 <Phone className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <span className="text-[10px] uppercase tracking-wider text-outline font-bold block mb-0.5">Telephone Consultations</span>
+                <span className="text-[10px] uppercase tracking-wider text-outline font-bold block mb-0.5">Give Us a Call</span>
                 <a href="tel:0405849841" className="font-headline text-base text-primary font-bold hover:text-secondary transition-colors block">
                   0405 849 841
                 </a>
                 <p className="mt-1 text-on-surface-variant text-xs">
-                  Mon–Sat: 7:30 am – 6:00 pm AEST
+                  Mon–Sat, 7:30am – 6:00pm
                 </p>
               </div>
             </div>
@@ -137,20 +137,20 @@ export default function ContactPage() {
               <div className="relative z-10 flex flex-col gap-3">
                 <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/10 text-secondary-container w-fit text-[10px] uppercase font-bold">
                   <span className="material-symbols-outlined text-xs">bolt</span>
-                  <span>Fastest Response</span>
+                  <span>QUICKEST WAY TO BOOK</span>
                 </div>
                 <h3 className="font-headline text-xl text-white font-bold">
-                  Ready to book? Request an in-home quote in 2 minutes.
+                  Fill in the form below and we'll confirm your booking the same day.
                 </h3>
                 <p className="text-xs text-on-primary-container leading-relaxed">
-                  No need to unhook heavy curtains. We test fabric type, measure track width, and steam extract safely right on the rail.
+                  No need to take anything down. We arrive with everything and clean your curtains right where they hang.
                 </p>
                 <div className="pt-2">
                   <a
                     href="#quote-form"
                     className="inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-full bg-secondary hover:bg-secondary-hover text-white text-xs font-bold shadow-sm transition-all"
                   >
-                    <span>Complete the Form Below</span>
+                    <span>Fill in the Form</span>
                     <span className="material-symbols-outlined text-[16px]">arrow_downward</span>
                   </a>
                 </div>
@@ -163,22 +163,22 @@ export default function ContactPage() {
             <div className="flex flex-col mb-6">
               <div className="inline-flex items-center gap-1.5 text-secondary text-xs uppercase tracking-wider mb-1 font-bold">
                 <span className="material-symbols-outlined text-sm">edit_note</span>
-                <span>Free On-Site Quotation</span>
+                <span>FREE QUOTE</span>
               </div>
               <h2 className="font-headline text-2xl sm:text-3xl text-primary font-bold tracking-tight">
                 Send Us a Message
               </h2>
               <p className="text-xs text-on-surface-variant mt-1">
-                Fill out the details below and our Brisbane master fabric technician will review and reply promptly.
+                Fill in your details and we'll come back to you with a straight answer and a price.
               </p>
             </div>
 
             {success ? (
               <div className="p-6 rounded-2xl bg-surface-container border border-primary/20 text-center space-y-3">
                 <CheckCircle2 className="w-10 h-10 text-secondary mx-auto" />
-                <h3 className="font-headline text-xl font-bold text-primary">Thank you for your enquiry!</h3>
+                <h3 className="font-headline text-xl font-bold text-primary">Message received!</h3>
                 <p className="text-xs text-on-surface-variant max-w-sm mx-auto">
-                  Your message has reached our Brisbane team. We will review your drapery specifications and contact you shortly.
+                  We'll be in touch shortly — usually within a couple of hours during business hours.
                 </p>
                 <button
                   onClick={() => setSuccess(false)}
@@ -276,10 +276,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold text-primary block mb-1">Window & Curtain Details</label>
+                  <label className="text-xs font-bold text-primary block mb-1">Tell Us More \(Optional\)</label>
                   <textarea
                     rows={4}
-                    placeholder="Mention number of rooms, track lengths, ceiling heights, or particular concerns like watermarks or pet odours..."
+                    placeholder="Number of rooms, rough track length, any stains or mould — whatever helps us understand the job."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl border border-outline border-opacity-30 focus:border-primary text-xs"
@@ -288,7 +288,7 @@ export default function ContactPage() {
 
                 <div className="flex items-center gap-2 text-on-surface-variant text-xs pt-1">
                   <Lock className="w-3.5 h-3.5 text-tertiary" />
-                  <span>Zero obligation quote. We respect your privacy and never share your data.</span>
+                  <span>No obligation. We don't share your details with anyone.</span>
                 </div>
 
                 <div className="pt-2">
@@ -312,11 +312,11 @@ export default function ContactPage() {
         <div className="max-w-[1140px] mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
             <div>
-              <span className="text-xs uppercase tracking-wider text-secondary font-semibold">PROMPT MOBILE SERVICE</span>
-              <h3 className="font-headline text-2xl font-bold text-primary mt-1">Our Brisbane Service Hubs</h3>
+              <span className="text-xs uppercase tracking-wider text-secondary font-semibold">WHERE WE WORK</span>
+              <h3 className="font-headline text-2xl font-bold text-primary mt-1">Areas We Cover</h3>
             </div>
             <p className="text-xs text-on-surface-variant max-w-md">
-              Fully equipped service vehicles bring high-temperature in-situ steam extraction directly to your residence across South East Queensland.
+              We travel to homes across Brisbane. If you're not sure whether we cover your area, just give us a call.
             </p>
           </div>
 
@@ -355,3 +355,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

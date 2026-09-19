@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -13,20 +13,20 @@ export default function BlogPage() {
       id: "1",
       category: "schedule",
       categoryLabel: "Care Schedule",
-      title: "How Often Should You Professionally Clean Your Curtains in Brisbane?",
+      title: "How Often Should You Clean Your Curtains in Brisbane?",
       date: "September 14, 2026",
       readTime: "5 min read",
-      excerpt: "From humid summer storm seasons to high airborne river pollen, Brisbane's unique subtropical climate dictates a distinct fabric care cycle. Discover the ideal timeline for sheers, blockouts, and living room drapes.",
+      excerpt: "Brisbane humidity and pollen means curtains get dirty faster than most people expect. Here's a practical guide to cleaning frequency depending on fabric type and which way your windows face.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCnBgX49e48D-ncD08CraiK9U9t1mdaw4Mrn9oe4wJWp1kUVOKCQUlb1tld4ya0qksub1sJ-TyCSq06K9nJ6IL2WXf9e_sogyv7YBk5WB4t_iP_pcS_5EGksdTUgtA5UZ1nRR56St4v_0j9Q3T6GMAy7bEQXzClrNRZWHLmyGOaZpbvQ3BjUAyuROhpT9pa3SFkcYEtG1XqxvO5NipVGe1KwRL4PDYwP8rkgJUOYNRC_yLoigFxV_O6yg",
     },
     {
       id: "2",
       category: "climate",
       categoryLabel: "Climate & Mould",
-      title: "Why Brisbane Humidity Demands Regular Curtain Care",
+      title: "Why Brisbane Humidity Is Hard on Curtains",
       date: "September 02, 2026",
       readTime: "6 min read",
-      excerpt: "With summer humidity levels frequently pushing beyond 75%, window drapery acts as an unintended moisture trap. Learn how to prevent mildew spores from bonding to delicate fibres before costly textile damage occurs.",
+      excerpt: "With Average Summer Humidity levels frequently pushing beyond 75%, window drapery acts as an unintended moisture trap. Learn how to prevent mildew spores from bonding to delicate fibres before costly textile damage occurs.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDTkpu4OoAvcxme9NS1p-sdRx-nzERtYdhFot1Ynoi7wSx_T4GNG6R1_qwfjDVVE1aG1UzZtdiGZvWALOvHAZS6Mv6Be7Gwi4AENbAaOJ-1rrNZUOOfB3KsjH4RRsZTsPO2cr5nGGW1HkgissbimjOaIVp5pgCF8B951eDPlgWRvd6fFKekMjabOLhAZXEcnr_GIJHNi_pysKs5-cohE2vfJLcS7SkMEXjd5x_fbQ8Lzn-lYnfj-SBC6Q",
     },
   ];
@@ -43,28 +43,28 @@ export default function BlogPage() {
         <div className="relative max-w-[1240px] mx-auto text-center flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container text-secondary-container text-xs font-semibold uppercase tracking-widest mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-            Fabric Care Knowledge & Insights
+            TIPS & ADVICE
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight max-w-3xl mb-4">
-            Curtain Care Tips & Advice
+            Curtain Care Tips
           </h1>
           <p className="font-body text-base sm:text-lg text-on-primary-container max-w-2xl leading-relaxed">
-            Simple tips, helpful guides, and expert fabric care advice from our local Brisbane team for Queenslanders, modern residences, and heritage drapes.
+            Practical tips from our Brisbane team on looking after your curtains — cleaning schedules, mould prevention, what to avoid.
           </p>
 
           {/* Trust Bar / Readership Highlights */}
           <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-12 gap-y-3 text-on-primary-container text-xs font-semibold">
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-secondary-container text-[18px]">verified_user</span>
-              <span>Brisbane Climate Tested</span>
+              <span>Tested in Brisbane conditions</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-secondary-container text-[18px]">dry_cleaning</span>
-              <span>Delicate & Sheer Safe</span>
+              <span>Safe for sheers & delicates</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-secondary-container text-[18px]">nest_eco_leaf</span>
-              <span>Zero Fabric Shrinkage</span>
+              <span>No shrinkage</span>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function BlogPage() {
           {[
             { id: "all", label: "All Articles" },
             { id: "schedule", label: "Care Schedule" },
-            { id: "climate", label: "Brisbane Climate & Mould" },
+            { id: "climate", label: "Climate & Mould" },
             { id: "sheers", label: "Sheers & Delicates" },
             { id: "technique", label: "DIY vs Pro" },
             { id: "protection", label: "UV & Protection" },
@@ -120,7 +120,7 @@ export default function BlogPage() {
                   <div className="flex items-center gap-2 text-on-surface-variant text-xs mb-3 font-medium">
                     <span>{art.date}</span>
                     <span>•</span>
-                    <span>Curtain Cleaning Brisbane</span>
+                    <span>CCB Team</span>
                     <span>•</span>
                     <span>{art.readTime}</span>
                   </div>
@@ -146,15 +146,15 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* 4. SUBTROPICAL FABRIC INDEX QUICK FACTS BANNER */}
+      {/* 4. BRISBANE CONDITIONS QUICK FACTS BANNER */}
       <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 mb-16">
         <div className="bg-surface-container rounded-3xl p-8 lg:p-12 border border-primary/10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 space-y-3">
-              <span className="text-secondary font-semibold text-xs uppercase tracking-widest block">Subtropical Fabric Index</span>
-              <h3 className="font-headline text-2xl font-bold text-primary">Local Weather & Indoor Air Health</h3>
+              <span className="text-secondary font-semibold text-xs uppercase tracking-widest block">BRISBANE CONDITIONS</span>
+              <h3 className="font-headline text-2xl font-bold text-primary">Why Brisbane is Hard on Curtains</h3>
               <p className="text-xs text-on-surface-variant leading-relaxed">
-                Brisbane's river valleys and sea breezes carry microscopic humidity and particulate layers that standard home dusting simply cannot neutralize.
+                Brisbane's humidity, UV, and pollen levels are genuinely tough on curtains. Here's what we see most often.
               </p>
             </div>
 
@@ -162,31 +162,31 @@ export default function BlogPage() {
               <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between border border-primary/10">
                 <div>
                   <span className="material-symbols-outlined text-secondary text-3xl mb-3">water_drop</span>
-                  <div className="font-headline text-xl font-bold text-primary mb-1">76% Avg</div>
-                  <div className="font-bold text-xs text-on-surface mb-2">Summer Humidity</div>
-                  <p className="text-[11px] text-on-surface-variant">Absorbed directly into heavy cotton and linen drapery linings.</p>
+                  <div className="font-headline text-xl font-bold text-primary mb-1">76%</div>
+                  <div className="font-bold text-xs text-on-surface mb-2">Average Summer Humidity</div>
+                  <p className="text-[11px] text-on-surface-variant">Heavy cotton and linen absorbs moisture from the air, which leads to mould and musty smells over time.</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-surface-container text-tertiary text-xs font-semibold">Requires dry-vapour sanitisation</div>
+                <div className="mt-4 pt-3 border-t border-surface-container text-tertiary text-xs font-semibold">Steam cleaning helps manage this</div>
               </div>
 
               <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between border border-primary/10">
                 <div>
                   <span className="material-symbols-outlined text-secondary text-3xl mb-3">flare</span>
                   <div className="font-headline text-xl font-bold text-primary mb-1">UV Index 11+</div>
-                  <div className="font-bold text-xs text-on-surface mb-2">Sun Degeneration</div>
-                  <p className="text-[11px] text-on-surface-variant">Makes unmaintained dry fabric brittle and prone to shredding.</p>
+                  <div className="font-bold text-xs text-on-surface mb-2">UV Damage</div>
+                  <p className="text-[11px] text-on-surface-variant">Curtains on north and west-facing windows break down faster — the fibres weaken and colours fade.</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-surface-container text-tertiary text-xs font-semibold">Thermal conditioning preserves life</div>
+                <div className="mt-4 pt-3 border-t border-surface-container text-tertiary text-xs font-semibold">Regular cleaning extends their life</div>
               </div>
 
               <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between border border-primary/10">
                 <div>
                   <span className="material-symbols-outlined text-secondary text-3xl mb-3">air</span>
                   <div className="font-headline text-xl font-bold text-primary mb-1">98.4%</div>
-                  <div className="font-bold text-xs text-on-surface mb-2">Pollen Trapping</div>
-                  <p className="text-[11px] text-on-surface-variant">Window sheer fabric acts as natural outdoor dust filters.</p>
+                  <div className="font-bold text-xs text-on-surface mb-2">Pollen Caught by Sheers</div>
+                  <p className="text-[11px] text-on-surface-variant">Sheer curtains catch a lot of what drifts in through open windows — pollen, dust, and fine particles.</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-surface-container text-tertiary text-xs font-semibold">Gentle in-situ pollen extraction</div>
+                <div className="mt-4 pt-3 border-t border-surface-container text-tertiary text-xs font-semibold">Steam removes it safely</div>
               </div>
             </div>
           </div>
@@ -200,13 +200,13 @@ export default function BlogPage() {
           <div className="relative max-w-2xl mx-auto text-center flex flex-col items-center space-y-4 z-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container text-secondary-container text-xs font-semibold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">support_agent</span>
-              Expert Brisbane Fabric Advice
+              GOT A QUESTION?
             </div>
             <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white tracking-tight">
-              Have a Question About Your Curtains?
+              Ask Us Anything
             </h2>
             <p className="text-xs sm:text-sm text-on-primary-container leading-relaxed">
-              Our certified master technicians are always ready to assess your specific window furnishings, delicate weave types, and custom rail heights across all Brisbane suburbs.
+              Not sure what your curtains need or whether we can help? Send us a message or give us a call — we're happy to talk it through.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto pt-2">
               <Link
@@ -229,3 +229,5 @@ export default function BlogPage() {
     </div>
   );
 }
+
+

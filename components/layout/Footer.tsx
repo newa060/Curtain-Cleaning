@@ -18,11 +18,11 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="font-body text-sm text-white/80 leading-relaxed max-w-sm">
-              Brisbane's dedicated on-site curtain and drapery cleaning specialists. We restore delicate fabrics and fresh indoor air directly in your home — no taking curtains down, no hassle.
+              Brisbane's on-site curtain cleaning specialists. We clean your curtains while they're still hanging — no taking them down, no transport, no hassle.
             </p>
             <div className="flex items-center gap-2 text-xs text-secondary-container bg-white/5 px-3 py-2 rounded-lg w-fit">
               <ShieldCheck className="w-4 h-4 text-secondary" />
-              <span>Master Fabric Care Certified</span>
+              <span>Fully Insured · Brisbane Based</span>
             </div>
           </div>
 

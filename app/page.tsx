@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -48,17 +48,17 @@ export default function HomePage() {
             {/* Trust badge pill */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold shadow-sm">
               <span className="text-secondary tracking-widest text-xs">★★★★★</span>
-              <span className="text-primary font-bold">Trusted Brisbane Curtain Cleaners</span>
+              <span className="text-primary font-bold">5-Star Rated · Brisbane Locals</span>
             </div>
 
             {/* Headline */}
             <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-primary font-bold tracking-tight text-balance leading-[1.1]">
-              Professional Curtain Cleaning Brisbane
+              Curtain Cleaning Brisbane
             </h1>
 
             {/* Supporting Paragraph */}
             <p className="font-body text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Gentle on-site steam sanitisation that revitalises delicate curtains directly on your tracks without dismantling. No re-hanging fuss, and no risk of fabric shrinkage — just fresh, allergen-free drapery in 2 to 4 hours.
+              We clean your curtains right where they hang — no taking them down, no trips to the dry cleaner. Steam cleaned, dried, and back to looking great, all in one visit.
             </p>
 
             {/* Dual CTAs */}
@@ -83,7 +83,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-2 gap-x-6 pt-4 w-full text-on-surface text-xs sm:text-sm">
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
-                <span className="font-medium">Cleaned hanging in situ</span>
+                <span className="font-medium">Cleaned while hanging</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
@@ -91,7 +91,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
-                <span className="font-medium">Fast 2–4 hr drying</span>
+                <span className="font-medium">Dry in 2–4 hours</span>
               </div>
             </div>
           </div>
@@ -115,8 +115,8 @@ export default function HomePage() {
                   <span className="material-symbols-outlined text-[20px]">curtains</span>
                 </div>
                 <div className="min-w-0">
-                  <p className="font-body text-sm font-bold text-primary leading-tight">Zero Rail Removal</p>
-                  <p className="font-body text-xs text-on-surface-variant truncate">No hook detachment or transport risk</p>
+                  <p className="font-body text-sm font-bold text-primary leading-tight">No removal needed</p>
+                  <p className="font-body text-xs text-on-surface-variant truncate">Curtains stay on the rail the whole time</p>
                 </div>
               </div>
             </div>
@@ -130,12 +130,12 @@ export default function HomePage() {
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
           {/* Header */}
           <div className="max-w-3xl mb-12">
-            <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">HEALTHIER HOME & PRISTINE FABRICS</span>
+            <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">WHY IT MATTERS</span>
             <h2 className="font-headline text-3xl lg:text-5xl font-bold text-white mt-2">
-              Why Professional Curtain Cleaning Matters
+              Your Curtains Collect More Than You Think
             </h2>
             <p className="font-body text-base text-on-primary-container mt-3 leading-relaxed">
-              Curtains act as giant passive air filters throughout your residence, absorbing airborne pollutants, dust mite allergens, cooking oils, and moisture in Brisbane's humid subtropical climate.
+              Curtains trap dust, allergens, cooking smells and moisture every single day. In Brisbane's humidity, that buildup happens faster than most people realise.
             </p>
           </div>
 
@@ -146,32 +146,32 @@ export default function HomePage() {
                 {
                   icon: "bug_report",
                   title: "Dust Mites & Allergens",
-                  desc: "Microscopic triggers build up in deep thermal weaves, worsening indoor air quality and seasonal asthma.",
+                  desc: "Heavy fabrics hold onto dust mite waste and pollen, which can trigger sneezing, itchy eyes, and flare-ups for anyone with asthma.",
                 },
                 {
                   icon: "humidity_mid",
-                  title: "Mould & Mildew Spores",
-                  desc: "Brisbane humidity breeds active mould spores along glass line hems and blackout rubber backing.",
+                  title: "Mould & Mildew",
+                  desc: "Brisbane's humidity is tough on curtains near windows. Mould spots often form along the hem and rubber-backed blackouts before you notice them.",
                 },
                 {
                   icon: "wb_sunny",
-                  title: "Sun Fading & UV Wear",
-                  desc: "Trapped grime accelerates fibre degradation when exposed to intense Queensland solar radiation.",
+                  title: "Sun Damage",
+                  desc: "Grime trapped in the fibres speeds up fading and weakening from UV — especially on north and west-facing windows.",
                 },
                 {
                   icon: "do_not_disturb_on",
-                  title: "Shrinkage from DIY Washes",
-                  desc: "Domestic washing machines shred header tape and shrink delicate linens by up to 10-15%.",
+                  title: "Shrinkage from Home Washing",
+                  desc: "A standard washing machine can shrink or warp headers and pull apart pinch pleats. It's an expensive mistake on quality curtains.",
                 },
                 {
                   icon: "pets",
-                  title: "Odours & Pet Dander",
-                  desc: "Kitchen grease droplets and pet dander lock deep into yarns, radiating persistent room odours.",
+                  title: "Odours & Pet Hair",
+                  desc: "Cooking smells and pet dander work their way deep into the fabric over time. Regular airing isn't enough to get rid of them.",
                 },
                 {
                   icon: "water_drop",
-                  title: "Water Rings & Mustiness",
-                  desc: "Window condensation produces unsightly brownish water stains that set permanently if untreated.",
+                  title: "Water Stains",
+                  desc: "Condensation from glass slowly leaves brown watermarks along the hem that set into the fabric if left too long.",
                 },
               ].map((item, idx) => (
                 <div key={idx} className="p-5 rounded-xl bg-primary-container/80 backdrop-blur-sm space-y-2 border border-white/10">
@@ -198,10 +198,10 @@ export default function HomePage() {
               <div className="p-6 rounded-2xl bg-primary-container border-l-4 border-secondary-container space-y-2">
                 <div className="flex items-center gap-2 text-xs font-semibold text-secondary-container uppercase">
                   <span className="material-symbols-outlined text-sm">shield</span>
-                  <span>SUBTROPICAL PROTECTION STANDARD</span>
+                  <span>SAFE FOR BRISBANE HOMES</span>
                 </div>
                 <p className="text-xs text-on-primary-container leading-relaxed">
-                  Our botanical sanitising rinse forms a breathable barrier against fungal development without leaving sticky residues that attract new dust particles.
+                  We use a gentle sanitising rinse that's safe for kids and pets — no harsh chemicals, no sticky residue left behind.
                 </p>
               </div>
             </div>
@@ -212,12 +212,12 @@ export default function HomePage() {
       {/* SECTION 3: "FROM BOOKING TO FRESH CURTAINS" (4 STEP CARDS) */}
       <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 py-16">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs uppercase tracking-wider text-secondary font-semibold">EASY & CONVENIENT</span>
+          <span className="text-xs uppercase tracking-wider text-secondary font-semibold">HOW IT WORKS</span>
           <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary mt-2">
-            From Booking To Fresh Curtains
+            From Booking to Fresh Curtains
           </h2>
           <p className="text-sm text-on-surface-variant mt-3 leading-relaxed">
-            A seamless 4-step experience designed so you never have to unhook a single pleat or transport heavy fabrics across town.
+            Four simple steps — no dismantling, no drop-offs, no stress. Just send us a message and we'll handle the rest.
           </p>
         </div>
 
@@ -225,29 +225,29 @@ export default function HomePage() {
           {[
             {
               step: "1",
-              title: "Enquire Online",
-              desc: "Tell us your curtain types, track lengths, and preferred appointment window through our fast online form.",
-              badge: "Fast same-day response",
+              title: "Send an Enquiry",
+              desc: "Tell us your curtain type, rough track length, and when suits you. We'll get back to you the same day.",
+              badge: "Same-day response",
               icon: "schedule",
             },
             {
               step: "2",
-              title: "We Confirm",
-              desc: "We confirm fabric suitability, assess specific treatments needed, and lock in your convenient arrival slot.",
+              title: "We Confirm the Details",
+              desc: "We'll check your fabric type and any specific concerns, then lock in a time that works for you.",
               badge: "Fixed arrival window",
               icon: "event_available",
             },
             {
               step: "3",
-              title: "We Clean On-Site",
-              desc: "Our Master Fabric specialist brings calibrated low-moisture steam tools. Your drapes remain hanging safely.",
-              badge: "Zero track removal",
+              title: "We Clean at Your Place",
+              desc: "Our technician arrives with all the gear. Curtains stay on the rail — we do everything around them.",
+              badge: "No rail removal",
               icon: "verified",
             },
             {
               step: "4",
-              title: "Enjoy Fresh Curtains",
-              desc: "Complete a walkthrough inspection with our technician. Curtains are dry, sanitised, and allergen-free in hours.",
+              title: "Done — Enjoy the Difference",
+              desc: "Walk through with us at the end. Curtains are clean, fresh and fully dry within a few hours.",
               badge: "Dry in 2–4 hours",
               icon: "check",
             },
@@ -273,7 +273,7 @@ export default function HomePage() {
             href="/book-now"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-secondary text-white font-semibold text-sm hover:bg-secondary-hover shadow-md transition-all"
           >
-            <span>Enquire For Your Home</span>
+            <span>Get a Free Quote</span>
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </Link>
         </div>
@@ -285,12 +285,12 @@ export default function HomePage() {
         <div className="relative rounded-3xl overflow-hidden shadow-lg bg-primary text-white mb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[380px]">
             <div className="lg:col-span-7 p-8 lg:p-14 flex flex-col justify-center text-white space-y-4 z-10">
-              <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">FABRIC INTEGRITY FIRST</span>
+              <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">HOW WE CLEAN</span>
               <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
-                Gentle On-Site Steam Cleaning
+                Steam Cleaning That's Kind to Your Fabrics
               </h2>
               <p className="text-sm text-on-primary-container max-w-xl leading-relaxed">
-                Our calibrated thermal extraction balances low-moisture vapor and micro-suction tailored specifically for raw Belgian linens, sensitive silks, blackout backings, pinch pleats, and sheer synthetic voiles.
+                We use low-moisture steam — enough heat to kill bacteria and lift grime, not enough to soak or stretch the fabric. Works on linens, silks, blackout panels, pinch pleats, sheers, and everything in between.
               </p>
             </div>
             <div className="lg:col-span-5 relative h-64 lg:h-auto">
@@ -313,14 +313,14 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mb-4">
                 <span className="material-symbols-outlined text-[20px]">style</span>
               </div>
-              <h3 className="font-headline text-xl font-bold text-primary mb-3">What We Treat</h3>
+              <h3 className="font-headline text-xl font-bold text-primary mb-3">What We Clean</h3>
               <ul className="space-y-3 text-xs text-on-surface">
                 {[
-                  "Sheer curtains & delicate lightweight voiles",
-                  "Heavy linen drapes & blackout acrylic linings",
+                  "Sheer curtains & lightweight voiles",
+                  "Heavy linen & blackout curtains",
                   "Pinch pleats, eyelets, S-folds & pelmets",
-                  "Roman blinds, roller blinds & bonded fabrics",
-                  "Mould residue, cooking grease & pet odours",
+                  "Roman blinds, roller blinds & fabric blinds",
+                  "Mould, cooking grease & pet odours",
                 ].map((txt, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-secondary text-base mt-0.5">check</span>
@@ -338,14 +338,14 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mb-4">
                 <span className="material-symbols-outlined text-[20px]">science</span>
               </div>
-              <h3 className="font-headline text-xl font-bold text-primary mb-3">Our Tailored Process</h3>
+              <h3 className="font-headline text-xl font-bold text-primary mb-3">How We Do It</h3>
               <ul className="space-y-3 text-xs text-on-surface">
                 {[
-                  "Fibre burn/swatch testing & dye stability check",
-                  "HEPA dry extraction of trapped micro-dust & dander",
-                  "pH-neutral botanical spot and stain conditioning",
-                  "Controlled low-moisture steam vapor extraction",
-                  "Pleat grooming & natural weighted hang alignment",
+                  "Fabric and dye test before we start",
+                  "Dry vacuum to lift surface dust and dander",
+                  "Gentle spot treatment for stains",
+                  "Low-moisture steam extraction",
+                  "Pleat straightening and hang check",
                 ].map((txt, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-secondary text-base mt-0.5">check</span>
@@ -366,11 +366,11 @@ export default function HomePage() {
               <h3 className="font-headline text-xl font-bold text-primary mb-3">Why Choose Us</h3>
               <ul className="space-y-3 text-xs text-on-surface">
                 {[
-                  "100% in-situ: zero track unhooking required",
-                  "Guaranteed zero fabric shrinkage or colour fade",
-                  "Child & pet safe natural formulations",
-                  "Brisbane family operated with Master Fabric certs",
-                  "Full public liability & textile care insurance",
+                  "Curtains stay hanging — we clean around them",
+                  "No shrinkage, no colour fade, no surprises",
+                  "Safe for kids and pets",
+                  "Brisbane family-run business",
+                  "Fully insured, fixed-price quotes",
                 ].map((txt, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-secondary text-base mt-0.5">check</span>
@@ -389,14 +389,14 @@ export default function HomePage() {
         <div className="p-8 lg:p-12 rounded-3xl bg-white shadow-md border border-primary/10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs uppercase text-secondary font-semibold">INSTANT SPACE PLANNER</span>
+              <span className="text-xs uppercase text-secondary font-semibold">WINDOW PLANNER</span>
               <h2 className="font-headline text-3xl font-bold text-primary">Measure Your Windows</h2>
               <p className="text-xs text-on-surface-variant leading-relaxed">
-                Estimate service scope by window width and fabric density. Our technicians confirm measurements on arrival with laser-guided precision.
+                Get a rough idea of how long your job will take. Our team checks everything on the day and gives you a fixed quote before starting.
               </p>
               <div className="flex items-center gap-2 text-tertiary text-xs font-semibold">
                 <span className="material-symbols-outlined text-base">info</span>
-                <span>No obligations, free quote provided before work starts</span>
+                <span>Free quote, no obligation</span>
               </div>
             </div>
 
@@ -451,7 +451,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-secondary">schedule</span>
                   <div>
-                    <p className="text-xs font-bold text-primary">Typical Treatment Duration</p>
+                    <p className="text-xs font-bold text-primary">How long will it take?</p>
                     <p className="text-xs text-on-surface-variant">{getDurationText(trackLength)}</p>
                   </div>
                 </div>
@@ -471,10 +471,10 @@ export default function HomePage() {
       {/* SECTION 6: TESTIMONIALS */}
       <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 py-16">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs text-secondary uppercase font-semibold">5.0 STAR RATED ACROSS BRISBANE</span>
-          <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary mt-2">What Brisbane Homeowners Say</h2>
+          <span className="text-xs text-secondary uppercase font-semibold">WHAT CUSTOMERS SAY</span>
+          <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary mt-2">Real Reviews from Brisbane Homes</h2>
           <p className="text-xs text-on-surface-variant mt-3">
-            Real feedback from residential clients and property managers in Queenslander homes and luxury riverside towers.
+            Customers from across Brisbane — Queenslanders, apartments, family homes.
           </p>
         </div>
 
@@ -482,24 +482,24 @@ export default function HomePage() {
           {[
             {
               stars: "★★★★★",
-              quote: "“I was terrified of taking down our heavy floor-to-ceiling linen drapes in New Farm. The technician cleaned them right on the tracks without a single drop on our timber floors. They look and smell brand new!”",
+              quote: "We have floor-to-ceiling linens in New Farm and I'd been putting off cleaning them for ages — too scared of shrinkage. The technician sorted them right on the rail. They came out looking brand new.",
               name: "Sarah M.",
               suburb: "New Farm",
               tag: "Linen Sheers",
             },
             {
               stars: "★★★★★",
-              quote: "“Living near the river in Indooroopilly, mould spots and musty smells were creeping onto our bedroom curtains. The steam treatment completely removed the odour and stains. Remarkable difference.”",
+              quote: "We're close to the river in Indooroopilly and the mould on our bedroom curtains was getting bad. Completely gone after the steam treatment — couldn't believe it honestly.",
               name: "David K.",
               suburb: "Indooroopilly",
               tag: "Mould Removal",
             },
             {
               stars: "★★★★★",
-              quote: "“Punctual, super courteous, and zero chemical smell afterwards. Having curtains cleaned without having to re-hook hundreds of pinch pleats is an absolute gamechanger.”",
+              quote: "On time, friendly, and no chemical smell at all. The pinch pleats on our living room curtains haven't looked this good since we bought them. Will book again.",
               name: "Michelle T.",
               suburb: "Paddington",
-              tag: "Full Home Drapes",
+              tag: "Full Home Curtains",
             },
           ].map((t, i) => (
             <div key={i} className="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-6 border border-primary/10">
@@ -524,10 +524,10 @@ export default function HomePage() {
       {/* SECTION 7: FAQ ACCORDION */}
       <section className="w-full max-w-[960px] mx-auto px-4 md:px-6 py-16">
         <div className="text-center max-w-xl mx-auto mb-12">
-          <span className="text-xs text-secondary uppercase font-semibold">GOT QUESTIONS?</span>
+          <span className="text-xs text-secondary uppercase font-semibold">COMMON QUESTIONS</span>
           <h2 className="font-headline text-3xl font-bold text-primary mt-2">Frequently Asked Questions</h2>
           <p className="text-xs text-on-surface-variant mt-2">
-            Everything you need to know about our in-situ steam curtain cleaning service.
+            Straight answers to the questions we get asked most.
           </p>
         </div>
 
@@ -535,23 +535,23 @@ export default function HomePage() {
           {[
             {
               q: "Do you clean curtains while they're still hanging?",
-              a: "Yes! 100% of our cleaning is performed in situ on your existing tracks, rods, or pelmets. You will never have to detach fiddly curtain hooks, climb step ladders, or risk damage during transit.",
+              a: "Yes — every job we do is with the curtains still hanging. No unhooking, no ladders on your part, no trips anywhere. We bring everything we need and work around your curtains where they are.",
             },
             {
               q: "How long does it take for curtains to dry?",
-              a: "Curtains typically dry within 2 to 4 hours. Because we utilize controlled low-moisture thermal extraction, fabrics are left gently refreshed rather than saturated. Normal cross-ventilation or ceiling fans easily speed up the final drying.",
+              a: "Usually 2 to 4 hours. We use low-moisture steam rather than soaking the fabric, so they dry much faster than you might expect. Opening a window or running a ceiling fan helps speed things up.",
             },
             {
               q: "Can you remove stubborn smoke, pet, or cooking odours?",
-              a: "Yes. Multi-layered fabrics tend to trap cooking oils and airborne smoke particles. Our botanical sanitising agent neutralises volatile odour molecules inside the weave rather than merely masking them with artificial fragrance.",
+              a: "Yes. Cooking smells, cigarette smoke and pet odours sink deep into fabric over time. Our steam treatment works through the weave to break down the source of the smell, not just mask it.",
             },
             {
               q: "Is the steam process safe for delicate fabrics like linen or sheer voile?",
-              a: "Absolutely. We conduct a preliminary fibre and dye identification test on an inconspicuous hem before commencing. Our machines allow exact micro-adjustments of heat, pressure, and moisture to ensure zero fibre distortion or dye transfer.",
+              a: "Yes. Before we start we always test the fabric on a hidden area — checking the dye and how the material responds to heat. If anything looks risky we tell you upfront, no surprises.",
             },
             {
               q: "Do I need to take curtains down or prep the room beforehand?",
-              a: "No unhooking or heavy lifting is required on your part. We simply ask that small items or plants on adjacent window sills are moved aside so our technicians have easy, safe access to the tracks.",
+              a: "Not much at all. If you can clear a bit of space along the window sill — move any ornaments, plants or furniture that's right up against the curtains — that's really all we need.",
             },
           ].map((faq, idx) => (
             <div key={idx} className="rounded-2xl bg-white shadow-sm border border-primary/10 overflow-hidden transition-all">
@@ -582,7 +582,7 @@ export default function HomePage() {
               <span className="text-xs text-secondary uppercase font-semibold">LOCAL COVERAGE</span>
               <h2 className="font-headline text-3xl font-bold text-primary mt-2">Serving Greater Brisbane & Surrounds</h2>
               <p className="text-xs text-on-surface-variant mt-3 leading-relaxed">
-                Our fully-equipped mobile fabric care units travel directly to residential properties, penthouses, and heritage homes right across the Brisbane river basin.
+                We come to you. Our van is kitted out with everything needed for the job — no drop-offs, no pick-ups, just one visit from us.
               </p>
             </div>
 
@@ -608,7 +608,7 @@ export default function HomePage() {
             <div className="p-4 rounded-xl bg-surface-container flex items-center gap-3 border border-primary/10">
               <HelpCircle className="w-5 h-5 text-secondary shrink-0" />
               <p className="text-xs text-on-surface">
-                Not sure if we cover your area? Call our friendly dispatch team on{" "}
+                Not sure if we cover your area? Give us a ring on{" "}
                 <a className="font-bold text-primary underline ml-1" href="tel:0405849841">
                   0405 849 841
                 </a>
@@ -633,8 +633,8 @@ export default function HomePage() {
                 <div className="flex items-center gap-3">
                   <span className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
                   <div>
-                    <p className="text-xs font-bold text-primary">Mobile Vans Across Brisbane</p>
-                    <p className="text-[11px] text-on-surface-variant">Same-week bookings available</p>
+                    <p className="text-xs font-bold text-primary">Covering Greater Brisbane</p>
+                    <p className="text-[11px] text-on-surface-variant">Same-week spots usually available</p>
                   </div>
                 </div>
                 <Link href="/contact" className="text-xs font-bold text-primary hover:text-secondary">
@@ -651,12 +651,12 @@ export default function HomePage() {
         <div className="relative rounded-3xl bg-primary p-8 lg:p-14 text-white shadow-xl overflow-hidden">
           <div className="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
           <div className="relative z-10 max-w-2xl space-y-4">
-            <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">PURE AIR & FLAWLESS FABRICS</span>
+            <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">READY WHEN YOU ARE</span>
             <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
-              Ready for Fresher, Healthier Curtains?
+              Give Your Curtains a Proper Clean
             </h2>
             <p className="text-sm text-on-primary-container leading-relaxed">
-              Experience the effortless luxury of professional in-situ curtain steam care in your Brisbane home. Prompt service, respectful technicians, and pristine results.
+              We show up on time, take care of your home, and leave your curtains looking great — it's that simple.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
@@ -679,3 +679,7 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+
+

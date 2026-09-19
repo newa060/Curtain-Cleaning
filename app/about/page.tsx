@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
@@ -26,13 +26,13 @@ export default function AboutPage() {
         <div className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6 text-center flex flex-col items-center z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-secondary-container mb-4">
             <span className="material-symbols-outlined text-[16px]">verified</span>
-            <span className="text-xs font-semibold uppercase tracking-wider">Brisbane Dedicated In-Situ Specialists</span>
+            <span className="text-xs font-semibold uppercase tracking-wider">Brisbane Curtain Cleaning</span>
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white max-w-4xl tracking-tight leading-tight mb-4">
-            Professional Curtain Cleaners Serving Brisbane
+            Curtain Cleaning Done at Your Place, Not a Factory
           </h1>
           <p className="font-body text-base sm:text-lg text-on-primary-container max-w-2xl text-center leading-relaxed mb-8">
-            A dedicated Brisbane fabric care team delivering respectful, meticulous in-situ curtain steam cleaning for private homes, heritage Queenslanders, and residences. We arrive on time, treat your home with care, and restore delicate fabrics right on the rail.
+            We clean curtains at your home while they hang on the rail. No removing them, no dropping them off somewhere, no waiting days to get them back. Just one visit and they're done.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -46,19 +46,19 @@ export default function AboutPage() {
               href="#approach"
               className="inline-flex items-center justify-center text-sm font-semibold text-white hover:bg-white/10 border border-white/30 px-6 py-3.5 rounded-full transition-all"
             >
-              Our Approach
+              STEP BY STEP
             </a>
             <a
               href="#difference"
               className="inline-flex items-center justify-center text-sm font-semibold text-white hover:bg-white/10 border border-white/30 px-6 py-3.5 rounded-full transition-all"
             >
-              Why Choose Us
+              Why People Use Us
             </a>
             <a
               href="#process"
               className="inline-flex items-center justify-center text-sm font-semibold text-white hover:bg-white/10 border border-white/30 px-6 py-3.5 rounded-full transition-all"
             >
-              Our Process
+              The Process
             </a>
           </div>
         </div>
@@ -72,22 +72,22 @@ export default function AboutPage() {
               {
                 icon: "eco",
                 title: "Eco-Friendly Solutions",
-                desc: "Plant-based, non-toxic sanitising steam treatments safe for children, pets, and delicate fibres.",
+                desc: "The products we use are plant-based and non-toxic — safe around kids, pets, and delicate fabrics.",
               },
               {
                 icon: "explore",
                 title: "Local Brisbane-Based",
-                desc: "Master fabric specialists serving Brisbane North, South, Western Suburbs, and Bayside.",
+                desc: "We're Brisbane locals, not a call centre. We know the suburbs and we show up on time.",
               },
               {
                 icon: "security",
                 title: "Fully Insured",
-                desc: "Comprehensive public liability & specialized textile care coverage for total peace of mind.",
+                desc: "Fully covered with public liability insurance for every job, big or small.",
               },
               {
                 icon: "thumb_up",
                 title: "100% Satisfaction",
-                desc: "Guaranteed zero fabric shrinkage, thorough in-situ inspection, and pristine results.",
+                desc: "We don't leave until you're happy with the result. No shrinkage, no surprises.",
               },
             ].map((card, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border border-primary/10 shadow-sm flex flex-col justify-between">
@@ -110,26 +110,26 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column */}
             <div className="lg:col-span-6 space-y-4">
-              <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">FABRIC CARE PHILOSOPHY</span>
+              <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">HOW WE APPROACH EACH JOB</span>
               <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
-                A Structured Approach to Every Job
+                We Check Before We Clean
               </h2>
               <div className="space-y-3 text-on-primary-container text-sm leading-relaxed">
                 <p>
-                  No two window treatments in a subtropical climate age identically. From humidity cycles across Moreton Bay to intense afternoon sun filtering through traditional Queenslander verandas, fabric fibres undergo constant microscopic stress.
+                  Every set of curtains is different. The fabric, the age, how much sun they get, whether there's mould near the window — it all affects how we clean them.
                 </p>
                 <p>
-                  We meticulously assess raw linen weaves, silk blends, open-weave sheers, rubberized thermal backings, and intricate pinch pleats prior to steam application. This upfront scrutiny determines the exact thermal range, moisture volume, and targeted botanical treatment needed to rejuvenate fibres safely without removal or damage.
+                  Before we start, we check the fabric, the stitching, and any problem spots. That way we know exactly how to treat each panel without guessing — and you know what to expect from the result.
                 </p>
               </div>
               <div className="pt-2 flex flex-wrap items-center gap-6 text-secondary-container text-xs font-semibold">
                 <div className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-base">check_circle</span>
-                  <span>Zero Fabric Distortion</span>
+                  <span>No shrinkage or fading</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-base">check_circle</span>
-                  <span>Safe for Coated Backings</span>
+                  <span>Safe for blackout linings</span>
                 </div>
               </div>
             </div>
@@ -140,26 +140,26 @@ export default function AboutPage() {
                 {
                   num: "01",
                   icon: "search",
-                  title: "Professional Fabric & Track Inspection",
-                  desc: "Detailed fibre testing, track weight review, and dye stability assessment before any moisture contacts the drapery.",
+                  title: "We check the fabric first",
+                  desc: "We test the fabric and dye on a hidden spot before applying any heat or moisture. No guesswork.",
                 },
                 {
                   num: "02",
                   icon: "air",
-                  title: "Pre-Treatment & Micro-Dust Extraction",
-                  desc: "Targeted loosening of airborne grime, dust mites, and environmental allergens trapped deep inside woven threads.",
+                  title: "Dry vacuum to clear the surface",
+                  desc: "We vacuum the curtain first to lift out loose dust, hair, and surface debris before the steam goes on.",
                 },
                 {
                   num: "03",
                   icon: "water_drop",
-                  title: "Gentle Low-Moisture Steam Extraction",
-                  desc: "In-situ thermal vapor sanitisation without soaking fabrics, dampening walls, or unhooking delicate pleats.",
+                  title: "Steam clean while hanging",
+                  desc: "Low-moisture steam cleans through the fabric without soaking it — no drips on your walls or floors.",
                 },
                 {
                   num: "04",
                   icon: "assignment_turned_in",
-                  title: "Final Walkthrough & Quality Verification",
-                  desc: "Complete pleat grooming, natural drape alignment, and client sign-off before leaving your home spotless.",
+                  title: "Check it over with you",
+                  desc: "We walk through the finished result with you before we leave. If something needs a second pass, we do it.",
                 },
               ].map((step, idx) => (
                 <div key={idx} className="bg-primary-container/80 backdrop-blur-sm p-5 rounded-2xl flex items-start gap-4 border border-white/10 hover:bg-primary-container transition-colors">
@@ -188,12 +188,12 @@ export default function AboutPage() {
               {/* Sticky Left Descriptor */}
               <div className="lg:col-span-4 flex flex-col justify-between items-start space-y-4">
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-secondary font-semibold block mb-1">HOW WE WORK</span>
+                  <span className="text-xs uppercase tracking-wider text-secondary font-semibold block mb-1">STEP BY STEP</span>
                   <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight mb-4">
-                    Our 8-Step Curtain Care Process
+                    What Happens on the Day
                   </h2>
                   <p className="text-xs text-on-surface-variant leading-relaxed">
-                    A meticulous, step-by-step protocol ensuring your window furnishings receive bespoke attention with zero risk of shrinkage, colour fading, or hardware disruption.
+                    Here's exactly what we do from the moment we arrive to when we pack up and leave.
                   </p>
                 </div>
                 <div className="w-full pt-4 hidden lg:block">
@@ -204,7 +204,7 @@ export default function AboutPage() {
                     Book Your Service
                   </Link>
                   <p className="text-[11px] text-on-surface-variant text-center mt-3">
-                    Prompt Brisbane scheduling & in-situ service
+                    Same-week bookings available
                   </p>
                 </div>
               </div>
@@ -215,50 +215,50 @@ export default function AboutPage() {
                   {
                     num: "01",
                     icon: "manage_search",
-                    title: "Fabric & Weave Inspection",
-                    desc: "Assessing fibre composition, sun exposure levels, and thermal backing stability before setting temperature parameters.",
+                    title: "Fabric check",
+                    desc: "We look at what the curtains are made of and how they've been holding up — sun damage, backing condition, any weak spots.",
                   },
                   {
                     num: "02",
                     icon: "troubleshoot",
-                    title: "Stain & Problem Identification",
-                    desc: "Pinpointing water rings, mould spores, cooking residue, and pet dander spots requiring tailored spot emulsifiers.",
+                    title: "Spot check for stains",
+                    desc: "We identify mould spots, water rings, grease marks, or anything that needs a bit of extra attention before we start.",
                   },
                   {
                     num: "03",
                     icon: "filter_alt",
-                    title: "Pre-Vacuuming & Dust Extraction",
-                    desc: "HEPA-filter dry lifting of surface dust, allergen reservoirs, and loose environmental particulates along the headers.",
+                    title: "Dry vacuum",
+                    desc: "A dry vacuum run along the headers and face of the curtain to pull out loose dust before the steam touches it.",
                   },
                   {
                     num: "04",
                     icon: "science",
-                    title: "Pre-Treatment Application",
-                    desc: "pH-neutral gentle botanical solutions formulated specifically for raw and delicate textiles to dissolve grime gently.",
+                    title: "Spot treatment",
+                    desc: "Any stubborn stains get a gentle treatment first — safe for the fabric, no harsh chemicals.",
                   },
                   {
                     num: "05",
                     icon: "heat_pump",
-                    title: "Professional Steam Sanitisation",
-                    desc: "Controlled temperature dry-vapor application that neutralises dust mites and loosens trapped atmospheric residue.",
+                    title: "Steam clean",
+                    desc: "Low-moisture steam goes through the weave, killing bacteria and loosening anything the vacuum didn't catch.",
                   },
                   {
                     num: "06",
                     icon: "opacity",
-                    title: "Gentle Moisture Extraction",
-                    desc: "Immediate low-pressure extraction preventing over-wetting, ensuring complete 2 to 4 hour drying directly on the track.",
+                    title: "Extract the moisture",
+                    desc: "We extract the moisture straight away so the fabric isn't left damp — curtains are usually dry within 2 to 4 hours.",
                   },
                   {
                     num: "07",
                     icon: "view_in_ar_new",
-                    title: "Odour Neutralisation & Spot Care",
-                    desc: "Elimination of persistent humidity mustiness, pet dander, and cooking fumes directly at the core fibre structure.",
+                    title: "Odour treatment",
+                    desc: "If there are lingering smells from cooking, pets, or moisture, we treat the source in the fabric — not just mask it.",
                   },
                   {
                     num: "08",
                     icon: "verified_user",
-                    title: "Final Quality Walkthrough",
-                    desc: "Pleat alignment check, fabric feel inspection, and immediate walkthrough conducted alongside the homeowner.",
+                    title: "Walk-through with you",
+                    desc: "We check the pleats are sitting right, the fabric looks good, and walk through everything with you before we go.",
                   },
                 ].map((step, idx) => (
                   <div key={idx} className="bg-surface-container p-5 rounded-2xl flex flex-col justify-between hover:bg-surface-container/80 transition-colors border border-primary/5">
@@ -276,16 +276,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. "THE BRISBANE DIFFERENCE" (WHY CHOOSE US) */}
+      {/* 5. "THE BRISBANE DIFFERENCE" (Why People Use Us) */}
       <section className="w-full bg-surface-container py-20 lg:py-28 scroll-mt-20" id="difference">
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs uppercase tracking-wider text-secondary font-semibold block mb-1">WHY CHOOSE US</span>
+            <span className="text-xs uppercase tracking-wider text-secondary font-semibold block mb-1">Why People Use Us</span>
             <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary mb-3">
-              The Curtain Cleaning Brisbane Difference
+              What Makes Us Different
             </h2>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Professional craftsmanship driven by specialized commercial equipment, safe solutions, and genuine care for your home.
+              Honest work, the right equipment, and no shortcuts.
             </p>
           </div>
 
@@ -293,23 +293,23 @@ export default function AboutPage() {
             {[
               {
                 icon: "precision_manufacturing",
-                title: "Proper Equipment",
-                desc: "We use specialized low-moisture continuous steam extraction units calibrated specifically for hanging fabrics, never aggressive carpet wands or supermarket hire gear that can stretch delicate headers or leave fabric soggy.",
+                title: "The Right Gear",
+                desc: "We use proper commercial steam units made for hanging fabrics — not carpet machines or hire-shop equipment that can over-wet and stretch your curtains.",
               },
               {
                 icon: "spa",
-                title: "Safe Fabric-Friendly Products",
-                desc: "pH-neutral, non-toxic, allergen-free botanical solutions that preserve natural linen oils, silk sheens, and rubberized blackout backings without leaving synthetic chemical odours behind.",
+                title: "Products That Won't Damage Your Fabrics",
+                desc: "Everything we use is non-toxic and pH-neutral. It keeps the fabric in good condition and doesn't leave a chemical smell behind.",
               },
               {
                 icon: "visibility",
-                title: "We Look Properly",
-                desc: "Thorough pre-inspection of delicate seams, stitching integrity, and sun-weakened fibres before any treatment touches your curtains. We understand where Brisbane UV degradation typically concentrates.",
+                title: "We Actually Inspect Before We Start",
+                desc: "We check the seams, stitching, and any sun-damaged spots before touching anything. We've seen what Brisbane sun does to fabric over a few years, and we work accordingly.",
               },
               {
                 icon: "verified",
-                title: "No Hidden Surprises",
-                desc: "Clear upfront quotes, zero track unhooking fees, and honest assessments of expected outcomes for old stains or water marks before work commences.",
+                title: "Straight Pricing, No Add-Ons",
+                desc: "You get a clear quote before we start. If there are old stains we can't guarantee removal on, we tell you that upfront — not after the job.",
               },
             ].map((pillar, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl shadow-stitch flex flex-col sm:flex-row gap-4 items-start border border-primary/10">
@@ -329,9 +329,9 @@ export default function AboutPage() {
       {/* CTA FOOTER BANNER */}
       <section className="max-w-[1240px] mx-auto px-4 md:px-6 py-16 text-center">
         <div className="bg-primary text-white p-10 rounded-3xl space-y-4">
-          <h2 className="font-headline text-3xl font-bold text-white">Experience Fresh Drapery Today</h2>
+          <h2 className="font-headline text-3xl font-bold text-white">Ready to Book?</h2>
           <p className="text-xs text-white/80 max-w-lg mx-auto">
-            Book online or speak with our Brisbane technicians for a free, transparent estimate.
+            Send us a message or call — we'll get back to you the same day with a straight answer and a price.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
@@ -347,3 +347,6 @@ export default function AboutPage() {
     </div>
   );
 }
+
+
+

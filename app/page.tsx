@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import {
   Shield,
   HelpCircle,
 } from "lucide-react";
+import BrisbaneMap from "@/components/BrisbaneMap";
 
 export default function HomePage() {
   // Track length slider state for Section 5
@@ -618,30 +619,7 @@ export default function HomePage() {
 
           {/* Map View Display */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-3xl overflow-hidden shadow-md bg-surface-container h-[380px] border border-primary/10">
-              <div
-                className="w-full h-full bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOnXh_2lJUH-oUNmAVH4VIqf3dbXrf6TtXuaKDeDggYzdMFX4zmyWrGPY_LWFcD3hhXQ7xcO-Ou89S6YCtBanGbFkCjJ13wP86KBkAYZdKg2q7BTOrVsz71nSEfDJ4teoq8vR1Um27H6vs5164KeojOENvDVY0p-mqPG2qSdBSk_dAZTE13sYKOpKuCOUMVp4rr8vQOXeotgJZ2ZSfhGtvWvwaZjbdmsxG9TcLBRflX_XNAzOSBbV-lA')",
-                }}
-              ></div>
-              <div className="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-
-              {/* Floating Badge */}
-              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md shadow-md flex items-center justify-between border border-primary/10">
-                <div className="flex items-center gap-3">
-                  <span className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <div>
-                    <p className="text-xs font-bold text-primary">Covering Greater Brisbane</p>
-                    <p className="text-[11px] text-on-surface-variant">Same-week spots usually available</p>
-                  </div>
-                </div>
-                <Link href="/contact" className="text-xs font-bold text-primary hover:text-secondary">
-                  Check Dates →
-                </Link>
-              </div>
-            </div>
+            <BrisbaneMap height="400px" />
           </div>
         </div>
       </section>

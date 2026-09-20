@@ -1,72 +1,47 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Check, 
-  Sparkles, 
-  ShieldCheck, 
-  MapPin, 
-  Calendar as CalendarIcon, 
-  Lock, 
-  CheckCircle2, 
-  Clock, 
-  Compass, 
-  Blinds, 
-  Wind, 
-  Droplets,
-  Layers
+import {
+  User,
+  Mail,
+  Phone,
+  MapPin,
+  Calendar,
+  Clock,
+  Check,
+  CheckCircle2,
+  FileText,
+  ShieldCheck,
+  Lock,
 } from "lucide-react";
 
-const SERVICES_OPTIONS = [
-  {
-    id: "Curtain Cleaning",
-    title: "Curtain Cleaning",
-    desc: "Lined, thermal, blackout and heavy curtains.",
-    icon: Layers,
-  },
-  {
-    id: "Sheer Cleaning",
-    title: "Sheer Cleaning",
-    desc: "Voile, lace, linen sheers — anything lightweight and delicate.",
-    icon: Sparkles,
-  },
-  {
-    id: "Blind Cleaning",
-    title: "Blind Cleaning",
-    desc: "Roman, vertical, roller, and fabric blinds.",
-    icon: Blinds,
-  },
-  {
-    id: "Odour Removal",
-    title: "Odour Removal",
-    desc: "Cooking smells, pet odours, mustiness.",
-    icon: Wind,
-  },
-  {
-    id: "Stain Treatment",
-    title: "Stain Treatment",
-    desc: "Water marks, mould spots, and specific stains.",
-    icon: Droplets,
-    colSpan: "sm:col-span-2 lg:col-span-1",
-  },
+const AVAILABLE_SERVICES = [
+  { id: "Curtain Cleaning", label: "Curtain Cleaning" },
+  { id: "Sheer Cleaning", label: "Sheer Cleaning" },
+  { id: "Blind Cleaning", label: "Blind Cleaning" },
+  { id: "Mould Treatment", label: "Mould Treatment" },
+  { id: "Stain Removal", label: "Stain Removal" },
+  { id: "Odour Removal", label: "Odour Removal" },
 ];
 
 export default function BookNowPage() {
-  const [selectedServices, setSelectedServices] = useState<string[]>(["Curtain Cleaning"]);
-  const [preferredDate, setPreferredDate] = useState<string>("");
-  const [dateFlexibility, setDateFlexibility] = useState<string>("Exact day only");
-  
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
     address: "",
+    date: "",
+    time: "Morning (8:00 AM - 12:00 PM)",
     instructions: "",
   });
 
+  const [selectedServices, setSelectedServices] = useState<string[]>([
+    "Curtain Cleaning",
+  ]);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const toggleService = (serviceId: string) => {
     if (selectedServices.includes(serviceId)) {
@@ -80,392 +55,363 @@ export default function BookNowPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setIsSubmitted(true);
+    }, 700);
   };
 
   return (
-    <div className="w-full bg-[#f1fcf8] min-h-screen">
-      {/* Subtle Hero / Top Banner */}
-      <section className="relative bg-[#0f4c4c] text-white overflow-hidden py-14 px-4 sm:px-6 lg:px-8">
-        <div 
-          className="absolute inset-0 opacity-10 pointer-events-none" 
-          style={{ 
-            backgroundImage: "radial-gradient(#d7e8c8 1px, transparent 1px)", 
-            backgroundSize: "24px 24px" 
-          }}
-        />
+    <div className="w-full bg-surface min-h-screen">
+      {/* Hero / Top Banner */}
+      <section className="relative bg-primary text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[620px] h-[320px] bg-primary-container rounded-full blur-3xl opacity-40 pointer-events-none"></div>
         <div className="relative max-w-[1240px] mx-auto text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-sm text-[#d7e8c8] text-xs font-semibold uppercase tracking-wider mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#fc9267]"></span>
-            BOOK A CLEAN
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-sm text-secondary-container text-xs font-semibold uppercase tracking-wider mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            BOOK ONLINE
           </div>
           <h1 className="font-headline text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-2xl tracking-tight">
-            Book a Curtain Clean
+            Book Your Curtain Clean
           </h1>
-          <p className="font-sans text-sm sm:text-base text-[#85bbbb] max-w-xl mt-3 font-normal leading-relaxed">
-            No payment upfront. We'll confirm your booking and run through the details with you before the day.
+          <p className="font-body text-sm sm:text-base text-on-primary-container max-w-xl mt-3 font-normal leading-relaxed">
+            No payment upfront. We'll confirm your booking details and provide a exact price before our visit.
           </p>
 
-          <div className="mt-8 pt-6 flex flex-wrap items-center justify-center gap-y-3 gap-x-6 text-[#85bbbb] text-xs sm:text-sm">
+          <div className="mt-8 pt-6 flex flex-wrap items-center justify-center gap-y-3 gap-x-6 text-on-primary-container text-xs sm:text-sm">
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#fc9267]" />
+              <ShieldCheck className="w-4 h-4 text-secondary-container" />
               <span className="text-white font-medium">Cleaned at your home</span>
             </div>
-            <span className="text-[#85bbbb]/40 hidden sm:inline">•</span>
+            <span className="text-white/40 hidden sm:inline">•</span>
             <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#fc9267]" />
-              <span className="text-white font-medium">No shrinkage</span>
+              <CheckCircle2 className="w-4 h-4 text-secondary-container" />
+              <span className="text-white font-medium">Zero fabric shrinkage</span>
             </div>
-            <span className="text-[#85bbbb]/40 hidden sm:inline">•</span>
+            <span className="text-white/40 hidden sm:inline">•</span>
             <div className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-[#fc9267]" />
-              <span className="text-white font-medium">All of Brisbane</span>
+              <MapPin className="w-4 h-4 text-secondary-container" />
+              <span className="text-white font-medium">All Greater Brisbane</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Booking Form Card Container */}
-      <section className="py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-[#f1fcf8]">
+      <section className="py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <form 
-            onSubmit={handleSubmit}
-            className="bg-white rounded-2xl shadow-xl p-6 sm:p-10 lg:p-12 space-y-10 transition-all border border-[#0F4C4C]/10"
-          >
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-primary/15">
             {isSubmitted ? (
-              <div className="py-8 text-center space-y-4">
-                <div className="w-12 h-12 rounded-full bg-[#fc9267]/20 text-[#9a4521] mx-auto flex items-center justify-center">
-                  <CheckCircle2 className="w-8 h-8 text-[#0F4C4C]" />
+              <div className="p-8 sm:p-12 text-center space-y-5">
+                <div className="w-16 h-16 rounded-full bg-surface-container text-primary mx-auto flex items-center justify-center">
+                  <CheckCircle2 className="w-10 h-10 text-secondary" />
                 </div>
-                <h3 className="font-headline text-2xl font-bold text-[#003434]">Request Sent!</h3>
-                <p className="text-sm text-[#404848] max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong>{formData.fullName || "valued client"}</strong>! We'll be in touch within a couple of hours to confirm your booking for <strong>{selectedServices.join(", ")}</strong> 
+                <h2 className="font-headline text-3xl font-bold text-primary">
+                  Booking Confirmed!
+                </h2>
+                <p className="text-sm text-on-surface-variant max-w-md mx-auto leading-relaxed">
+                  Thank you, <strong>{formData.fullName || "valued client"}</strong>! We have received your booking request for <strong>{selectedServices.join(", ")}</strong>.
+                </p>
+                <div className="p-4 rounded-2xl bg-surface-container max-w-md mx-auto text-left text-xs space-y-2 text-primary">
+                  <div><strong>Preferred Date:</strong> {formData.date || "As soon as possible"}</div>
+                  <div><strong>Time Slot:</strong> {formData.time}</div>
+                  <div><strong>Address:</strong> {formData.address || "Brisbane address"}</div>
+                </div>
+                <p className="text-xs text-on-surface-variant">
+                  Our team will call or email you shortly to confirm exact arrival details.
                 </p>
                 <div className="pt-4">
                   <button
                     type="button"
-                    onClick={() => setIsSubmitted(false)}
-                    className="px-6 py-2.5 rounded-full bg-[#0F4C4C] text-white text-xs font-semibold hover:bg-[#003434] transition-all"
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setFormData({
+                        fullName: "",
+                        email: "",
+                        phone: "",
+                        address: "",
+                        date: "",
+                        time: "Morning (8:00 AM - 12:00 PM)",
+                        instructions: "",
+                      });
+                    }}
+                    className="px-8 py-3 rounded-full bg-primary text-white text-xs font-bold hover:bg-primary-dark transition-all"
                   >
-                    Send Another Request
+                    Submit Another Booking
                   </button>
                 </div>
               </div>
             ) : (
-              <>
-                {/* STEP 1: What do you need cleaned? */}
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f4c4c] text-white flex items-center justify-center font-semibold text-sm">
-                      1
-                    </span>
-                    <div>
-                      <h2 className="font-headline text-xl sm:text-2xl font-semibold text-[#003434] tracking-tight">
-                        What do you need cleaned?
-                      </h2>
-                      <p className="text-xs sm:text-sm text-[#404848] mt-1">
-                        Pick everything that applies — you can select more than one.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 pt-1">
-                    {SERVICES_OPTIONS.map((srv) => {
-                      const IconComponent = srv.icon;
-                      const isSelected = selectedServices.includes(srv.id);
-                      return (
-                        <div
-                          key={srv.id}
-                          onClick={() => toggleService(srv.id)}
-                          className={`group relative flex flex-col justify-between p-4 rounded-xl transition-all cursor-pointer select-none border ${
-                            isSelected
-                              ? "bg-[#e5f0ed] border-[#0F4C4C] shadow-sm"
-                              : "bg-[#ebf6f3] border-transparent hover:bg-[#e5f0ed]"
-                          } ${srv.colSpan || ""}`}
-                        >
-                          <div className="flex items-start justify-between">
-                            <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center text-[#0f4c4c] group-hover:scale-105 transition-transform shadow-xs">
-                              <IconComponent className="w-5 h-5" />
-                            </div>
-                            <div
-                              className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${
-                                isSelected
-                                  ? "bg-[#0f4c4c] text-white"
-                                  : "bg-white text-transparent border border-[#bfc8c8]"
-                              }`}
-                            >
-                              <Check className="w-3.5 h-3.5" />
-                            </div>
-                          </div>
-                          <div className="mt-4">
-                            <span className="block font-sans text-sm font-semibold text-[#003434]">
-                              {srv.title}
-                            </span>
-                            <span className="block text-xs text-[#404848] mt-0.5">
-                              {srv.desc}
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                <div className="w-full h-px bg-[#e5f0ed]"></div>
-
-                {/* STEP 2: When suits you? */}
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f4c4c] text-white flex items-center justify-center font-semibold text-sm">
-                      2
-                    </span>
-                    <div>
-                      <h2 className="font-headline text-xl sm:text-2xl font-semibold text-[#003434] tracking-tight">
-                        When suits you?
-                      </h2>
-                      <p className="text-xs sm:text-sm text-[#404848] mt-1">
-                        Pick a day that works for you and we'll confirm whether we can make it work.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4 pt-1">
-                    <div>
-                      <label 
-                        className="block text-xs font-semibold uppercase tracking-wider text-[#003434] mb-2" 
-                        htmlFor="preferred-date"
-                      >
-                        Preferred date
-                      </label>
-                      <input
-                        id="preferred-date"
-                        type="date"
-                        required
-                        value={preferredDate}
-                        onChange={(e) => setPreferredDate(e.target.value)}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#ebf6f3] text-[#141d1c] font-sans text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
-                      />
-                    </div>
-
-                    <div className="pt-2">
-                      <span className="block text-xs uppercase tracking-wider text-[#404848] mb-2.5 font-semibold">
-                        Flexibility Option
+              <form onSubmit={handleSubmit} className="divide-y divide-primary/10">
+                <div className="p-6 sm:p-8 lg:p-10 space-y-8">
+                  {/* SECTION 1: Personal Details */}
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-headline font-bold text-sm shrink-0 shadow-sm">
+                        1
                       </span>
-                      <div className="flex flex-wrap gap-2.5">
-                        {[
-                          "Exact day only",
-                          "Flexible (± 1 day)",
-                          "As soon as possible",
-                        ].map((option) => {
-                          const isChecked = dateFlexibility === option;
-                          return (
-                            <button
-                              key={option}
-                              type="button"
-                              onClick={() => setDateFlexibility(option)}
-                              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium transition-all ${
-                                isChecked
-                                  ? "bg-[#e5f0ed] text-[#141d1c] font-semibold border border-[#0F4C4C]"
-                                  : "bg-[#ebf6f3] text-[#141d1c] hover:bg-[#e5f0ed] border border-transparent"
+                      <h2 className="font-headline text-xl sm:text-2xl font-bold text-primary tracking-tight">
+                        Personal Details
+                      </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div>
+                        <label className="text-[11px] font-bold font-headline text-primary tracking-wider uppercase block mb-2">
+                          FULL NAME *
+                        </label>
+                        <div className="relative">
+                          <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/60" />
+                          <input
+                            type="text"
+                            required
+                            placeholder="Full Name"
+                            value={formData.fullName}
+                            onChange={(e) =>
+                              setFormData({ ...formData, fullName: e.target.value })
+                            }
+                            className="w-full px-4 py-3.5 pl-11 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="text-[11px] font-bold font-headline text-primary tracking-wider uppercase block mb-2">
+                          EMAIL ADDRESS *
+                        </label>
+                        <div className="relative">
+                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/60" />
+                          <input
+                            type="email"
+                            required
+                            placeholder="Email Address"
+                            value={formData.email}
+                            onChange={(e) =>
+                              setFormData({ ...formData, email: e.target.value })
+                            }
+                            className="w-full px-4 py-3.5 pl-11 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="text-[11px] font-bold font-headline text-primary tracking-wider uppercase block mb-2">
+                          MOBILE PHONE *
+                        </label>
+                        <div className="relative">
+                          <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/60" />
+                          <input
+                            type="tel"
+                            required
+                            placeholder="Phone Number"
+                            value={formData.phone}
+                            onChange={(e) =>
+                              setFormData({ ...formData, phone: e.target.value })
+                            }
+                            className="w-full px-4 py-3.5 pl-11 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="text-[11px] font-bold font-headline text-primary tracking-wider uppercase block mb-2">
+                          PROPERTY ADDRESS *
+                        </label>
+                        <div className="relative">
+                          <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/60" />
+                          <input
+                            type="text"
+                            required
+                            placeholder="Property Address"
+                            value={formData.address}
+                            onChange={(e) =>
+                              setFormData({ ...formData, address: e.target.value })
+                            }
+                            className="w-full px-4 py-3.5 pl-11 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* SECTION 2: Preferred Date */}
+                  <div className="space-y-6 pt-2">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-headline font-bold text-sm shrink-0 shadow-sm">
+                        2
+                      </span>
+                      <h2 className="font-headline text-xl sm:text-2xl font-bold text-primary tracking-tight">
+                        Preferred Date
+                      </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div>
+                        <label className="text-[11px] font-bold font-headline text-primary tracking-wider uppercase block mb-2">
+                          DATE *
+                        </label>
+                        <div className="relative">
+                          <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/60 pointer-events-none" />
+                          <input
+                            type="date"
+                            required
+                            value={formData.date}
+                            onChange={(e) =>
+                              setFormData({ ...formData, date: e.target.value })
+                            }
+                            className="w-full px-4 py-3.5 pl-11 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="text-[11px] font-bold font-headline text-primary tracking-wider uppercase block mb-2">
+                          PREFERRED TIME
+                        </label>
+                        <div className="relative">
+                          <Clock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/60 pointer-events-none" />
+                          <select
+                            value={formData.time}
+                            onChange={(e) =>
+                              setFormData({ ...formData, time: e.target.value })
+                            }
+                            className="w-full px-4 py-3.5 pl-11 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all cursor-pointer appearance-none"
+                          >
+                            <option value="Morning (8:00 AM - 12:00 PM)">
+                              Morning (8:00 AM - 12:00 PM)
+                            </option>
+                            <option value="Afternoon (12:00 PM - 4:00 PM)">
+                              Afternoon (12:00 PM - 4:00 PM)
+                            </option>
+                            <option value="Evening (4:00 PM - 7:00 PM)">
+                              Evening (4:00 PM - 7:00 PM)
+                            </option>
+                            <option value="Flexible All Day">Flexible All Day</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* SECTION 3: Select Services */}
+                  <div className="space-y-6 pt-2">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-headline font-bold text-sm shrink-0 shadow-sm">
+                        3
+                      </span>
+                      <h2 className="font-headline text-xl sm:text-2xl font-bold text-primary tracking-tight">
+                        Select Services
+                      </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {AVAILABLE_SERVICES.map((srv) => {
+                        const isSelected = selectedServices.includes(srv.id);
+                        return (
+                          <div
+                            key={srv.id}
+                            onClick={() => toggleService(srv.id)}
+                            className={`flex items-center gap-3 p-4 rounded-2xl cursor-pointer select-none transition-all border ${
+                              isSelected
+                                ? "bg-[#f0f7f5] border-primary text-primary shadow-xs font-bold"
+                                : "bg-[#f8fcfb] border-primary/20 text-on-surface-variant hover:border-primary/40 font-medium"
+                            }`}
+                          >
+                            <div
+                              className={`w-5 h-5 rounded-md flex items-center justify-center transition-all ${
+                                isSelected
+                                  ? "bg-primary text-white"
+                                  : "bg-white border border-primary/30"
                               }`}
                             >
-                              <span
-                                className={`w-2 h-2 rounded-full flex-shrink-0 ${
-                                  isChecked ? "bg-[#0f4c4c]" : "bg-[#bfc8c8]"
-                                }`}
-                              />
-                              <span>{option}</span>
-                            </button>
-                          );
-                        })}
-                      </div>
+                              {isSelected && <Check className="w-3.5 h-3.5" />}
+                            </div>
+                            <span className="text-xs sm:text-sm font-headline">
+                              {srv.label}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
-                </div>
 
-                <div className="w-full h-px bg-[#e5f0ed]"></div>
-
-                {/* STEP 3: Your Details */}
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f4c4c] text-white flex items-center justify-center font-semibold text-sm">
-                      3
-                    </span>
-                    <div>
-                      <h2 className="font-headline text-xl sm:text-2xl font-semibold text-[#003434] tracking-tight">
-                        Your Details
+                  {/* SECTION 4: Special Instructions (Optional) */}
+                  <div className="space-y-6 pt-2">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-headline font-bold text-sm shrink-0 shadow-sm">
+                        4
+                      </span>
+                      <h2 className="font-headline text-xl sm:text-2xl font-bold text-primary tracking-tight">
+                        Special Instructions (Optional)
                       </h2>
-                      <p className="text-xs sm:text-sm text-[#404848] mt-1">
-                        So we can confirm the booking and get in touch if we need anything.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4 pt-1">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-semibold text-[#003434] mb-1.5" htmlFor="full-name">
-                          Full Name *
-                        </label>
-                        <input
-                          id="full-name"
-                          type="text"
-                          required
-                          placeholder="Full Name"
-                          value={formData.fullName}
-                          onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-semibold text-[#003434] mb-1.5" htmlFor="email-address">
-                          Email Address *
-                        </label>
-                        <input
-                          id="email-address"
-                          type="email"
-                          required
-                          placeholder="Email Address"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-semibold text-[#003434] mb-1.5" htmlFor="mobile-phone">
-                          Mobile Phone *
-                        </label>
-                        <input
-                          id="mobile-phone"
-                          type="tel"
-                          required
-                          placeholder="Phone Number"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-semibold text-[#003434] mb-1.5" htmlFor="property-address">
-                          Property Address & Suburb *
-                        </label>
-                        <input
-                          id="property-address"
-                          type="text"
-                          required
-                          placeholder="Property Address & Suburb"
-                          value={formData.address}
-                          onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all border border-transparent focus:border-[#0F4C4C]"
-                        />
-                      </div>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-[#003434] mb-1.5" htmlFor="special-instructions">
-                        Anything else we should know? \(Optional\)
+                      <label className="text-[11px] font-bold font-headline text-primary tracking-wider uppercase block mb-2">
+                        ADDITIONAL DETAILS
                       </label>
-                      <textarea
-                        id="special-instructions"
-                        rows={4}
-                        placeholder="Fabric type, ceiling height, parking, mould or stain concerns — anything that helps us prepare."
-                        value={formData.instructions}
-                        onChange={(e) => setFormData({ ...formData, instructions: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-[#ebf6f3] text-[#141d1c] placeholder-[#707978] text-sm focus:outline-none focus:bg-[#e5f0ed] transition-all resize-none border border-transparent focus:border-[#0F4C4C]"
-                      />
+                      <div className="relative">
+                        <FileText className="absolute left-4 top-4 w-4 h-4 text-primary/60 pointer-events-none" />
+                        <textarea
+                          rows={4}
+                          placeholder="Specific stains, access notes, parking instructions, pets, etc."
+                          value={formData.instructions}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              instructions: e.target.value,
+                            })
+                          }
+                          className="w-full px-4 py-3.5 pl-11 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50 min-h-[120px] resize-y"
+                        ></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Submit Button & Trust Disclaimers */}
-                <div className="pt-4 space-y-4">
+                {/* Bottom Submit Bar */}
+                <div className="bg-[#f0f7f5] px-6 sm:px-8 py-6 border-t border-primary/10 flex flex-col items-center gap-3">
                   <button
                     type="submit"
-                    className="w-full py-4 px-6 rounded-full bg-[#003434] hover:bg-[#0f4c4c] text-white font-semibold text-base shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-3 cursor-pointer"
+                    disabled={loading}
+                    className="w-full py-4 px-8 rounded-2xl bg-primary hover:bg-primary-dark active:scale-[0.99] text-white font-headline text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    <span>Request Booking</span>
-                    <CalendarIcon className="w-5 h-5" />
+                    <span>{loading ? "Processing..." : "Confirm Booking"}</span>
+                    <CheckCircle2 className="w-5 h-5" />
                   </button>
 
-                  <div className="text-center space-y-1.5">
-                    <p className="text-xs text-[#404848]">
-                      No payment now. We'll call to confirm the details before the visit.
-                    </p>
-                    <div className="inline-flex items-center gap-1.5 text-[#707978] text-xs">
-                      <Lock className="w-3.5 h-3.5" />
-                      <span>No obligation · We don't share your details</span>
-                    </div>
+                  <div className="flex items-center gap-2 text-on-surface-variant text-xs pt-1">
+                    <Lock className="w-3.5 h-3.5 text-secondary" />
+                    <span>No upfront payment required. Free cancellation.</span>
                   </div>
                 </div>
-              </>
+              </form>
             )}
-          </form>
-        </div>
-      </section>
-
-      {/* Quick Trust Strip / Guarantees */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-8 bg-[#f1fcf8]">
-        <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-6 rounded-xl shadow-xs flex flex-col items-start gap-3 border border-[#0F4C4C]/5">
-              <div className="w-10 h-10 rounded-lg bg-[#ebf6f3] flex items-center justify-center text-[#0f4c4c]">
-                <Clock className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-sans text-sm font-semibold text-[#003434]">Quick Response</h3>
-                <p className="text-xs text-[#404848] mt-1 leading-relaxed">
-                  We get back to most enquiries within a couple of hours during business hours.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-xs flex flex-col items-start gap-3 border border-[#0F4C4C]/5">
-              <div className="w-10 h-10 rounded-lg bg-[#ebf6f3] flex items-center justify-center text-[#0f4c4c]">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-sans text-sm font-semibold text-[#003434]">We Come to You</h3>
-                <p className="text-xs text-[#404848] mt-1 leading-relaxed">
-                  Curtains stay hanging the whole time. No removing, no lugging them anywhere.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-xs flex flex-col items-start gap-3 border border-[#0F4C4C]/5">
-              <div className="w-10 h-10 rounded-lg bg-[#ebf6f3] flex items-center justify-center text-[#0f4c4c]">
-                <Compass className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-sans text-sm font-semibold text-[#003434]">Based in Brisbane</h3>
-                <p className="text-xs text-[#404848] mt-1 leading-relaxed">
-                  We cover Brisbane North, South, Western Suburbs, and the Bayside.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Editorial Textile Context Split Card */}
-      <section className="pb-24 px-4 sm:px-6 lg:px-8 bg-[#f1fcf8]">
-        <div className="max-w-3xl mx-auto rounded-2xl bg-[#ebf6f3] p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 border border-[#0F4C4C]/10">
-          <div className="w-full sm:w-1/3 aspect-[4/3] rounded-xl overflow-hidden shadow-sm flex-shrink-0 relative">
+      {/* Editorial Split Banner */}
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto rounded-3xl bg-surface-container p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 border border-primary/10 shadow-sm">
+          <div className="w-full sm:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden shadow-sm flex-shrink-0 relative">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3dFhhTTuHT_UIHWANJSzfqCUTPwkOXbVGKM188lXKwfqQwaEdL-A5xNDbfcB1GcTSXkKvQr-ggovqnyaUgTzacVvvlDtYkLV-dVu4YJo6V54b6RYyoVuDhFnXyuzZIPq6F25nqMWWjyb6acUrNrYRVc7GPXy6o31fSRrmbVLPTutjXBFGtlnXem2_yvMJJ6WYeR5Q_JEl98UocHmRExic2txwOSse4g-J7R70HVJxJWZa0OYMEN65kA"
-              alt="Sunlit Australian living room in Brisbane with elegant floor to ceiling cream linen curtains"
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
+              alt="Sunlit Australian living room with clean curtains"
               fill
               className="object-cover"
             />
           </div>
           <div className="flex flex-col space-y-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#9a4521]">
+            <span className="text-xs font-bold uppercase tracking-wider text-secondary">
               WHY LEAVE THEM HANGING
             </span>
-            <h4 className="font-headline text-lg sm:text-xl font-semibold text-[#003434]">
-              Taking Curtains Down Often Causes More Damage
+            <h4 className="font-headline text-lg sm:text-xl font-bold text-primary">
+              Cleaned Right Where They Hang
             </h4>
-            <p className="text-xs sm:text-sm text-[#404848] leading-relaxed">
-              Heavy curtains are awkward to remove and easy to damage in the process — tracks get bent, seams tear, pleats lose their shape. Cleaning them while they hang avoids all of that.
+            <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              Dismantling heavy curtains is awkward and can damage tracks and pleats. Our gentle steam process cleans your curtains on the track so you don't lose privacy or window protection.
             </p>
           </div>
         </div>
@@ -473,4 +419,3 @@ export default function BookNowPage() {
     </div>
   );
 }
-

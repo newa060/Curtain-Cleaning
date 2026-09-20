@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export const Navbar: React.FC = () => {
@@ -21,9 +22,16 @@ export const Navbar: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#f1fcf8]/95 backdrop-blur-md border-b border-[#0F4C4C]/10 transition-colors">
       <div className="h-20 w-full max-w-[1240px] mx-auto px-4 md:px-6 flex items-center justify-between gap-4">
         {/* Logo & Brand Title */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-            <span className="material-symbols-outlined text-[22px]">curtains</span>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 md:w-11 md:h-11 flex items-center justify-center shrink-0">
+            <Image
+              src="/assets/logo.png"
+              alt="Curtain Cleaning Brisbane Logo"
+              width={44}
+              height={44}
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform"
+              priority
+            />
           </div>
           <span className="font-headline text-xl md:text-2xl text-primary font-bold tracking-tight">
             Curtain Cleaning Brisbane

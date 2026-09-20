@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
 
 export const Footer: React.FC = () => {
@@ -10,11 +11,15 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap xl:justify-between gap-10 xl:gap-16 pb-12 border-b border-white/10">
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
-                <span className="material-symbols-outlined text-[20px]">
-                  curtains
-                </span>
+            <div className="flex items-center gap-3">
+              <div className="relative w-10 h-10 flex items-center justify-center shrink-0 bg-white p-1 rounded-xl shadow-sm border border-white/20">
+                <Image
+                  src="/assets/logo.png"
+                  alt="Curtain Cleaning Brisbane Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-headline text-2xl font-bold tracking-tight text-white">
                 Curtain Cleaning Brisbane

@@ -4,9 +4,15 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://curtaincleaningbrisbane.com.au"),
   title: "Curtain Cleaning Brisbane | On-Site Steam & Ultrasonic Fabric Care",
   description:
     "Gentle, professional on-site curtain steam cleaning in Brisbane. We clean delicate linen, sheer, silk, and heavy velvet curtains directly on your tracks without dismantling. Fast 2-4 hour drying time.",
+  icons: {
+    icon: "/assets/logo.png",
+    shortcut: "/assets/logo.png",
+    apple: "/assets/logo.png",
+  },
   keywords: [
     "Curtain Cleaning Brisbane",
     "On-Site Curtain Cleaning",
@@ -20,6 +26,14 @@ export const metadata: Metadata = {
     description: "Professional gentle steam sanitisation for delicate hanging curtains across Brisbane.",
     url: "https://curtaincleaningbrisbane.com.au",
     siteName: "Curtain Cleaning Brisbane",
+    images: [
+      {
+        url: "/assets/logo.png",
+        width: 800,
+        height: 800,
+        alt: "Curtain Cleaning Brisbane Logo",
+      },
+    ],
     locale: "en_AU",
     type: "website",
   },

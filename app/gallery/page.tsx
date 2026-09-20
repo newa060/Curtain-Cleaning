@@ -44,11 +44,10 @@ export default function GalleryPage() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
-                activeCategory === cat.id
-                  ? "bg-primary text-white shadow-sm"
-                  : "bg-white text-on-surface hover:bg-surface-container border border-outline-variant"
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${activeCategory === cat.id
+                ? "bg-primary text-white shadow-sm"
+                : "bg-white text-on-surface hover:bg-surface-container border border-outline-variant"
+                }`}
             >
               {cat.label}
             </button>

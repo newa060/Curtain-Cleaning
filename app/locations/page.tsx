@@ -5,6 +5,8 @@ import Link from "next/link";
 import { BRISBANE_SUBURBS } from "@/data/locations";
 import { MapPin, Search, ArrowRight, CheckCircle2 } from "lucide-react";
 
+import BrisbaneMap from "@/components/BrisbaneMap";
+
 export default function LocationsPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -70,18 +72,9 @@ export default function LocationsPage() {
           </div>
         </div>
 
-        {/* Map Placeholder UI */}
-        <div className="mt-12 bg-white rounded-3xl border border-primary/10 overflow-hidden shadow-stitch p-6 text-center space-y-4">
-          <h3 className="font-headline text-xl font-bold text-primary">Greater Brisbane Service Coverage Map</h3>
-          <div className="relative aspect-[16/7] w-full rounded-2xl bg-surface-container overflow-hidden flex items-center justify-center border border-primary/10">
-            <div className="text-center p-6 space-y-2">
-              <MapPin className="w-8 h-8 text-secondary mx-auto animate-bounce" />
-              <span className="font-headline font-bold text-primary text-base block">Servicing All 15km Radius from Brisbane CBD</span>
-              <p className="text-xs text-on-surface-variant max-w-md mx-auto">
-                Including Hamilton, Ascot, New Farm, Bulimba, Paddington, Indooroopilly, Clayfield, Chermside, and Carindale.
-              </p>
-            </div>
-          </div>
+        {/* Live Brisbane Coverage Map Section */}
+        <div className="mt-12">
+          <BrisbaneMap showCardHeader={true} showSuburbsList={true} height="480px" />
         </div>
       </section>
     </div>

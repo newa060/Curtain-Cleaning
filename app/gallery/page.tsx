@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import BookingForm from "@/components/BookingForm";
 import { GALLERY_DATA } from "@/data/gallery";
 import { ArrowRight, Sparkles, Filter } from "lucide-react";
 
@@ -117,6 +118,40 @@ export default function GalleryPage() {
             <span>Book Your Cleaning</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
+        </div>
+      </section>
+
+      {/* BOOKING FORM SECTION */}
+      <section className="w-full bg-surface-container py-16 lg:py-20 px-4 md:px-6">
+        <div className="max-w-[1240px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div className="lg:col-span-4 space-y-4 lg:pt-4">
+              <span className="text-xs uppercase tracking-wider text-secondary font-semibold">BOOK A CLEAN</span>
+              <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary leading-tight">
+                Ready to Book?
+              </h2>
+              <p className="text-sm text-on-surface-variant leading-relaxed">
+                Fill in your details and we'll confirm the same day. No payment required upfront.
+              </p>
+              <ul className="space-y-2 pt-2 text-sm text-on-surface">
+                {["Curtains stay on the rail", "Same-week bookings available", "Free quote, no obligation"].map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
+              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+                <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
+                <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
+              </div>
+              <div className="p-6 sm:p-8">
+                <BookingForm />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

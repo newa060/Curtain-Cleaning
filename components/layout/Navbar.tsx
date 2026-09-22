@@ -19,23 +19,20 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#f1fcf8]/95 backdrop-blur-md border-b border-[#0F4C4C]/10 transition-colors">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#f1fcf8]/95 backdrop-blur-md border-b-2 border-[#0F4C4C]/20 transition-colors">
       <div className="h-20 w-full max-w-[1240px] mx-auto px-4 md:px-6 flex items-center justify-between gap-4">
-        {/* Logo & Brand Title */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 md:w-11 md:h-11 flex items-center justify-center shrink-0">
+        {/* Logo */}
+        <Link href="/" className="flex items-center group">
+          <div className="relative w-64 h-16 flex items-center justify-center shrink-0">
             <Image
-              src="/assets/logo.png"
-              alt="Curtain Cleaning Brisbane Logo"
-              width={44}
-              height={44}
-              className="w-full h-full object-contain group-hover:scale-105 transition-transform"
+              src="/logo2.png"
+              alt="Curtain Cleaning Brisbane"
+              width={256}
+              height={64}
+              className="w-full h-full object-contain group-hover:opacity-90 transition-opacity"
               priority
             />
           </div>
-          <span className="font-headline text-xl md:text-2xl text-primary font-bold tracking-tight">
-            Curtain Cleaning Brisbane
-          </span>
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -79,7 +76,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#f1fcf8] border-b border-[#0F4C4C]/10 px-6 py-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden bg-[#f1fcf8] border-b-2 border-[#0F4C4C]/20 px-6 py-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;

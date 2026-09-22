@@ -11,19 +11,16 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap xl:justify-between gap-10 xl:gap-16 pb-12 border-b border-white/10">
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 flex items-center justify-center shrink-0 bg-white p-1 rounded-xl shadow-sm border border-white/20">
+            <div className="flex items-center">
+              <div className="relative w-48 h-14 flex items-center justify-start shrink-0">
                 <Image
-                  src="/assets/logo.png"
-                  alt="Curtain Cleaning Brisbane Logo"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-contain"
+                  src="/logo2.png"
+                  alt="Curtain Cleaning Brisbane"
+                  width={192}
+                  height={56}
+                  className="w-full h-full object-contain brightness-0 invert"
                 />
               </div>
-              <span className="font-headline text-2xl font-bold tracking-tight text-white">
-                Curtain Cleaning Brisbane
-              </span>
             </div>
             <p className="font-body text-sm text-white/80 leading-relaxed max-w-sm">
               Brisbane's on-site curtain cleaning specialists. We clean your

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle2, ShieldCheck, Lock } from "lucide-react";
 import BrisbaneMap from "@/components/BrisbaneMap";
+import BookingForm from "@/components/BookingForm";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,14 +16,31 @@ export default function ContactPage() {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Something went wrong.");
+      }
+
       setSuccess(true);
-    }, 800);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -289,6 +307,11 @@ export default function ContactPage() {
                     </button>
                   </div>
 
+                  {error && (
+                    <p className="text-xs text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-center">
+                      {error}
+                    </p>
+                  )}
                   <div className="flex items-center justify-center gap-2 text-on-surface-variant text-xs pt-1">
                     <Lock className="w-3.5 h-3.5 text-secondary" />
                     <span>Your information is kept 100% confidential.</span>
@@ -358,6 +381,40 @@ export default function ContactPage() {
 
           {/* Interactive Brisbane Coverage Map */}
           <BrisbaneMap height="420px" showCardHeader={true} />
+        </div>
+      </section>
+
+      {/* BOOKING FORM SECTION */}
+      <section className="w-full bg-surface-container py-16 lg:py-20 px-4 md:px-6">
+        <div className="max-w-[1240px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div className="lg:col-span-4 space-y-4 lg:pt-4">
+              <span className="text-xs uppercase tracking-wider text-secondary font-semibold">BOOK A CLEAN</span>
+              <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary leading-tight">
+                Ready to Book?
+              </h2>
+              <p className="text-sm text-on-surface-variant leading-relaxed">
+                Fill in your details and we'll confirm the same day. No payment required upfront.
+              </p>
+              <ul className="space-y-2 pt-2 text-sm text-on-surface">
+                {["Curtains stay on the rail", "Same-week bookings available", "Free quote, no obligation"].map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
+              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+                <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
+                <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
+              </div>
+              <div className="p-6 sm:p-8">
+                <BookingForm />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

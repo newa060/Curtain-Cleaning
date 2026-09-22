@@ -43,7 +43,20 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full">
       {/* SECTION 1: HERO SECTION */}
-      <section className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6 py-8 lg:py-16">
+      <section className="relative w-full py-8 lg:py-16">
+        {/* Background Image — full screen width */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/hero-bg.jpg"
+            alt="Curtain cleaning background"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-white/35"></div>
+        </div>
+        <div className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Copy & Actions */}
           <div className="lg:col-span-6 flex flex-col items-start gap-5">
@@ -110,6 +123,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

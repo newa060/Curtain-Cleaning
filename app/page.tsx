@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import BrisbaneMap from "@/components/BrisbaneMap";
 import BookingForm from "@/components/BookingForm";
+import TestimonialsSlider from "@/components/TestimonialsSlider";
 
 export default function HomePage() {
   // Track length slider state for Section 5
@@ -505,58 +506,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 6: TESTIMONIALS */}
-      <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 py-16">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs text-secondary uppercase font-semibold">WHAT CUSTOMERS SAY</span>
-          <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary mt-2">Real Reviews from Brisbane Homes</h2>
-          <p className="text-xs text-on-surface-variant mt-3">
-            Customers from across Brisbane — Queenslanders, apartments, family homes.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              stars: "★★★★★",
-              quote: "We have floor-to-ceiling linens in New Farm and I'd been putting off cleaning them for ages — too scared of shrinkage. The technician sorted them right on the rail. They came out looking brand new.",
-              name: "Sarah M.",
-              suburb: "New Farm",
-              tag: "Linen Sheers",
-            },
-            {
-              stars: "★★★★★",
-              quote: "We're close to the river in Indooroopilly and the mould on our bedroom curtains was getting bad. Completely gone after the steam treatment — couldn't believe it honestly.",
-              name: "David K.",
-              suburb: "Indooroopilly",
-              tag: "Mould Removal",
-            },
-            {
-              stars: "★★★★★",
-              quote: "On time, friendly, and no chemical smell at all. The pinch pleats on our living room curtains haven't looked this good since we bought them. Will book again.",
-              name: "Michelle T.",
-              suburb: "Paddington",
-              tag: "Full Home Curtains",
-            },
-          ].map((t, i) => (
-            <div key={i} className="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-6 border border-primary/10">
-              <div className="space-y-4">
-                <div className="text-secondary text-sm font-bold tracking-widest">{t.stars}</div>
-                <p className="text-xs text-on-surface italic leading-relaxed">{t.quote}</p>
-              </div>
-              <div className="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
-                <div>
-                  <h4 className="font-bold text-xs text-primary">{t.name}</h4>
-                  <span className="text-[11px] text-on-surface-variant">{t.suburb}</span>
-                </div>
-                <span className="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold">
-                  {t.tag}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* SECTION 6: TESTIMONIALS SLIDER */}
+      <TestimonialsSlider />
 
       {/* SECTION 7: FAQ ACCORDION */}
       <section className="w-full max-w-[960px] mx-auto px-4 md:px-6 py-16">

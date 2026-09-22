@@ -46,7 +46,7 @@ export default function HomePage() {
       <section className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6 py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Copy & Actions */}
-          <div className="lg:col-span-7 flex flex-col items-start gap-5">
+          <div className="lg:col-span-6 flex flex-col items-start gap-5">
             {/* Trust badge pill */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold shadow-sm">
               <span className="text-secondary tracking-widest text-xs">★★★★★</span>
@@ -77,7 +77,7 @@ export default function HomePage() {
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-all duration-200"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call Now (0405 849 841)</span>
+                <span>Call Now</span>
               </a>
             </div>
 
@@ -98,31 +98,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Visual Showcase */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container aspect-[4/5] lg:aspect-[5/6] w-full">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEIysmVXGyFSSjQM30f-hfoLJAJkl03-FyVqDKnmnX5Va4q0tzRBpGRkA08ikEYE_3xdFetf8CAETr3oJoeiSZ404Ahs3xELp3uLA9xxCmHT7nRfeol4MqhuGN7KdyOTK5h33cFKnVoXnHPi8allNKs09MeIxwfUlXeZGWnMuquQh4GQ_yQ7kgLfm9VPP6o8ruB06gZ4Na_lngTiIg6TEZ3dqTy5hBXFfVHrcpDQLVdvt4rXqMpikiOA"
-                alt="Professional technician gently steam cleaning hanging textured sheer curtains in a Brisbane home"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 45vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
-
-              {/* Floating Editorial Pill Tag */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/95 backdrop-blur-md shadow-md flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
-                  <span className="material-symbols-outlined text-[20px]">curtains</span>
-                </div>
-                <div className="min-w-0">
-                  <p className="font-body text-sm font-bold text-primary leading-tight">No removal needed</p>
-                  <p className="font-body text-xs text-on-surface-variant truncate">Curtains stay on the rail the whole time</p>
-                </div>
+          {/* Right Column: Booking Form */}
+          <div className="lg:col-span-6 w-full">
+            <div className="bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
+              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+                <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
+                <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
+              </div>
+              <div className="p-6 sm:p-8">
+                <BookingForm />
               </div>
             </div>
-            <div className="absolute -top-4 -right-4 -z-10 w-24 h-24 rounded-full bg-secondary-container/40 blur-xl"></div>
           </div>
         </div>
       </section>

@@ -13,20 +13,31 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
     background-color: #f1fcf8;
     color: #141d1c;
     font-family: var(--font-jakarta), sans-serif;
+    font-weight: 400;
   }
 
-  h1, h2 {
+  /* DM Serif Display is a single-weight font (400 only).
+     Prevent browser from synthesizing a fake bold which causes blur. */
+  h1, h2,
+  .font-headline {
     font-family: var(--font-headline), serif;
+    font-weight: 400 !important;
+    font-synthesis: none;
   }
 
+  /* Sub-headings use Jakarta Sans — proper bold variants available */
   h3, h4, h5, h6 {
     font-family: var(--font-jakarta), sans-serif;
+    font-weight: 700;
   }
 }
 

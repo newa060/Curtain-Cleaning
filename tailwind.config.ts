@@ -43,7 +43,7 @@ const config: Config = {
         "outline-variant": "#bfc8c8",
       },
       fontFamily: {
-        headline: ["var(--font-playfair)", "Playfair Display", "serif"],
+        headline: ["var(--font-headline)", "DM Serif Display", "Georgia", "serif"],
         body: ["var(--font-jakarta)", "Plus Jakarta Sans", "sans-serif"],
       },
       spacing: {

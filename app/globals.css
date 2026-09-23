@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 @tailwind base;
@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --font-playfair: 'Playfair Display', serif;
+    --font-headline: 'DM Serif Display', Georgia, serif;
     --font-jakarta: 'Plus Jakarta Sans', sans-serif;
   }
 
@@ -21,8 +21,12 @@
     font-family: var(--font-jakarta), sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), serif;
+  h1, h2 {
+    font-family: var(--font-headline), serif;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-jakarta), sans-serif;
   }
 }
 

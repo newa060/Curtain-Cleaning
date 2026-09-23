@@ -387,40 +387,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MID-PAGE BOOKING CTA */}
-      <section className="w-full bg-primary py-16 lg:py-20 px-4 md:px-6 my-6">
-        <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-5 space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              Book a Clean
-            </span>
-            <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
-              Get Your Curtains Cleaned This Week
-            </h2>
-            <p className="text-sm text-on-primary-container leading-relaxed">
-              No taking curtains down. No upfront payment. We come to you, clean everything on the rail, and leave the same day.
-            </p>
-            <ul className="space-y-2.5 text-sm text-on-primary-container">
-              {["Same-week appointments available", "Free quote before we start", "Safe for all fabric types"].map((item) => (
-                <li key={item} className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-secondary-container text-base">check_circle</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="lg:col-span-7 bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
-            <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
-              <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
-              <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
-            </div>
-            <div className="p-6 sm:p-8">
-              <BookingForm />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 5: FABRIC ESTIMATE SLIDER ("MEASURE YOUR WINDOWS") */}
       <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 py-10">

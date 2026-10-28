@@ -33,7 +33,48 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 2: Company */}
+          {/* Col 2: Services & Areas */}
+          <div className="space-y-3 xl:shrink-0">
+            <h4 className="font-headline text-lg font-semibold text-white">
+              Services & Coverage
+            </h4>
+            <ul className="space-y-2 text-sm text-white/80">
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-secondary-container transition-colors"
+                >
+                  Our Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/locations"
+                  className="hover:text-secondary-container transition-colors"
+                >
+                  Brisbane Locations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/feedback"
+                  className="hover:text-secondary-container transition-colors"
+                >
+                  Customer Reviews
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/book-now"
+                  className="hover:text-secondary-container transition-colors"
+                >
+                  Book Online
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Company */}
           <div className="space-y-3 xl:shrink-0">
             <h4 className="font-headline text-lg font-semibold text-white">
               Company
@@ -42,15 +83,15 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-secondary-container transition-colors"
                 >
-                  About
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="/gallery"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-secondary-container transition-colors"
                 >
                   Gallery
                 </Link>
@@ -58,15 +99,15 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/blog"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-secondary-container transition-colors"
                 >
-                  Blog
+                  Blog & Guides
                 </Link>
               </li>
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-secondary-container transition-colors"
                 >
                   Contact
                 </Link>
@@ -74,7 +115,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Contact & Support */}
+          {/* Col 4: Contact & Support */}
           <div className="space-y-3 xl:shrink-0">
             <h4 className="font-headline text-lg font-semibold text-white">
               Contact & Support
@@ -82,7 +123,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-2 text-sm text-white/80">
               <a
                 href="tel:0405849841"
-                className="flex items-center gap-2 hover:text-white transition-colors"
+                className="flex items-center gap-2 hover:text-secondary-container transition-colors"
               >
                 <Phone className="w-4 h-4 text-secondary-container shrink-0" />
                 <span>0405 849 841</span>

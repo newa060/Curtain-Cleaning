@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { ChevronLeft, ChevronRight, ArrowRight, MessageSquareHeart } from "lucide-react";
 
 const TESTIMONIALS = [
   {
@@ -244,6 +245,32 @@ export default function TestimonialsSlider() {
             }`}
           />
         ))}
+      </div>
+
+      {/* Review Summary & Feedback CTA Card */}
+      <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-primary/10 shadow-stitch flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="space-y-1.5">
+          <div className="flex items-center justify-center md:justify-start gap-2">
+            <span className="text-secondary text-sm font-bold tracking-wider">★★★★★</span>
+            <span className="text-xs font-bold text-primary">4.9 / 5 Rating from Brisbane Residents</span>
+          </div>
+          <h3 className="font-headline text-xl sm:text-2xl font-bold text-primary">
+            Had your curtains cleaned with us?
+          </h3>
+          <p className="text-xs sm:text-sm text-on-surface-variant max-w-lg leading-relaxed">
+            We value your experience. Read authentic reviews from your Brisbane neighbours or share your feedback with our team.
+          </p>
+        </div>
+        <div className="flex items-center justify-center gap-3 shrink-0">
+          <Link
+            href="/feedback"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-primary-dark text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow transition-all duration-200 group"
+          >
+            <MessageSquareHeart className="w-4 h-4 text-secondary-container" />
+            <span>Read All Reviews & Leave Feedback</span>
+            <ArrowRight className="w-4 h-4 text-secondary-container group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -385,6 +385,29 @@ export default function HomePage() {
             <div className="text-secondary font-semibold text-xs">Trusted by interior designers</div>
           </div>
         </div>
+
+        {/* Services Showcase CTA Card */}
+        <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-primary/10 shadow-stitch flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="space-y-1.5 max-w-xl">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 text-secondary text-xs font-bold uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Specialised Fabric Treatments
+            </span>
+            <h3 className="font-headline text-2xl lg:text-3xl text-primary font-bold">
+              Looking for a specific curtain or blind service?
+            </h3>
+            <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              From delicate sheer mould removal to ultrasonic blind sanitisation and heavy velvet steam care — explore all of our specialised on-site treatments.
+            </p>
+          </div>
+          <Link
+            href="/services"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-primary-dark text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow transition-all duration-200 shrink-0 group"
+          >
+            <span>Explore All Services</span>
+            <ArrowRight className="w-4 h-4 text-secondary-container group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </section>
 
 
@@ -558,15 +581,25 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Helper Pill */}
-            <div className="p-4 rounded-xl bg-surface-container flex items-center gap-3 border border-primary/10">
-              <HelpCircle className="w-5 h-5 text-secondary shrink-0" />
-              <p className="text-xs text-on-surface">
-                Not sure if we cover your area? Give us a ring on{" "}
-                <a className="font-bold text-primary underline ml-1" href="tel:0405849841">
-                  0405 849 841
-                </a>
-              </p>
+            {/* View Full Locations Page CTA & Helper Box */}
+            <div className="pt-2 space-y-3">
+              <Link
+                href="/locations"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-secondary hover:bg-secondary-hover text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow transition-all duration-200 group"
+              >
+                <span>Search All 100+ Serviced Suburbs & Map</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+
+              <div className="p-4 rounded-2xl bg-white flex items-center gap-3 border border-primary/10 shadow-sm">
+                <HelpCircle className="w-5 h-5 text-secondary shrink-0" />
+                <p className="text-xs text-on-surface">
+                  Not sure if we cover your area? Call our Brisbane team on{" "}
+                  <a className="font-bold text-primary hover:text-secondary underline transition-colors ml-1" href="tel:0405849841">
+                    0405 849 841
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
 

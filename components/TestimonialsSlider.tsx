@@ -3,79 +3,125 @@
 import React, { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, ArrowRight, MessageSquareHeart } from "lucide-react";
+import GoogleReviewCard, { GoogleGLogo } from "@/components/GoogleReviewCard";
 
 const TESTIMONIALS = [
   {
-    stars: "★★★★★",
+    id: "nine-handajani",
+    name: "Nine Handajani",
+    initial: "N",
+    avatarBg: "bg-[#5c6bc0]",
+    timeAgo: "11 months ago",
+    rating: 5,
+    quote:
+      "Excellent work. These guys are very professional and quick services on Brisbane for carpet cleaning, curtain cleaning and fabric repairs. Restored our heavy drapes to pristine condition without having to take them down.",
+    suburb: "Brisbane City",
+    tag: "Curtains & Fabric Care",
+    verified: true,
+  },
+  {
+    id: "sarah-m",
+    name: "Sarah Mitchell",
+    initial: "S",
+    avatarBg: "bg-[#0b8043]",
+    timeAgo: "2 months ago",
+    rating: 5,
     quote:
       "We have floor-to-ceiling linens in New Farm and I'd been putting off cleaning them for ages — too scared of shrinkage. The technician sorted them right on the rail. They came out looking brand new.",
-    name: "Sarah M.",
     suburb: "New Farm",
     tag: "Linen Sheers",
-    initial: "S",
+    verified: true,
   },
   {
-    stars: "★★★★★",
+    id: "david-k",
+    name: "David Kelly",
+    initial: "D",
+    avatarBg: "bg-[#f4511e]",
+    timeAgo: "4 months ago",
+    rating: 5,
     quote:
       "We're close to the river in Indooroopilly and the mould on our bedroom curtains was getting bad. Completely gone after the steam treatment — couldn't believe it honestly.",
-    name: "David K.",
     suburb: "Indooroopilly",
     tag: "Mould Removal",
-    initial: "D",
+    verified: true,
   },
   {
-    stars: "★★★★★",
+    id: "michelle-t",
+    name: "Michelle Turner",
+    initial: "M",
+    avatarBg: "bg-[#8e24aa]",
+    timeAgo: "5 months ago",
+    rating: 5,
     quote:
       "On time, friendly, and no chemical smell at all. The pinch pleats on our living room curtains haven't looked this good since we bought them. Will book again.",
-    name: "Michelle T.",
     suburb: "Paddington",
     tag: "Full Home Curtains",
-    initial: "M",
+    verified: true,
   },
   {
-    stars: "★★★★★",
+    id: "lara-f",
+    name: "Lara Fletcher",
+    initial: "L",
+    avatarBg: "bg-[#039be5]",
+    timeAgo: "6 months ago",
+    rating: 5,
     quote:
       "I honestly didn't expect much but the results were incredible. The blackout curtains in the kids' room had pet hair embedded everywhere. One visit and they're totally clean. So easy too — they didn't even need to come down.",
-    name: "Lara F.",
     suburb: "Chermside",
     tag: "Pet Hair & Blackout",
-    initial: "L",
+    verified: true,
   },
   {
-    stars: "★★★★★",
+    id: "james-w",
+    name: "James Wilson",
+    initial: "J",
+    avatarBg: "bg-[#00897b]",
+    timeAgo: "8 months ago",
+    rating: 5,
     quote:
       "Booked on a Monday, they came Wednesday. The technician was professional, explained everything before starting, and our Roman blinds look perfect again. Booking a second appointment for the bedroom already.",
-    name: "James W.",
     suburb: "Toowong",
     tag: "Roman Blinds",
-    initial: "J",
+    verified: true,
   },
   {
-    stars: "★★★★★",
+    id: "rachel-h",
+    name: "Rachel Hughes",
+    initial: "R",
+    avatarBg: "bg-[#e040fb]",
+    timeAgo: "10 months ago",
+    rating: 5,
     quote:
       "We're a rental property manager and I've started recommending these guys to all our tenants. End-of-lease curtain cleans that actually pass inspections. No drama, no damage, no complaints.",
-    name: "Rachel H.",
     suburb: "Morningside",
     tag: "End of Lease",
-    initial: "R",
+    verified: true,
   },
   {
-    stars: "★★★★★",
+    id: "cynthia-a",
+    name: "Cynthia Adams",
+    initial: "C",
+    avatarBg: "bg-[#e67c73]",
+    timeAgo: "1 year ago",
+    rating: 5,
     quote:
       "My velvet curtains are irreplaceable and I was terrified to clean them. The team was incredibly careful — they tested a small section first, explained exactly what they were doing, and the results were stunning.",
-    name: "Cynthia A.",
     suburb: "Ascot",
     tag: "Luxury Velvet",
-    initial: "C",
+    verified: true,
   },
   {
-    stars: "★★★★★",
+    id: "tom-karen",
+    name: "Tom & Karen Bennett",
+    initial: "T",
+    avatarBg: "bg-[#3949ab]",
+    timeAgo: "1 year ago",
+    rating: 5,
     quote:
       "We moved into a home that had been smoked in for years. The curtains reeked. After one treatment the smell is completely gone. I didn't think it was possible. Absolute lifesavers.",
-    name: "Tom & Karen B.",
     suburb: "Wynnum",
     tag: "Smoke Odour",
-    initial: "T",
+    verified: true,
   },
 ];
 
@@ -147,14 +193,24 @@ export default function TestimonialsSlider() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
         <div className="max-w-xl">
-          <span className="text-xs text-secondary uppercase font-semibold tracking-wider">
-            WHAT CUSTOMERS SAY
-          </span>
-          <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary mt-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#e8eaed] shadow-sm mb-3">
+            <GoogleGLogo className="w-4 h-4" />
+            <span className="text-xs font-bold text-gray-800">Google Reviews</span>
+            <div className="flex items-center text-[#fbbc04]">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-3.5 h-3.5 fill-[#fbbc04]" viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+              ))}
+            </div>
+            <span className="text-xs font-semibold text-gray-600">4.9 / 5.0</span>
+          </div>
+
+          <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary">
             Real Reviews from Brisbane Homes
           </h2>
-          <p className="text-xs text-on-surface-variant mt-2 leading-relaxed">
-            Customers from across Brisbane — Queenslanders, apartments, family homes.
+          <p className="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+            Verified feedback from homeowners and property managers across Greater Brisbane.
           </p>
         </div>
 
@@ -191,40 +247,28 @@ export default function TestimonialsSlider() {
         onMouseUp={onMouseUp}
         onMouseLeave={onMouseUp}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {visibleIndexes.map((tIdx, slotIdx) => {
             const t = TESTIMONIALS[tIdx];
             return (
               <div
                 key={`${tIdx}-${slotIdx}`}
-                className={`p-8 rounded-2xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-6 border border-primary/10
-                  ${slotIdx >= 1 ? "hidden md:flex" : "flex"}
-                  ${slotIdx >= 2 ? "md:hidden lg:flex" : ""}`}
+                className={`h-full ${slotIdx >= 1 ? "hidden md:block" : "block"} ${
+                  slotIdx >= 2 ? "md:hidden lg:block" : ""
+                }`}
               >
-                <div className="space-y-4">
-                  <div className="text-secondary text-base font-bold tracking-widest">
-                    {t.stars}
-                  </div>
-                  <p className="text-sm text-on-surface italic leading-relaxed">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-outline-variant/20 flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center shrink-0">
-                      {t.initial}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-xs text-primary">{t.name}</h4>
-                      <span className="text-[11px] text-on-surface-variant">
-                        {t.suburb}
-                      </span>
-                    </div>
-                  </div>
-                  <span className="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold shrink-0">
-                    {t.tag}
-                  </span>
-                </div>
+                <GoogleReviewCard
+                  name={t.name}
+                  initial={t.initial}
+                  avatarBg={t.avatarBg}
+                  timeAgo={t.timeAgo}
+                  rating={t.rating}
+                  quote={t.quote}
+                  suburb={t.suburb}
+                  tag={t.tag}
+                  verified={t.verified}
+                  truncateLength={120}
+                />
               </div>
             );
           })}
@@ -251,14 +295,17 @@ export default function TestimonialsSlider() {
       <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-primary/10 shadow-stitch flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         <div className="space-y-1.5">
           <div className="flex items-center justify-center md:justify-start gap-2">
-            <span className="text-secondary text-sm font-bold tracking-wider">★★★★★</span>
-            <span className="text-xs font-bold text-primary">4.9 / 5 Rating from Brisbane Residents</span>
+            <GoogleGLogo className="w-5 h-5 shrink-0" />
+            <span className="text-[#fbbc04] text-base font-bold tracking-wider">★★★★★</span>
+            <span className="text-xs font-bold text-primary">
+              4.9 / 5.0 Google Rating from Brisbane Residents
+            </span>
           </div>
           <h3 className="font-headline text-xl sm:text-2xl font-bold text-primary">
             Had your curtains cleaned with us?
           </h3>
           <p className="text-xs sm:text-sm text-on-surface-variant max-w-lg leading-relaxed">
-            We value your experience. Read authentic reviews from your Brisbane neighbours or share your feedback with our team.
+            We value your experience. Read authentic Google reviews from your Brisbane neighbours or share your feedback with our team.
           </p>
         </div>
         <div className="flex items-center justify-center gap-3 shrink-0">

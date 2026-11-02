@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
@@ -25,14 +25,14 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/85 to-primary"></div>
 
         <div className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6 text-center flex flex-col items-center z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-secondary-container mb-4">
-            <span className="material-symbols-outlined text-[16px]">verified</span>
-            <span className="text-xs font-semibold uppercase tracking-wider">Brisbane Curtain Cleaning</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 backdrop-blur-md shadow-sm mb-4">
+            <span className="material-symbols-outlined text-[16px] text-[#FFA877]">verified</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-white">Brisbane Curtain Cleaning</span>
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white max-w-4xl tracking-tight leading-tight mb-4">
             Curtain Cleaning Done at Your Place, Not a Factory
           </h1>
-          <p className="font-body text-base sm:text-lg text-on-primary-container max-w-2xl text-center leading-relaxed mb-8">
+          <p className="font-body text-base sm:text-lg text-white/90 max-w-2xl text-center leading-relaxed font-normal mb-8">
             We clean curtains at your home while they hang on the rail. No removing them, no dropping them off somewhere, no waiting days to get them back. Just one visit and they're done.
           </p>
 
@@ -45,19 +45,19 @@ export default function AboutPage() {
             </Link>
             <a
               href="#approach"
-              className="inline-flex items-center justify-center text-sm font-semibold text-white hover:bg-white/10 border border-white/30 px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               STEP BY STEP
             </a>
             <a
               href="#difference"
-              className="inline-flex items-center justify-center text-sm font-semibold text-white hover:bg-white/10 border border-white/30 px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               Why People Use Us
             </a>
             <a
               href="#process"
-              className="inline-flex items-center justify-center text-sm font-semibold text-white hover:bg-white/10 border border-white/30 px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               The Process
             </a>

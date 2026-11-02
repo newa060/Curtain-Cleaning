@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Star, Send, CheckCircle2, ShieldCheck, MessageSquareHeart } from "lucide-react";
 import { TESTIMONIALS_DATA } from "@/data/testimonials";
 import BookingForm from "@/components/BookingForm";
+import GoogleReviewCard, { GoogleGLogo } from "@/components/GoogleReviewCard";
 
 export default function FeedbackPage() {
   const [rating, setRating] = useState<number>(5);
@@ -32,14 +33,15 @@ export default function FeedbackPage() {
             Real Reviews from Brisbane Homes
           </h1>
           <p className="font-body text-sm sm:text-base text-white/80 max-w-2xl mt-3 leading-relaxed">
-            Read verified feedback from households across Greater Brisbane or share your recent experience with our on-site team.
+            Read verified Google reviews from households across Greater Brisbane or share your recent experience with our on-site curtain care team.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-5 text-xs text-white/90">
-            <div className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full">
-              <span className="text-secondary font-bold tracking-wider">★★★★★</span>
-              <span className="font-bold">4.9 / 5 Overall Satisfaction</span>
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-white/90">
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm">
+              <GoogleGLogo className="w-4 h-4 shrink-0" />
+              <span className="text-[#fbbc04] font-bold tracking-wider">★★★★★</span>
+              <span className="font-bold">4.9 / 5 Google Review Score</span>
             </div>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 bg-white/5 px-3.5 py-2 rounded-full">
               <ShieldCheck className="w-4 h-4 text-secondary-container" />
               <span>100% Verified Local Homeowners</span>
             </div>
@@ -65,14 +67,33 @@ export default function FeedbackPage() {
             </div>
 
             {submitted ? (
-              <div className="p-8 rounded-2xl bg-[#f0f7f5] text-center space-y-3 border border-primary/15 animate-in fade-in duration-300">
-                <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto">
-                  <CheckCircle2 className="w-7 h-7 text-primary" />
+              <div className="space-y-4 animate-in fade-in duration-300">
+                <div className="p-5 rounded-2xl bg-[#f0f7f5] border border-primary/15 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-headline font-bold text-primary text-base">Thank You, {name}!</h3>
+                    <p className="text-xs text-on-surface-variant leading-relaxed">
+                      Your feedback has been submitted successfully.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-headline font-bold text-primary text-xl">Thank You, {name}!</h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Your feedback has been submitted and helps Brisbane homeowners make informed decisions.
-                </p>
+
+                <div className="pt-1">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Preview of your review:</p>
+                  <GoogleReviewCard
+                    name={name}
+                    initial={name.charAt(0).toUpperCase()}
+                    avatarBg="bg-[#5c6bc0]"
+                    timeAgo="Just now"
+                    rating={rating}
+                    quote={comments}
+                    suburb={suburb ? `${suburb}, Brisbane` : "Brisbane"}
+                    tag={service}
+                    verified={true}
+                  />
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -175,55 +196,40 @@ export default function FeedbackPage() {
             )}
           </div>
 
-          {/* Right Column: Existing Verified Reviews Stream */}
+          {/* Right Column: Existing Verified Reviews Stream in Google Format */}
           <div className="lg:col-span-7 space-y-4">
             <div className="flex items-center justify-between pb-2">
-              <div>
-                <h2 className="font-headline text-2xl font-bold text-primary">
-                  Verified Testimonials
-                </h2>
-                <p className="text-xs text-on-surface-variant">
-                  Recent reviews from Brisbane customers
-                </p>
+              <div className="flex items-center gap-2.5">
+                <GoogleGLogo className="w-5 h-5 shrink-0" />
+                <div>
+                  <h2 className="font-headline text-2xl font-bold text-primary">
+                    Verified Google Reviews
+                  </h2>
+                  <p className="text-xs text-on-surface-variant">
+                    Recent verified feedback from Brisbane customers
+                  </p>
+                </div>
               </div>
               <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
-                {TESTIMONIALS_DATA.length} Verified Reviews
+                {TESTIMONIALS_DATA.length} Verified
               </span>
             </div>
 
             <div className="space-y-4">
               {TESTIMONIALS_DATA.map((t) => (
-                <div
+                <GoogleReviewCard
                   key={t.id}
-                  className="bg-white p-6 sm:p-7 rounded-3xl border border-primary/10 shadow-stitch space-y-3 hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-secondary">
-                      {[...Array(t.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
-                      ))}
-                    </div>
-                    <span className="text-[11px] text-on-surface-variant font-medium">
-                      {t.date}
-                    </span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-on-surface leading-relaxed italic">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="pt-3 border-t border-primary/5 flex items-center justify-between">
-                    <div>
-                      <span className="font-bold text-xs sm:text-sm text-primary block">
-                        {t.name}
-                      </span>
-                      <span className="text-[11px] text-on-surface-variant">
-                        {t.suburb}, Brisbane
-                      </span>
-                    </div>
-                    <span className="text-[10px] font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-                      {t.service}
-                    </span>
-                  </div>
-                </div>
+                  name={t.name}
+                  initial={t.initial}
+                  avatarBg={t.avatarBg}
+                  timeAgo={t.timeAgo || t.date}
+                  rating={t.rating}
+                  quote={t.quote}
+                  suburb={t.suburb}
+                  tag={t.service}
+                  verified={t.verified}
+                  truncateLength={130}
+                />
               ))}
             </div>
           </div>

@@ -55,76 +55,79 @@ export default function HomePage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-white/35"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/20 to-transparent"></div>
+
         </div>
         <div className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Copy & Actions */}
-          <div className="lg:col-span-6 flex flex-col items-start gap-5">
-            {/* Trust badge pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold shadow-sm">
-              <span className="text-secondary tracking-widest text-xs">★★★★★</span>
-              <span className="text-primary font-bold">5-Star Rated · Brisbane Locals</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left Column: Copy & Actions */}
+            <div className="lg:col-span-6 flex flex-col items-start gap-5 relative">
+              {/* Ambient soft glow: keeps photo clearly visible while ensuring text contrast */}
+              <div className="absolute -inset-4 sm:-inset-6 -z-10 rounded-3xl bg-gradient-to-r from-white/60 via-white/40 to-transparent backdrop-blur-[2px] pointer-events-none"></div>
+              {/* Trust badge pill */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 border border-primary/15 text-on-surface text-xs font-semibold shadow-sm backdrop-blur-md">
+                <span className="text-secondary tracking-widest text-xs">★★★★★</span>
+                <span className="text-primary font-bold">5-Star Rated · Brisbane Locals</span>
+              </div>
+
+              {/* Headline */}
+              <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-primary font-bold tracking-tight text-balance leading-[1.1] drop-shadow-[0_2px_8px_rgba(255,255,255,0.95)]">
+                Curtain Cleaning Brisbane
+              </h1>
+
+              {/* Supporting Paragraph */}
+              <p className="font-body text-base sm:text-lg text-primary font-semibold max-w-xl leading-relaxed drop-shadow-[0_1px_6px_rgba(255,255,255,0.9)]">
+                We clean your curtains right where they hang — no taking them down, no trips to the dry cleaner. Steam cleaned, dried, and back to looking great, all in one visit.
+              </p>
+
+              {/* Dual CTAs */}
+              <div className="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+                <Link
+                  href="/book-now"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-secondary text-white font-semibold text-sm hover:bg-secondary-hover shadow-md transition-all duration-200"
+                >
+                  <span>Enquire Now</span>
+                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </Link>
+                <a
+                  href="tel:0405849841"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-primary bg-white/95 text-primary font-bold text-sm hover:bg-primary hover:text-white shadow-sm backdrop-blur-md transition-all duration-200"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call Now</span>
+                </a>
+              </div>
+
+              {/* Key Benefits Checkmarks */}
+              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-3 w-full text-xs sm:text-sm">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-primary/15 shadow-xs text-on-surface">
+                  <span className="material-symbols-outlined text-secondary text-base font-bold">check_circle</span>
+                  <span className="font-semibold text-primary">Cleaned while hanging</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-primary/15 shadow-xs text-on-surface">
+                  <span className="material-symbols-outlined text-secondary text-base font-bold">check_circle</span>
+                  <span className="font-semibold text-primary">Safe for silks & sheers</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-primary/15 shadow-xs text-on-surface">
+                  <span className="material-symbols-outlined text-secondary text-base font-bold">check_circle</span>
+                  <span className="font-semibold text-primary">Dry in 2–4 hours</span>
+                </div>
+              </div>
             </div>
 
-            {/* Headline */}
-            <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-primary font-bold tracking-tight text-balance leading-[1.1]">
-              Curtain Cleaning Brisbane
-            </h1>
-
-            {/* Supporting Paragraph */}
-            <p className="font-body text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
-              We clean your curtains right where they hang — no taking them down, no trips to the dry cleaner. Steam cleaned, dried, and back to looking great, all in one visit.
-            </p>
-
-            {/* Dual CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
-              <Link
-                href="/book-now"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-secondary text-white font-semibold text-sm hover:bg-secondary-hover shadow-md transition-all duration-200"
-              >
-                <span>Enquire Now</span>
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-              </Link>
-              <a
-                href="tel:0405849841"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-all duration-200"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Call Now</span>
-              </a>
-            </div>
-
-            {/* Key Benefits Checkmarks */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-2 gap-x-6 pt-4 w-full text-on-surface text-xs sm:text-sm">
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
-                <span className="font-medium">Cleaned while hanging</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
-                <span className="font-medium">Safe for silks & sheers</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
-                <span className="font-medium">Dry in 2–4 hours</span>
+            {/* Right Column: Booking Form */}
+            <div className="lg:col-span-6 w-full">
+              <div className="bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
+                <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+                  <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
+                  <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
+                </div>
+                <div className="p-6 sm:p-8">
+                  <BookingForm />
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Right Column: Booking Form */}
-          <div className="lg:col-span-6 w-full">
-            <div className="bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
-                <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
-                <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
-              </div>
-              <div className="p-6 sm:p-8">
-                <BookingForm />
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 
@@ -137,7 +140,7 @@ export default function HomePage() {
             <h2 className="font-headline text-3xl lg:text-5xl font-bold text-white mt-2">
               Your Curtains Collect More Than You Think
             </h2>
-            <p className="font-body text-base text-on-primary-container mt-3 leading-relaxed">
+            <p className="font-body text-base sm:text-lg text-white/90 mt-3 leading-relaxed">
               Curtains trap dust, allergens, cooking smells and moisture every single day. In Brisbane's humidity, that buildup happens faster than most people realise.
             </p>
           </div>
@@ -461,11 +464,10 @@ export default function HomePage() {
                       key={chip}
                       type="button"
                       onClick={() => setActiveFabric(chip)}
-                      className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
-                        activeFabric === chip
+                      className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${activeFabric === chip
                           ? "bg-primary text-white shadow-sm"
                           : "bg-white text-on-surface hover:bg-surface-container border border-outline-variant"
-                      }`}
+                        }`}
                     >
                       {chip}
                     </button>

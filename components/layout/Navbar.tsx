@@ -12,7 +12,7 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+
 
     { name: "Gallery", href: "/gallery" },
 

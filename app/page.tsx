@@ -118,7 +118,7 @@ export default function HomePage() {
             {/* Right Column: Booking Form */}
             <div className="lg:col-span-6 w-full">
               <div className="bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
-                <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+                <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                   <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                   <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
                 </div>
@@ -131,16 +131,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 2: DARK TEAL PANEL ("Why Professional Curtain Cleaning Matters") */}
-      <section className="w-full bg-primary text-white py-16 lg:py-24 my-6">
+      {/* SECTION 2: WARM TAUPE/SAND PANEL ("Why Professional Curtain Cleaning Matters") */}
+      <section className="w-full bg-[#1B3C59] text-white py-16 lg:py-24 my-6">
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
           {/* Header */}
           <div className="max-w-3xl mb-12">
-            <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">WHY IT MATTERS</span>
+            <span className="text-xs uppercase tracking-wider text-[#FFA877] font-bold">WHY IT MATTERS</span>
             <h2 className="font-headline text-3xl lg:text-5xl font-bold text-white mt-2">
               Your Curtains Collect More Than You Think
             </h2>
-            <p className="font-body text-base sm:text-lg text-white/90 mt-3 leading-relaxed">
+            <p className="font-body text-base sm:text-lg text-white/85 mt-3 leading-relaxed">
               Curtains trap dust, allergens, cooking smells and moisture every single day. In Brisbane's humidity, that buildup happens faster than most people realise.
             </p>
           </div>
@@ -180,12 +180,12 @@ export default function HomePage() {
                   desc: "Condensation from glass slowly leaves brown watermarks along the hem that set into the fabric if left too long.",
                 },
               ].map((item, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-primary-container/80 backdrop-blur-sm space-y-2 border border-white/10">
-                  <div className="flex items-center gap-2 text-secondary-container">
-                    <span className="material-symbols-outlined text-[20px]">{item.icon}</span>
-                    <h3 className="font-headline text-base font-semibold text-white">{item.title}</h3>
+                <div key={idx} className="p-5 rounded-2xl bg-white/[0.08] backdrop-blur-md space-y-2 border border-white/15 shadow-sm hover:bg-white/[0.12] transition-all">
+                  <div className="flex items-center gap-2 text-[#FFA877]">
+                    <span className="material-symbols-outlined text-[20px] text-[#FFA877]">{item.icon}</span>
+                    <h3 className="font-headline text-base font-bold text-white">{item.title}</h3>
                   </div>
-                  <p className="text-xs text-on-primary-container leading-relaxed">{item.desc}</p>
+                  <p className="text-xs text-white/80 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -199,14 +199,14 @@ export default function HomePage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-primary/20"></div>
+                <div className="absolute inset-0 bg-black/15"></div>
               </div>
-              <div className="p-6 rounded-2xl bg-primary-container border-l-4 border-secondary-container space-y-2">
-                <div className="flex items-center gap-2 text-xs font-semibold text-secondary-container uppercase">
+              <div className="p-6 rounded-2xl bg-white/[0.08] backdrop-blur-md border-l-4 border-[#C8643B] border-t border-r border-b border-white/15 shadow-sm space-y-2">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#FFA877] uppercase tracking-wider">
                   <span className="material-symbols-outlined text-sm">shield</span>
                   <span>SAFE FOR BRISBANE HOMES</span>
                 </div>
-                <p className="text-xs text-on-primary-container leading-relaxed">
+                <p className="text-xs text-white/85 leading-relaxed">
                   We use a gentle sanitising rinse that's safe for kids and pets — no harsh chemicals, no sticky residue left behind.
                 </p>
               </div>
@@ -288,14 +288,14 @@ export default function HomePage() {
       {/* SECTION 4: GENTLE ON-SITE STEAM CLEANING (FEATURED BANNER + 3 CARDS) */}
       <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 py-12">
         {/* Featured Banner */}
-        <div className="relative rounded-3xl overflow-hidden shadow-lg bg-primary text-white mb-10">
+        <div className="relative rounded-3xl overflow-hidden shadow-lg bg-[#1B3C59] text-white mb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[380px]">
             <div className="lg:col-span-7 p-8 lg:p-14 flex flex-col justify-center text-white space-y-4 z-10">
-              <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">HOW WE CLEAN</span>
+              <span className="text-xs uppercase tracking-wider text-[#C8643B] font-bold">HOW WE CLEAN</span>
               <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
                 Steam Cleaning That's Kind to Your Fabrics
               </h2>
-              <p className="text-sm text-on-primary-container max-w-xl leading-relaxed">
+              <p className="text-sm text-white/85 max-w-xl leading-relaxed">
                 We use low-moisture steam — enough heat to kill bacteria and lift grime, not enough to soak or stretch the fabric. Works on linens, silks, blackout panels, pinch pleats, sheers, and everything in between.
               </p>
             </div>
@@ -306,7 +306,7 @@ export default function HomePage() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-primary via-primary/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#1B3C59] via-[#1B3C59]/40 to-transparent"></div>
             </div>
           </div>
         </div>
@@ -634,7 +634,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                 <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
               </div>
@@ -648,14 +648,14 @@ export default function HomePage() {
 
       {/* SECTION 10: BOTTOM CTA BANNER */}
       <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 py-12 mb-8">
-        <div className="relative rounded-3xl bg-primary p-8 lg:p-14 text-white shadow-xl overflow-hidden">
+        <div className="relative rounded-3xl bg-[#1B3C59] p-8 lg:p-14 text-white shadow-xl overflow-hidden">
           <div className="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
           <div className="relative z-10 max-w-2xl space-y-4">
-            <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">READY WHEN YOU ARE</span>
+            <span className="text-xs uppercase tracking-wider text-[#C8643B] font-bold">READY WHEN YOU ARE</span>
             <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
               Give Your Curtains a Proper Clean
             </h2>
-            <p className="text-sm text-on-primary-container leading-relaxed">
+            <p className="text-sm text-white/85 leading-relaxed">
               We show up on time, take care of your home, and leave your curtains looking great — it's that simple.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-4">

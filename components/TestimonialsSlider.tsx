@@ -193,7 +193,7 @@ export default function TestimonialsSlider() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
         <div className="max-w-xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#e8eaed] shadow-sm mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-outline-variant shadow-sm mb-3">
             <GoogleGLogo className="w-4 h-4" />
             <span className="text-xs font-bold text-gray-800">Google Reviews</span>
             <div className="flex items-center text-[#fbbc04]">

@@ -24,36 +24,36 @@ export default function BlogPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full bg-primary text-white pt-12 pb-20 px-4 md:px-6 overflow-hidden">
+      <section className="relative w-full bg-[#1B3C59] text-white pt-12 pb-20 px-4 md:px-6 overflow-hidden">
         <div className="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-secondary/15 blur-3xl pointer-events-none"></div>
         <div className="relative max-w-[1240px] mx-auto text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container text-secondary-container text-xs font-semibold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#FFA877] text-xs font-bold uppercase tracking-widest mb-4 border border-[#22201E]/10 shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
             TIPS & ADVICE
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight max-w-3xl mb-4">
             Curtain Care & Cleaning Articles
           </h1>
-          <p className="font-body text-base sm:text-lg text-on-primary-container max-w-2xl leading-relaxed">
+          <p className="font-body text-base sm:text-lg text-white/85 max-w-2xl leading-relaxed">
             Practical guides and fabric care tips from our Brisbane team — covering cleaning schedules, mould prevention, fabric safety, and Brisbane climate advice.
           </p>
 
           {/* Trust Highlights Bar */}
-          <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-12 gap-y-3 text-on-primary-container text-xs font-semibold">
+          <div className="mt-8 pt-6 border-t border-[#22201E]/15 flex flex-wrap items-center justify-center gap-x-12 gap-y-3 text-white/85 text-xs font-semibold">
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary-container text-[18px]">
+              <span className="material-symbols-outlined text-[#C8643B] text-[18px]">
                 verified_user
               </span>
               <span>Tested in Brisbane conditions</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary-container text-[18px]">
+              <span className="material-symbols-outlined text-[#C8643B] text-[18px]">
                 dry_cleaning
               </span>
               <span>Safe for sheers & delicates</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary-container text-[18px]">
+              <span className="material-symbols-outlined text-[#C8643B] text-[18px]">
                 nest_eco_leaf
               </span>
               <span>Zero fabric shrinkage</span>
@@ -161,7 +161,7 @@ export default function BlogPage() {
       </section>
 
       {/* MID-PAGE BOOKING CTA */}
-      <section className="w-full bg-primary py-16 lg:py-20 px-4 md:px-6 my-6">
+      <section className="w-full bg-[#1B3C59] text-white py-16 lg:py-20 px-4 md:px-6 my-6">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 space-y-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider">
@@ -184,7 +184,7 @@ export default function BlogPage() {
             </ul>
           </div>
           <div className="lg:col-span-7 bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
-            <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+            <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
               <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
               <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
             </div>
@@ -278,7 +278,7 @@ export default function BlogPage() {
 
       {/* 5. CTA BOTTOM BANNER */}
       <section className="w-full max-w-[1240px] mx-auto px-4 md:px-6 pb-16">
-        <div className="relative bg-primary text-white rounded-3xl p-8 md:p-12 lg:p-16 overflow-hidden shadow-xl">
+        <div className="relative bg-[#1B3C59] text-white rounded-3xl p-8 md:p-12 lg:p-16 overflow-hidden shadow-xl">
           <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
           <div className="relative max-w-2xl mx-auto text-center flex flex-col items-center space-y-4 z-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container text-secondary-container text-xs font-semibold uppercase tracking-widest">
@@ -332,7 +332,7 @@ export default function BlogPage() {
               </ul>
             </div>
             <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                 <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
               </div>

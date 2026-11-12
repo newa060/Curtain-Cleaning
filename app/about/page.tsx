@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. HERO BANNER */}
-      <section className="relative w-full overflow-hidden bg-primary text-white py-20 lg:py-28">
+      <section className="relative w-full overflow-hidden bg-[#1B3C59] text-white py-20 lg:py-28">
         <div className="absolute inset-0 w-full h-full opacity-20">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3THR8EQBJHvkowo7UuLF0gMp0pF7vWHhbZKZceQueRnQbMG8FYB2v9gXF28CqNgzEOpt_T9oNOvCqFHwKz7NRZz7DTUvKRfTWc0nMw7y28bAZd1jkxsMN8yAPGq4dmQmDGepUOWfX35OKsfSA2LJt-Lzd2-i3O2Mzo9j7dZa1oEmcl9wVxpl7K7mwO9QQCSYnjxXdNRwERYQzAEpezgo29VXzXR7mGD7NDzA5Hm99MBJ9yi9w9bWdew"
@@ -22,17 +22,17 @@ export default function AboutPage() {
             className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/85 to-primary"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1B3C59]/95 via-[#1B3C59]/85 to-[#1B3C59]"></div>
 
         <div className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6 text-center flex flex-col items-center z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 backdrop-blur-md shadow-sm mb-4">
-            <span className="material-symbols-outlined text-[16px] text-[#FFA877]">verified</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF8F5] border border-[#22201E]/10 shadow-sm mb-4">
+            <span className="material-symbols-outlined text-[16px] text-[#C8643B]">verified</span>
             <span className="text-xs font-bold uppercase tracking-widest text-white">Brisbane Curtain Cleaning</span>
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white max-w-4xl tracking-tight leading-tight mb-4">
             Curtain Cleaning Done at Your Place, Not a Factory
           </h1>
-          <p className="font-body text-base sm:text-lg text-white/90 max-w-2xl text-center leading-relaxed font-normal mb-8">
+          <p className="font-body text-base sm:text-lg text-white/85 max-w-2xl text-center leading-relaxed font-normal mb-8">
             We clean curtains at your home while they hang on the rail. No removing them, no dropping them off somewhere, no waiting days to get them back. Just one visit and they're done.
           </p>
 
@@ -45,19 +45,19 @@ export default function AboutPage() {
             </Link>
             <a
               href="#approach"
-              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-[#FAF8F5]/80 hover:bg-[#FAF8F5] border border-[#22201E]/15 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               STEP BY STEP
             </a>
             <a
               href="#difference"
-              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-[#FAF8F5]/80 hover:bg-[#FAF8F5] border border-[#22201E]/15 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               Why People Use Us
             </a>
             <a
               href="#process"
-              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-[#FAF8F5]/80 hover:bg-[#FAF8F5] border border-[#22201E]/15 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               The Process
             </a>
@@ -106,16 +106,16 @@ export default function AboutPage() {
       </section>
 
       {/* 3. DARK TEAL "STRUCTURED APPROACH" PANEL */}
-      <section className="w-full bg-primary text-white py-20 lg:py-28 scroll-mt-20" id="approach">
+      <section className="w-full bg-[#1B3C59] text-white py-20 lg:py-28 scroll-mt-20" id="approach">
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column */}
             <div className="lg:col-span-6 space-y-4">
-              <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">HOW WE APPROACH EACH JOB</span>
+              <span className="text-xs uppercase tracking-wider text-[#FFA877] font-bold">HOW WE APPROACH EACH JOB</span>
               <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
                 We Check Before We Clean
               </h2>
-              <div className="space-y-3 text-on-primary-container text-sm leading-relaxed">
+              <div className="space-y-3 text-white/85 text-sm leading-relaxed">
                 <p>
                   Every set of curtains is different. The fabric, the age, how much sun they get, whether there's mould near the window — it all affects how we clean them.
                 </p>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                   Before we start, we check the fabric, the stitching, and any problem spots. That way we know exactly how to treat each panel without guessing — and you know what to expect from the result.
                 </p>
               </div>
-              <div className="pt-2 flex flex-wrap items-center gap-6 text-secondary-container text-xs font-semibold">
+              <div className="pt-2 flex flex-wrap items-center gap-6 text-[#C8643B] text-xs font-semibold">
                 <div className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-base">check_circle</span>
                   <span>No shrinkage or fading</span>
@@ -163,16 +163,16 @@ export default function AboutPage() {
                   desc: "We walk through the finished result with you before we leave. If something needs a second pass, we do it.",
                 },
               ].map((step, idx) => (
-                <div key={idx} className="bg-primary-container/80 backdrop-blur-sm p-5 rounded-2xl flex items-start gap-4 border border-white/10 hover:bg-primary-container transition-colors">
+                <div key={idx} className="bg-white/[0.08] backdrop-blur-md p-5 rounded-2xl flex items-start gap-4 border border-white/15 hover:bg-white/[0.12] transition-colors">
                   <div className="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                     {step.num}
                   </div>
                   <div>
                     <div className="flex items-center gap-1.5 mb-1">
-                      <span className="material-symbols-outlined text-secondary-container text-[18px]">{step.icon}</span>
+                      <span className="material-symbols-outlined text-[#C8643B] text-[18px]">{step.icon}</span>
                       <h4 className="font-headline text-base font-semibold text-white">{step.title}</h4>
                     </div>
-                    <p className="text-xs text-on-primary-container leading-relaxed">{step.desc}</p>
+                    <p className="text-xs text-white/85 leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -182,10 +182,10 @@ export default function AboutPage() {
       </section>
 
       {/* MID-PAGE BOOKING CTA */}
-      <section className="w-full bg-primary py-16 lg:py-20 px-4 md:px-6">
+      <section className="w-full bg-[#1B3C59] py-16 lg:py-20 px-4 md:px-6 text-white">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] text-[#C8643B] text-xs font-bold uppercase tracking-wider border border-[#22201E]/10 shadow-xs">
               <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
               Book a Clean
             </span>
@@ -195,17 +195,17 @@ export default function AboutPage() {
             <p className="text-sm text-on-primary-container leading-relaxed">
               No taking curtains down. No upfront payment. We come to you, clean everything on the rail, and leave the same day.
             </p>
-            <ul className="space-y-2.5 text-sm text-on-primary-container">
+            <ul className="space-y-2.5 text-sm text-white/85">
               {["Same-week appointments available", "Free quote before we start", "Safe for all fabric types"].map((item) => (
                 <li key={item} className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-secondary-container text-base">check_circle</span>
+                  <span className="material-symbols-outlined text-[#C8643B] text-base">check_circle</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="lg:col-span-7 bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
-            <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+            <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
               <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
               <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
             </div>
@@ -364,7 +364,7 @@ export default function AboutPage() {
 
       {/* CTA FOOTER BANNER */}
       <section className="max-w-[1240px] mx-auto px-4 md:px-6 py-16 text-center">
-        <div className="bg-primary text-white p-10 rounded-3xl space-y-4">
+        <div className="bg-[#1B3C59] text-white p-10 rounded-3xl space-y-4">
           <h2 className="font-headline text-3xl font-bold text-white">Ready to Book?</h2>
           <p className="text-xs text-white/80 max-w-lg mx-auto">
             Send us a message or call — we'll get back to you the same day with a straight answer and a price.
@@ -402,7 +402,7 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                 <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
               </div>

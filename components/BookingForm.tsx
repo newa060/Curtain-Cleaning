@@ -90,7 +90,7 @@ export default function BookingForm() {
               placeholder="Full Name"
               value={formData.fullName}
               onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8fcfb] border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-surface border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
             />
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function BookingForm() {
               placeholder="Email Address"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8fcfb] border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-surface border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
             />
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function BookingForm() {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8fcfb] border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-surface border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
             />
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function BookingForm() {
               placeholder="Property Address"
               value={formData.address}
               onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8fcfb] border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-surface border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
             />
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function BookingForm() {
               required
               value={formData.service}
               onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl bg-[#f8fcfb] border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all appearance-none cursor-pointer"
+              className="w-full px-4 py-3 rounded-xl bg-surface border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all appearance-none cursor-pointer"
             >
               {SERVICES.map((s) => (
                 <option key={s} value={s}>{s}</option>
@@ -169,7 +169,7 @@ export default function BookingForm() {
               required
               value={formData.date}
               onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8fcfb] border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-surface border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
             />
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function BookingForm() {
             placeholder="Stains, access notes, pets, parking, etc."
             value={formData.instructions}
             onChange={(e) => setFormData({ ...formData, instructions: e.target.value })}
-            className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8fcfb] border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50 resize-none"
+            className="w-full pl-10 pr-4 py-3 rounded-xl bg-surface border border-primary/20 text-sm text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50 resize-none"
           />
         </div>
       </div>

@@ -46,17 +46,17 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full bg-surface min-h-screen">
       {/* 1. HERO HEADER SECTION */}
-      <section className="relative w-full bg-primary text-white py-14 sm:py-20 lg:py-24 px-4 md:px-6 overflow-hidden">
+      <section className="relative w-full bg-[#1B3C59] text-white py-14 sm:py-20 lg:py-24 px-4 md:px-6 overflow-hidden">
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[620px] h-[320px] bg-primary-container rounded-full blur-3xl opacity-40 pointer-events-none"></div>
         <div className="relative max-w-[900px] mx-auto text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFA877] text-xs font-bold uppercase tracking-wider mb-4 border border-[#22201E]/10 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-secondary"></span>
             CONTACT US
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
-            Get in <span className="italic font-headline text-secondary-container">Touch</span>
+            Get in <span className="italic font-headline text-[#C8643B]">Touch</span>
           </h1>
-          <p className="mt-4 max-w-[640px] font-body text-base sm:text-lg text-on-primary-container leading-relaxed">
+          <p className="mt-4 max-w-[640px] font-body text-base sm:text-lg text-white/85 leading-relaxed">
             Have a question or want a price for your curtains? Drop us a message and we'll get back to you shortly.
           </p>
 
@@ -153,16 +153,16 @@ export default function ContactPage() {
             </div>
 
             {/* Info Banner Card */}
-            <div className="w-full bg-primary text-white rounded-2xl p-6 shadow-md relative overflow-hidden">
+            <div className="w-full bg-[#1B3C59] text-white rounded-2xl p-6 shadow-md border border-[#22201E]/10 relative overflow-hidden">
               <div className="relative z-10 flex flex-col gap-3">
-                <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/10 text-secondary-container w-fit text-[10px] uppercase font-bold">
+                <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/10 text-[#FFA877] w-fit text-[10px] uppercase font-bold border border-[#22201E]/10">
                   <ShieldCheck className="w-3.5 h-3.5 text-secondary" />
                   <span>ON-SITE CONVENIENCE</span>
                 </div>
                 <h3 className="font-headline text-xl text-white font-bold">
                   No Need to Dismantle Your Curtains
                 </h3>
-                <p className="text-xs text-on-primary-container leading-relaxed">
+                <p className="text-xs text-white/85 leading-relaxed">
                   We arrive at your property and clean your hanging curtains directly on your tracks — zero taking down, zero hassle.
                 </p>
               </div>
@@ -175,7 +175,7 @@ export default function ContactPage() {
             id="contact-card"
           >
             {/* Form Top Header Banner */}
-            <div className="bg-[#f0f7f5] px-6 sm:px-8 py-6 border-b border-primary/10">
+            <div className="bg-surface-tinted px-6 sm:px-8 py-6 border-b border-primary/10">
               <h2 className="font-headline text-2xl sm:text-3xl text-primary font-bold tracking-tight">
                 Send Us a Message
               </h2>
@@ -226,7 +226,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, fullName: e.target.value })
                         }
-                        className="w-full px-4 py-3.5 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-surface border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
                       />
                     </div>
                     <div>
@@ -241,7 +241,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-4 py-3.5 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-surface border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
                       />
                     </div>
                   </div>
@@ -260,7 +260,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
                         }
-                        className="w-full px-4 py-3.5 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-surface border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
                       />
                     </div>
                     <div>
@@ -274,7 +274,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, address: e.target.value })
                         }
-                        className="w-full px-4 py-3.5 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-surface border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50"
                       />
                     </div>
                   </div>
@@ -291,7 +291,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3.5 rounded-2xl bg-[#f8fcfb] border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50 min-h-[140px] resize-y"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-surface border border-primary/20 text-xs sm:text-sm text-primary font-medium focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-on-surface-variant/50 min-h-[140px] resize-y"
                     ></textarea>
                   </div>
 

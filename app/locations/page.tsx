@@ -33,9 +33,9 @@ export default function LocationsPage() {
   return (
     <div className="w-full">
       {/* Header Banner */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-[#1B3C59] text-white py-16">
         <div className="max-w-[1240px] mx-auto px-4 md:px-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFA877] text-xs font-bold uppercase tracking-wider mb-3 border border-[#22201E]/10 shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
             SERVICE COVERAGE
           </div>
@@ -195,7 +195,7 @@ export default function LocationsPage() {
               </ul>
             </div>
             <div className="lg:col-span-8 bg-white rounded-3xl shadow-stitch border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                 <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
               </div>

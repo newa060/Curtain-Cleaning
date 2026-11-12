@@ -17,10 +17,10 @@ export default function GalleryPage() {
   return (
     <div className="w-full">
       {/* Page Header */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-[#1B3C59] text-white py-16">
         <div className="max-w-[1240px] mx-auto px-4 md:px-6">
-          <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">Visual Proof</span>
-          <h1 className="font-headline text-4xl lg:text-5xl font-bold mt-2">
+          <span className="text-xs uppercase tracking-wider text-[#FFA877] font-bold">Visual Proof</span>
+          <h1 className="font-headline text-4xl lg:text-5xl font-bold mt-2 text-white">
             Curtain Cleaning Gallery & Results
           </h1>
           <p className="font-body text-base text-white/80 max-w-2xl mt-4 leading-relaxed">
@@ -107,9 +107,9 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA Footer */}
-      <section className="bg-primary text-white py-12 text-center">
+      <section className="bg-[#1B3C59] text-white py-12 text-center">
         <div className="max-w-[1240px] mx-auto px-4 md:px-6 space-y-4">
-          <h2 className="font-headline text-3xl font-bold">Want Your Curtains Looking This Fresh?</h2>
+          <h2 className="font-headline text-3xl font-bold text-white">Want Your Curtains Looking This Fresh?</h2>
           <p className="text-sm text-white/80 max-w-md mx-auto">Get an instant quote online or schedule an on-site service date today.</p>
           <Link
             href="/book-now"
@@ -143,7 +143,7 @@ export default function GalleryPage() {
               </ul>
             </div>
             <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                 <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
               </div>

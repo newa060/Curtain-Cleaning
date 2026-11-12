@@ -10,15 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0F4C4C",
-          dark: "#003434",
-          container: "#0F4C4C",
+          DEFAULT: "#1B3C59",
+          dark: "#132A3E",
+          container: "#1B3C59",
           fixed: "#b5edec",
         },
         secondary: {
-          DEFAULT: "#C1633C",
-          hover: "#A44E2B",
-          container: "#fc9267",
+          DEFAULT: "#C8643B",
+          hover: "#B0542E",
+          container: "#FFA877",
         },
         tertiary: {
           DEFAULT: "#8A9A7E",
@@ -36,7 +36,7 @@ const config: Config = {
         "on-secondary": "#FFFFFF",
         "on-surface": "#26302E",
         "on-surface-variant": "#404848",
-        "on-primary-container": "#E6F4F1",
+        "on-primary-container": "#DCEAF5",
         "on-secondary-container": "#FFE2D5",
         "on-tertiary-container": "#a6b699",
         outline: "#707978",

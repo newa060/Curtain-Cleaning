@@ -23,25 +23,25 @@ export default function FeedbackPage() {
   return (
     <div className="w-full">
       {/* Header Banner */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-[#1B3C59] text-white py-16">
         <div className="max-w-[1240px] mx-auto px-4 md:px-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] text-[#C8643B] text-xs font-bold uppercase tracking-wider mb-3 border border-[#22201E]/10 shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
             CUSTOMER REVIEWS & FEEDBACK
           </div>
-          <h1 className="font-headline text-4xl lg:text-5xl font-bold mt-1">
+          <h1 className="font-headline text-4xl lg:text-5xl font-bold mt-1 text-white">
             Real Reviews from Brisbane Homes
           </h1>
-          <p className="font-body text-sm sm:text-base text-white/80 max-w-2xl mt-3 leading-relaxed">
+          <p className="font-body text-sm sm:text-base text-white/85 max-w-2xl mt-3 leading-relaxed">
             Read verified Google reviews from households across Greater Brisbane or share your recent experience with our on-site curtain care team.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-white/90">
-            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm">
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-white">
+            <div className="flex items-center gap-2 bg-[#FAF8F5] px-4 py-2 rounded-full border border-[#22201E]/10 shadow-xs text-white">
               <GoogleGLogo className="w-4 h-4 shrink-0" />
               <span className="text-[#fbbc04] font-bold tracking-wider">★★★★★</span>
               <span className="font-bold">4.9 / 5 Google Review Score</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-white/5 px-3.5 py-2 rounded-full">
+            <div className="flex items-center gap-1.5 bg-[#FAF8F5]/80 px-3.5 py-2 rounded-full border border-[#22201E]/5 text-white/85">
               <ShieldCheck className="w-4 h-4 text-secondary-container" />
               <span>100% Verified Local Homeowners</span>
             </div>
@@ -68,7 +68,7 @@ export default function FeedbackPage() {
 
             {submitted ? (
               <div className="space-y-4 animate-in fade-in duration-300">
-                <div className="p-5 rounded-2xl bg-[#f0f7f5] border border-primary/15 flex items-center gap-3">
+                <div className="p-5 rounded-2xl bg-surface-tinted border border-primary/15 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
                     <CheckCircle2 className="w-6 h-6 text-primary" />
                   </div>
@@ -115,7 +115,7 @@ export default function FeedbackPage() {
                           className={`w-6 h-6 ${
                             star <= rating
                               ? "fill-secondary text-secondary"
-                              : "text-gray-300"
+                              : "text-outline-variant"
                           }`}
                         />
                       </button>
@@ -264,7 +264,7 @@ export default function FeedbackPage() {
               </ul>
             </div>
             <div className="lg:col-span-8 bg-white rounded-3xl shadow-stitch border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                 <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
               </div>

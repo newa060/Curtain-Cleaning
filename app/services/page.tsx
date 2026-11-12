@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICES_DATA } from "@/data/services";
@@ -14,13 +14,13 @@ export default function ServicesPage() {
   return (
     <div className="w-full">
       {/* Header */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-[#1B3C59] text-white py-16">
         <div className="max-w-[1240px] mx-auto px-4 md:px-6">
-          <span className="text-xs uppercase tracking-wider text-secondary-container font-semibold">WHAT WE DO</span>
-          <h1 className="font-headline text-4xl lg:text-5xl font-bold mt-2 text-balance">
+          <span className="text-xs uppercase tracking-wider text-[#C8643B] font-bold">WHAT WE DO</span>
+          <h1 className="font-headline text-4xl lg:text-5xl font-bold mt-2 text-white text-balance">
             Our Curtain Cleaning Services
           </h1>
-          <p className="font-body text-base text-white/80 max-w-2xl mt-4 leading-relaxed">
+          <p className="font-body text-base text-white/85 max-w-2xl mt-4 leading-relaxed">
             We handle all types of curtains and blinds — from lightweight sheers to heavy blackouts. Every job is done at your home, no removal needed.
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function ServicesPage() {
       </section>
 
       {/* MID-PAGE BOOKING CTA */}
-      <section className="w-full bg-primary py-16 lg:py-20 px-4 md:px-6">
+      <section className="w-full bg-[#1B3C59] text-white py-16 lg:py-20 px-4 md:px-6">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 space-y-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-secondary-container text-xs font-semibold uppercase tracking-wider">
@@ -129,7 +129,7 @@ export default function ServicesPage() {
             </ul>
           </div>
           <div className="lg:col-span-7 bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
-            <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+            <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
               <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
               <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
             </div>
@@ -184,7 +184,7 @@ export default function ServicesPage() {
               </ul>
             </div>
             <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
-              <div className="bg-[#f0f7f5] px-8 py-5 border-b border-primary/10">
+              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
                 <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
               </div>

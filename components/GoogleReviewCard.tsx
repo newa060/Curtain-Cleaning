@@ -86,7 +86,7 @@ export default function GoogleReviewCard({
   const displayedText = shouldTruncate && !expanded ? `${quote.slice(0, truncateLength).trim()}...` : quote;
 
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-[#e8eaed] flex flex-col justify-between hover:shadow-[0_4px_20px_rgba(0,0,0,0.09)] transition-all duration-300 h-full">
+    <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-outline-variant flex flex-col justify-between hover:shadow-[0_4px_20px_rgba(0,0,0,0.09)] transition-all duration-300 h-full">
       <div className="space-y-3">
         {/* Top Header: Avatar + User Info + Google G Icon */}
         <div className="flex items-start justify-between gap-3">
@@ -105,10 +105,10 @@ export default function GoogleReviewCard({
               </div>
             )}
             <div className="min-w-0">
-              <h3 className="font-bold text-[15px] sm:text-[16px] text-[#202124] leading-snug tracking-tight">
+              <h3 className="font-bold text-[15px] sm:text-[16px] text-on-surface leading-snug tracking-tight">
                 {name}
               </h3>
-              <p className="text-xs sm:text-[13px] text-[#70757a] font-normal leading-tight mt-0.5">
+              <p className="text-xs sm:text-[13px] text-outline font-normal leading-tight mt-0.5">
                 {timeAgo}
               </p>
             </div>
@@ -128,14 +128,14 @@ export default function GoogleReviewCard({
 
         {/* Review Text */}
         <div className="pt-1">
-          <p className="text-[14px] sm:text-[15px] text-[#3c4043] leading-relaxed font-normal">
+          <p className="text-[14px] sm:text-[15px] text-on-surface-variant leading-relaxed font-normal">
             {displayedText}
           </p>
           {shouldTruncate && (
             <button
               type="button"
               onClick={() => setExpanded(!expanded)}
-              className="text-[13px] sm:text-sm text-[#70757a] hover:text-[#202124] font-medium inline-block mt-1 cursor-pointer transition-colors focus:outline-none"
+              className="text-[13px] sm:text-sm text-outline hover:text-on-surface font-medium inline-block mt-1 cursor-pointer transition-colors focus:outline-none"
             >
               {expanded ? "Read less" : "Read more"}
             </button>
@@ -145,15 +145,15 @@ export default function GoogleReviewCard({
 
       {/* Optional Suburb & Service Badges */}
       {(suburb || tag) && (
-        <div className="pt-4 mt-4 border-t border-[#f1f3f4] flex items-center justify-between text-xs text-[#70757a]">
+        <div className="pt-4 mt-4 border-t border-surface-dim flex items-center justify-between text-xs text-outline">
           {suburb && (
             <span className="flex items-center gap-1.5 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
               {suburb}
             </span>
           )}
           {tag && (
-            <span className="bg-[#f1f3f4] text-[#3c4043] px-2.5 py-0.5 rounded-full text-[11px] font-medium">
+            <span className="bg-surface-container text-on-surface-variant px-2.5 py-0.5 rounded-full text-[11px] font-medium">
               {tag}
             </span>
           )}

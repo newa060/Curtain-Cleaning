@@ -25,7 +25,7 @@ export default function BrisbaneMap({
   return (
     <div className={`w-full overflow-hidden rounded-3xl border border-primary/15 bg-white shadow-stitch ${className}`}>
       {showCardHeader && (
-        <div className="p-5 border-b border-primary/10 bg-[#f8fcfb] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="p-5 border-b border-primary/10 bg-surface flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>

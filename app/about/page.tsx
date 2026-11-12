@@ -25,8 +25,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#1B3C59]/95 via-[#1B3C59]/85 to-[#1B3C59]"></div>
 
         <div className="relative w-full max-w-[1240px] mx-auto px-4 md:px-6 text-center flex flex-col items-center z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF8F5] border border-[#22201E]/10 shadow-sm mb-4">
-            <span className="material-symbols-outlined text-[16px] text-[#C8643B]">verified</span>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md shadow-sm mb-4">
             <span className="text-xs font-bold uppercase tracking-widest text-white">Brisbane Curtain Cleaning</span>
           </div>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl text-white max-w-4xl tracking-tight leading-tight mb-4">
@@ -45,19 +44,19 @@ export default function AboutPage() {
             </Link>
             <a
               href="#approach"
-              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-[#FAF8F5]/80 hover:bg-[#FAF8F5] border border-[#22201E]/15 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               STEP BY STEP
             </a>
             <a
               href="#difference"
-              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-[#FAF8F5]/80 hover:bg-[#FAF8F5] border border-[#22201E]/15 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               Why People Use Us
             </a>
             <a
               href="#process"
-              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-[#FAF8F5]/80 hover:bg-[#FAF8F5] border border-[#22201E]/15 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
+              className="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm shadow-xs px-6 py-3.5 rounded-full transition-all"
             >
               The Process
             </a>
@@ -185,7 +184,7 @@ export default function AboutPage() {
       <section className="w-full bg-[#1B3C59] py-16 lg:py-20 px-4 md:px-6 text-white">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] text-[#C8643B] text-xs font-bold uppercase tracking-wider border border-[#22201E]/10 shadow-xs">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFA877] text-xs font-bold uppercase tracking-wider border border-white/20 shadow-xs">
               <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
               Book a Clean
             </span>

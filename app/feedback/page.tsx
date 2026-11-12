@@ -25,7 +25,7 @@ export default function FeedbackPage() {
       {/* Header Banner */}
       <section className="bg-[#1B3C59] text-white py-16">
         <div className="max-w-[1240px] mx-auto px-4 md:px-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] text-[#C8643B] text-xs font-bold uppercase tracking-wider mb-3 border border-[#22201E]/10 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFA877] text-xs font-bold uppercase tracking-wider mb-3 border border-white/20 shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
             CUSTOMER REVIEWS & FEEDBACK
           </div>
@@ -36,12 +36,12 @@ export default function FeedbackPage() {
             Read verified Google reviews from households across Greater Brisbane or share your recent experience with our on-site curtain care team.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-white">
-            <div className="flex items-center gap-2 bg-[#FAF8F5] px-4 py-2 rounded-full border border-[#22201E]/10 shadow-xs text-white">
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 shadow-xs text-white">
               <GoogleGLogo className="w-4 h-4 shrink-0" />
               <span className="text-[#fbbc04] font-bold tracking-wider">★★★★★</span>
               <span className="font-bold">4.9 / 5 Google Review Score</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-[#FAF8F5]/80 px-3.5 py-2 rounded-full border border-[#22201E]/5 text-white/85">
+            <div className="flex items-center gap-1.5 bg-white/10 px-3.5 py-2 rounded-full border border-white/20 text-white/90">
               <ShieldCheck className="w-4 h-4 text-secondary-container" />
               <span>100% Verified Local Homeowners</span>
             </div>

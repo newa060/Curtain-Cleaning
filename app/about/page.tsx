@@ -1,7 +1,29 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
+import {
+  CheckCircle2,
+  ShieldCheck,
+  ArrowRight,
+  Leaf,
+  MapPin,
+  Shield,
+  ThumbsUp,
+  Search,
+  Wind,
+  Droplets,
+  ClipboardCheck,
+  Eye,
+  Pipette,
+  Sparkles,
+  CloudDrizzle,
+  Eraser,
+  HandMetal,
+  Wrench,
+  Flower2,
+  ScanEye,
+  BadgeCheck,
+} from "lucide-react";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata = {
@@ -32,7 +54,7 @@ export default function AboutPage() {
             Curtain Cleaning Done at Your Place, Not a Factory
           </h1>
           <p className="font-body text-base sm:text-lg text-white/85 max-w-2xl text-center leading-relaxed font-normal mb-8">
-            We clean curtains at your home while they hang on the rail. No removing them, no dropping them off somewhere, no waiting days to get them back. Just one visit and they're done.
+            We clean curtains at your home while they hang on the rail. No removing them, no dropping them off somewhere, no waiting days to get them back. Just one visit and they&apos;re done.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -65,35 +87,35 @@ export default function AboutPage() {
       </section>
 
       {/* 2. TRUST STAT STRIP */}
-      <section className="w-full bg-surface-container py-12">
+      <section className="w-full bg-white py-14 border-b border-primary/10">
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: "eco",
+                icon: <Leaf className="w-6 h-6" />,
                 title: "Eco-Friendly Solutions",
                 desc: "The products we use are plant-based and non-toxic — safe around kids, pets, and delicate fabrics.",
               },
               {
-                icon: "explore",
+                icon: <MapPin className="w-6 h-6" />,
                 title: "Local Brisbane-Based",
                 desc: "We're Brisbane locals, not a call centre. We know the suburbs and we show up on time.",
               },
               {
-                icon: "security",
+                icon: <Shield className="w-6 h-6" />,
                 title: "Fully Insured",
                 desc: "Fully covered with public liability insurance for every job, big or small.",
               },
               {
-                icon: "thumb_up",
+                icon: <ThumbsUp className="w-6 h-6" />,
                 title: "100% Satisfaction",
                 desc: "We don't leave until you're happy with the result. No shrinkage, no surprises.",
               },
             ].map((card, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-primary/10 shadow-sm flex flex-col justify-between">
+              <div key={idx} className="bg-[#FAF8F5] p-6 rounded-2xl border border-primary/8 flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-4">
-                    <span className="material-symbols-outlined text-[24px]">{card.icon}</span>
+                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-primary mb-4 border border-primary/10">
+                    {card.icon}
                   </div>
                   <h3 className="font-headline text-lg font-bold text-primary mb-1">{card.title}</h3>
                   <p className="text-xs text-on-surface-variant leading-relaxed">{card.desc}</p>
@@ -104,7 +126,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. DARK TEAL "STRUCTURED APPROACH" PANEL */}
+      {/* 3. "STRUCTURED APPROACH" PANEL — Dark navy */}
       <section className="w-full bg-[#1B3C59] text-white py-20 lg:py-28 scroll-mt-20" id="approach">
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -116,7 +138,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-3 text-white/85 text-sm leading-relaxed">
                 <p>
-                  Every set of curtains is different. The fabric, the age, how much sun they get, whether there's mould near the window — it all affects how we clean them.
+                  Every set of curtains is different. The fabric, the age, how much sun they get, whether there&apos;s mould near the window — it all affects how we clean them.
                 </p>
                 <p>
                   Before we start, we check the fabric, the stitching, and any problem spots. That way we know exactly how to treat each panel without guessing — and you know what to expect from the result.
@@ -124,11 +146,11 @@ export default function AboutPage() {
               </div>
               <div className="pt-2 flex flex-wrap items-center gap-6 text-[#C8643B] text-xs font-semibold">
                 <div className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-base">check_circle</span>
+                  <CheckCircle2 className="w-4 h-4" />
                   <span>No shrinkage or fading</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-base">check_circle</span>
+                  <CheckCircle2 className="w-4 h-4" />
                   <span>Safe for blackout linings</span>
                 </div>
               </div>
@@ -139,25 +161,25 @@ export default function AboutPage() {
               {[
                 {
                   num: "01",
-                  icon: "search",
+                  icon: <Search className="w-[18px] h-[18px]" />,
                   title: "We check the fabric first",
                   desc: "We test the fabric and dye on a hidden spot before applying any heat or moisture. No guesswork.",
                 },
                 {
                   num: "02",
-                  icon: "air",
+                  icon: <Wind className="w-[18px] h-[18px]" />,
                   title: "Dry vacuum to clear the surface",
                   desc: "We vacuum the curtain first to lift out loose dust, hair, and surface debris before the steam goes on.",
                 },
                 {
                   num: "03",
-                  icon: "water_drop",
+                  icon: <Droplets className="w-[18px] h-[18px]" />,
                   title: "Steam clean while hanging",
                   desc: "Low-moisture steam cleans through the fabric without soaking it — no drips on your walls or floors.",
                 },
                 {
                   num: "04",
-                  icon: "assignment_turned_in",
+                  icon: <ClipboardCheck className="w-[18px] h-[18px]" />,
                   title: "Check it over with you",
                   desc: "We walk through the finished result with you before we leave. If something needs a second pass, we do it.",
                 },
@@ -168,7 +190,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="flex items-center gap-1.5 mb-1">
-                      <span className="material-symbols-outlined text-[#C8643B] text-[18px]">{step.icon}</span>
+                      <span className="text-[#C8643B]">{step.icon}</span>
                       <h4 className="font-headline text-base font-semibold text-white">{step.title}</h4>
                     </div>
                     <p className="text-xs text-white/85 leading-relaxed">{step.desc}</p>
@@ -180,33 +202,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* MID-PAGE BOOKING CTA */}
-      <section className="w-full bg-[#1B3C59] py-16 lg:py-20 px-4 md:px-6 text-white">
+      {/* MID-PAGE BOOKING CTA — Light warm background */}
+      <section className="w-full bg-[#F3EDE2] py-20 lg:py-24 px-4 md:px-6">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFA877] text-xs font-bold uppercase tracking-wider border border-white/20 shadow-xs">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-secondary text-xs font-bold uppercase tracking-wider border border-primary/10 shadow-xs">
               <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
               Book a Clean
             </span>
-            <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white leading-tight">
+            <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary leading-tight">
               Get Your Curtains Cleaned This Week
             </h2>
-            <p className="text-sm text-on-primary-container leading-relaxed">
+            <p className="text-sm text-on-surface-variant leading-relaxed">
               No taking curtains down. No upfront payment. We come to you, clean everything on the rail, and leave the same day.
             </p>
-            <ul className="space-y-2.5 text-sm text-white/85">
+            <ul className="space-y-3 text-sm text-on-surface font-medium">
               {["Same-week appointments available", "Free quote before we start", "Safe for all fabric types"].map((item) => (
                 <li key={item} className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[#C8643B] text-base">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="lg:col-span-7 bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden">
-            <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
+            <div className="bg-[#FAF8F5] px-8 py-5 border-b border-primary/10">
               <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
-              <p className="text-xs text-on-surface-variant mt-0.5">We'll confirm the same day — no payment needed now.</p>
+              <p className="text-xs text-on-surface-variant mt-0.5">We&apos;ll confirm the same day — no payment needed now.</p>
             </div>
             <div className="p-6 sm:p-8">
               <BookingForm />
@@ -215,91 +237,94 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. OUR 8-STEP CLEANING PROCESS PANEL */}
-      <section className="w-full bg-surface py-20 lg:py-28 scroll-mt-20" id="process">
+      {/* 4. OUR 8-STEP CLEANING PROCESS PANEL — White card on cream */}
+      <section className="w-full bg-[#FAF8F5] py-20 lg:py-28 scroll-mt-20" id="process">
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
-          <div className="bg-white rounded-3xl p-8 lg:p-14 shadow-stitch border border-primary/10">
+          <div className="bg-white rounded-3xl p-8 lg:p-14 shadow-md border border-primary/10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Sticky Left Descriptor */}
-              <div className="lg:col-span-4 flex flex-col justify-between items-start space-y-4">
+              <div className="lg:col-span-4 flex flex-col items-start gap-6 lg:sticky lg:top-32 self-start">
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-secondary font-semibold block mb-1">STEP BY STEP</span>
-                  <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight mb-4">
+                  <span className="text-xs uppercase tracking-wider text-secondary font-bold block mb-2">STEP BY STEP</span>
+                  <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight mb-3">
                     What Happens on the Day
                   </h2>
-                  <p className="text-xs text-on-surface-variant leading-relaxed">
-                    Here's exactly what we do from the moment we arrive to when we pack up and leave.
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Here&apos;s exactly what we do from the moment we arrive to when we pack up and leave.
                   </p>
                 </div>
-                <div className="w-full pt-4 hidden lg:block">
+
+                <div className="flex flex-col items-start gap-2.5 pt-1">
                   <Link
                     href="/book-now"
-                    className="inline-flex items-center justify-center w-full text-xs font-bold text-white bg-secondary hover:bg-secondary-hover px-8 py-3.5 rounded-full shadow-sm transition-all"
+                    className="inline-flex items-center justify-center gap-2 text-sm font-bold text-white bg-secondary hover:bg-secondary-hover px-7 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all"
                   >
-                    Book Your Service
+                    <span>Book Your Service</span>
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <p className="text-[11px] text-on-surface-variant text-center mt-3">
-                    Same-week bookings available
-                  </p>
+                  <div className="flex items-center gap-2 text-xs text-on-surface-variant">
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    <span>Same-week bookings available</span>
+                  </div>
                 </div>
               </div>
 
-              {/* 8 Sequential Steps Mosaic */}
+              {/* 8 Sequential Steps */}
               <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   {
                     num: "01",
-                    icon: "manage_search",
+                    icon: <Eye className="w-5 h-5" />,
                     title: "Fabric check",
                     desc: "We look at what the curtains are made of and how they've been holding up — sun damage, backing condition, any weak spots.",
                   },
                   {
                     num: "02",
-                    icon: "troubleshoot",
+                    icon: <ScanEye className="w-5 h-5" />,
                     title: "Spot check for stains",
                     desc: "We identify mould spots, water rings, grease marks, or anything that needs a bit of extra attention before we start.",
                   },
                   {
                     num: "03",
-                    icon: "filter_alt",
+                    icon: <Wind className="w-5 h-5" />,
                     title: "Dry vacuum",
                     desc: "A dry vacuum run along the headers and face of the curtain to pull out loose dust before the steam touches it.",
                   },
                   {
                     num: "04",
-                    icon: "science",
+                    icon: <Pipette className="w-5 h-5" />,
                     title: "Spot treatment",
                     desc: "Any stubborn stains get a gentle treatment first — safe for the fabric, no harsh chemicals.",
                   },
                   {
                     num: "05",
-                    icon: "heat_pump",
+                    icon: <CloudDrizzle className="w-5 h-5" />,
                     title: "Steam clean",
                     desc: "Low-moisture steam goes through the weave, killing bacteria and loosening anything the vacuum didn't catch.",
                   },
                   {
                     num: "06",
-                    icon: "opacity",
+                    icon: <Droplets className="w-5 h-5" />,
                     title: "Extract the moisture",
                     desc: "We extract the moisture straight away so the fabric isn't left damp — curtains are usually dry within 2 to 4 hours.",
                   },
                   {
                     num: "07",
-                    icon: "view_in_ar_new",
+                    icon: <Sparkles className="w-5 h-5" />,
                     title: "Odour treatment",
                     desc: "If there are lingering smells from cooking, pets, or moisture, we treat the source in the fabric — not just mask it.",
                   },
                   {
                     num: "08",
-                    icon: "verified_user",
+                    icon: <ClipboardCheck className="w-5 h-5" />,
                     title: "Walk-through with you",
                     desc: "We check the pleats are sitting right, the fabric looks good, and walk through everything with you before we go.",
                   },
                 ].map((step, idx) => (
-                  <div key={idx} className="bg-surface-container p-5 rounded-2xl flex flex-col justify-between hover:bg-surface-container/80 transition-colors border border-primary/5">
+                  <div key={idx} className="bg-[#FAF8F5] p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition-all border border-primary/5">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-[11px] font-bold text-secondary bg-secondary/15 px-2.5 py-0.5 rounded-full">{step.num}</span>
-                      <span className="material-symbols-outlined text-primary text-[20px]">{step.icon}</span>
+                      <span className="text-primary">{step.icon}</span>
                     </div>
                     <h4 className="font-headline text-sm font-bold text-primary mb-1">{step.title}</h4>
                     <p className="text-[11px] text-on-surface-variant leading-relaxed">{step.desc}</p>
@@ -311,15 +336,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. "THE BRISBANE DIFFERENCE" (Why People Use Us) */}
-      <section className="w-full bg-surface-container py-20 lg:py-28 scroll-mt-20" id="difference">
+      {/* 5. "THE BRISBANE DIFFERENCE" (Why People Use Us) — Dark navy */}
+      <section className="w-full bg-[#1B3C59] text-white py-20 lg:py-28 scroll-mt-20" id="difference">
         <div className="w-full max-w-[1240px] mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs uppercase tracking-wider text-secondary font-semibold block mb-1">Why People Use Us</span>
-            <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary mb-3">
+            <span className="text-xs uppercase tracking-wider text-[#FFA877] font-bold block mb-1">Why People Use Us</span>
+            <h2 className="font-headline text-3xl lg:text-4xl font-bold text-white mb-3">
               What Makes Us Different
             </h2>
-            <p className="text-xs text-on-surface-variant leading-relaxed">
+            <p className="text-sm text-white/70 leading-relaxed">
               Honest work, the right equipment, and no shortcuts.
             </p>
           </div>
@@ -327,33 +352,33 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                icon: "precision_manufacturing",
+                icon: <Wrench className="w-6 h-6" />,
                 title: "The Right Gear",
                 desc: "We use proper commercial steam units made for hanging fabrics — not carpet machines or hire-shop equipment that can over-wet and stretch your curtains.",
               },
               {
-                icon: "spa",
+                icon: <Flower2 className="w-6 h-6" />,
                 title: "Products That Won't Damage Your Fabrics",
                 desc: "Everything we use is non-toxic and pH-neutral. It keeps the fabric in good condition and doesn't leave a chemical smell behind.",
               },
               {
-                icon: "visibility",
+                icon: <ScanEye className="w-6 h-6" />,
                 title: "We Actually Inspect Before We Start",
                 desc: "We check the seams, stitching, and any sun-damaged spots before touching anything. We've seen what Brisbane sun does to fabric over a few years, and we work accordingly.",
               },
               {
-                icon: "verified",
+                icon: <BadgeCheck className="w-6 h-6" />,
                 title: "Straight Pricing, No Add-Ons",
                 desc: "You get a clear quote before we start. If there are old stains we can't guarantee removal on, we tell you that upfront — not after the job.",
               },
             ].map((pillar, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl shadow-stitch flex flex-col sm:flex-row gap-4 items-start border border-primary/10">
-                <div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary shrink-0">
-                  <span className="material-symbols-outlined text-[26px]">{pillar.icon}</span>
+              <div key={idx} className="bg-white/[0.06] backdrop-blur-sm p-6 rounded-2xl flex flex-col sm:flex-row gap-4 items-start border border-white/15 hover:bg-white/[0.1] transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#FFA877] shrink-0 border border-white/15">
+                  {pillar.icon}
                 </div>
                 <div>
-                  <h3 className="font-headline text-lg font-bold text-primary mb-2">{pillar.title}</h3>
-                  <p className="text-xs text-on-surface-variant leading-relaxed">{pillar.desc}</p>
+                  <h3 className="font-headline text-lg font-bold text-white mb-2">{pillar.title}</h3>
+                  <p className="text-xs text-white/75 leading-relaxed">{pillar.desc}</p>
                 </div>
               </div>
             ))}
@@ -361,49 +386,34 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA FOOTER BANNER */}
-      <section className="max-w-[1240px] mx-auto px-4 md:px-6 py-16 text-center">
-        <div className="bg-[#1B3C59] text-white p-10 rounded-3xl space-y-4">
-          <h2 className="font-headline text-3xl font-bold text-white">Ready to Book?</h2>
-          <p className="text-xs text-white/80 max-w-lg mx-auto">
-            Send us a message or call — we'll get back to you the same day with a straight answer and a price.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Link
-              href="/book-now"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-secondary text-white font-bold text-xs hover:bg-secondary-hover shadow-md transition-all"
-            >
-              <span>Book Online</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* BOOKING FORM SECTION */}
-      <section className="w-full bg-surface-container py-16 lg:py-20 px-4 md:px-6">
+      {/* FINAL BOOKING FORM SECTION — Light warm background */}
+      <section className="w-full bg-[#F3EDE2] py-20 lg:py-28 px-4 md:px-6">
         <div className="max-w-[1240px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            <div className="lg:col-span-4 space-y-4 lg:pt-4">
-              <span className="text-xs uppercase tracking-wider text-secondary font-semibold">BOOK A CLEAN</span>
-              <h2 className="font-headline text-3xl lg:text-4xl font-bold text-primary leading-tight">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-4 space-y-5">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-secondary text-xs font-bold uppercase tracking-wider border border-primary/10 shadow-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                BOOK A CLEAN
+              </span>
+              <h2 className="font-headline text-3xl lg:text-5xl font-bold text-primary leading-tight">
                 Ready to Book?
               </h2>
-              <p className="text-sm text-on-surface-variant leading-relaxed">
-                Fill in your details and we'll confirm the same day. No payment required upfront.
+              <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
+                Fill in your details and we&apos;ll confirm your booking the same day. No payment required upfront.
               </p>
-              <ul className="space-y-2 pt-2 text-sm text-on-surface">
+              <ul className="space-y-3 pt-2 text-sm text-on-surface font-medium">
                 {["Curtains stay on the rail", "Same-week bookings available", "Free quote, no obligation"].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-secondary text-base">check_circle</span>
+                  <li key={item} className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-primary/10 overflow-hidden">
-              <div className="bg-surface-tinted px-8 py-5 border-b border-primary/10">
+            <div className="lg:col-span-8 bg-white rounded-3xl shadow-2xl border border-primary/10 overflow-hidden">
+              <div className="bg-[#FAF8F5] px-8 py-5 border-b border-primary/10">
                 <h3 className="font-headline text-xl font-bold text-primary">Request a Booking</h3>
-                <p className="text-xs text-on-surface-variant mt-0.5">We'll get back to you the same day.</p>
+                <p className="text-xs text-on-surface-variant mt-0.5">We&apos;ll get back to you the same day.</p>
               </div>
               <div className="p-6 sm:p-8">
                 <BookingForm />
